@@ -1,0 +1,118 @@
+- const base = "."
+- const home = true
+- const canonical = "/"
+- const page = "contact"
+
+doctype html
+html(lang="ja")
+    include ./partials/_head
+    body
+        include ./layouts/_header
+        include ./components/_bl-banner
+        +blockBanner("APPLICATION FORM", "応募フォーム", "assets/img/contact/banner-2.jpg", [ { "link": "#", "title": "株式会社弥生金属" }, { "link": "", "title": "応募フォーム" } ])
+        //- img.lazy(data-src="assets/img/contact/img.jpg")
+        main#main.p-contact
+            section.l-blocks.l-contact
+                .l-container-1000
+                    h3.c-title.c-title--center.c-title--border-bottom.c-title--line-18
+                        strong.font-weight-bold
+                            | 応
+                            b 募
+                            | フォーム
+                        span.font-11 Contact form
+                    blockquote.c-blockquote.c-blockquote--center.p-fadeinup.p-delay_1s
+                        | ※ご質問がございましたらお気軽にお問合せ下さい。
+                        br
+                        | お電話（072-961-8411）にてご連絡頂くか、下記のフォームにご記入の上、送信下さい。
+                        br
+                        | 「必須」の項目は入力必須項目となります。
+                    form.c-form.p-fadeinup.p-delay_1s(method='post' action='/mail.php')
+                        table
+                            tbody
+                                tr
+                                    th(scope="row")
+                                        span.required お名前
+                                    td
+                                        input.md(name='お名前' placeholder='入力必須項目です' required='')
+                                tr
+                                    th
+                                        span.required フリガナ
+                                    td
+                                        input.md(name='フリガナ' placeholder='入力必須項目です' required='')
+                                tr
+                                    th
+                                        span.required 電話番号
+                                    td
+                                        input.sm(name='電話番号' placeholder='入力必須項目です' required='')
+                                        span ※例）0123-45-6789
+                                tr
+                                    th
+                                        | 郵便番号
+                                    td
+                                        input.sm(id='郵便番号' name='郵便番号')
+                                        span ※例）123-4567
+                                tr
+                                    th
+                                        | 住所
+                                    td
+                                        input.lg(id='住所' name='住所')
+                                tr
+                                    th
+                                        span.required メールアドレス
+                                    td
+                                        input.md(name='メールアドレス' placeholder='入力必須項目です' required='')
+                                tr
+                                    th
+                                        | ご希望の連絡方法
+                                    td
+                                        label.radio(for='電話')
+                                            input(type='radio' id='電話' value='電話' name='ご希望の連絡方法')
+                                            | 電話
+                                        label.radio(for='メール')
+                                            input(type='radio' id='メール' value='メール' name='ご希望の連絡方法')
+                                            | メール
+                                tr
+                                    th.top
+                                        span.required ご相談内容
+                                    td
+                                        textarea.lg(cols='50' rows='12' name='ご相談内容' placeholder='入力必須項目です' required='')
+                        .gr-btn
+                            button(type='submit')
+                                span 送信する
+                            button(type='reset')
+                                span リセット
+                    blockquote.c-blockquote.c-blockquote--center.p-fadeinup.p-delay_1s
+                        | ※送信頂いてから3日間経過しても返事が無い場合は送信トラブルがあった可能性があります。
+                        br
+                        | お手数ですが再度送信頂くか直接お電話（072-961-8411）にてご連絡下さい。
+                    dl.p-fadeinup.p-delay_1s
+                        dt 
+                            h3.c-title-7
+                                strong 個人情報保護方針
+                                span Privacy Policy
+                        dd
+                            ul 
+                                li ※ご利用の申込みの際に伺った個人情報は皆様のプライバシーを尊重し、当方はその保護に努め第三者にその情報を一切開示いたしません。
+                                li ※当サイトで収集する個人情報は、情報登録の際に記入いただく項目の他、接続時のIPアドレス、使用ブラウザ、OSなどの状況を収集させて頂きます。
+                                li ※当サイトで収集する個人情報は、コンテンツ一般利用者の快適性、有用性ならびに広告主に効果的な広告手段を提供するための分析素材データとして使用いた します。ただし、広告主に対する広告露出状況の提示において個人を特定できるような情報の公開は一切行っておりません。
+                                li ※当サイトを利用した犯罪行為などがあった場合、当局より情報開示の要請があった場合、その要請内容を充分確認のうえ情報開示要請に応じる場合も有ります。
+                    dl.p-fadeinup.p-delay_1s
+                        dt 
+                            h3.c-title-7
+                                strong 動作推奨環境
+                                span Recommended operating environment
+                        dd
+                            p 本ホームページでは、より安全で快適にご利用いただくために下記のブラウザを推奨いたします。
+                            ul 
+                                li
+                                    strong Windows (8・7・XP・Vista) をご利用の場合
+                                li Microsoft Internet Explorer 10.0以上
+                                li ※Microsoft Internet Explorer 10でアクセスされる場合は、「ツール」→「互換表示」を押してアクセスください。
+                                li Mozilla Firefox 12以上
+                                li Google Chrome 18.0以上
+                            ul 
+                                li
+                                    strong Macintosh (Mac OS X) をご利用の場合
+                                li Safari 5.0以上Mozilla Firefox 12以上
+                                li ※パソコン、スマートフォンのOSやブラウザにより、一部ページにおいて、正しく機能しない、もしくは正しく表示されない場合がございます。
+    include ./layouts/_footer

@@ -1,0 +1,107 @@
+- const base = "."
+- const home = true
+- const canonical = "/"
+- const page = "service"
+
+doctype html
+html(lang="ja")
+    include ./partials/_head
+    body
+        include ./layouts/_header
+        include ./components/_bl-banner
+        +blockBanner("材料紹介", "Processing technique01", "./assets/img/service/banner-2.jpg", [ { "link": "#", "title": "自動打ち抜き機加工" }, { "link": "", "title": "ロボットプレス加工" } ])
+        //- img.lazy(data-src="./assets/img/service/img-2.jpg")
+        main#main.p-service
+            section.l-blocks.l-service.pt80.pt50sp.pb110.pb70sp
+                .l-container-1200 
+                    .l-blocks__title.mb100.mb70sp.p-fadein.p-delay_1s
+                        h3.c-title.text38.text28sp.text24xs.mb20
+                            strong
+                                | 取
+                                b.clblue 扱
+                                | い品目・材料の紹介
+                        blockquote.c-blockquote.gothic
+                            p.text18.text15sp.bold
+                                | 株式会社松山では、これまでに培った技術力を駆使して、お客様のニーズに沿ったゴム加工を致します。
+                                br
+                                | こちらのページに掲載されていない材質であっても、どうぞお気軽にお問い合わせ下さい。
+                    .l-blocks__main
+                        .l-contents.mb105.mb75sp.p-fadeinup.p-delay_1s
+                            h3.c-title.subtitle.title-border.title-border-bottom.bdblack.text28.text24sp.wfull.u-square.square-md.clblue.mb10
+                                strong
+                                    | 取扱い品目
+                                span.c-subtitle.line.line-sm.line-bottom.text11.mt15.mt10sp.ml20.ml10sp Features of processing
+                            dl.c-dl.dl-blue.space20
+                                dt 各種ゴムシート加工
+                                dd カット、打抜き、テープ張り、ハーフカットなど
+                                dt 金型成型品
+                                dd プレス成型、注入型成型、インジェクション成型など
+                                dt 押出成型品
+                                dd 単層押出、２層押出など
+                                dt その他加工
+                                dd 製品のカット、接着、テープ張り、穴加工などの各種加工
+                        .l-contents.p-fadeinup.p-delay_1s
+                            h3.c-title.subtitle.title-border.title-border-bottom.bdblack.text28.text24sp.wfull.u-square.square-md.clblue.mb20
+                                strong
+                                    | 取扱い材料
+                                span.c-subtitle.line.line-sm.line-bottom.text11.mt15.mt10sp.ml20.ml10sp Material
+                            .l-wrapper
+                                table.c-table.boder-bottom.td-center.th-max-width.td-max-width.td-clblue
+                                    tbody 
+                                        tr 
+                                            td.bfblue
+                                                | 天然ゴム
+                                                br
+                                                | （NR)
+                                            td.bfblue
+                                                | エチレンプロピレンゴム
+                                                br
+                                                | （EPDM)
+                                            td.bfblue
+                                                | ニトリルゴム
+                                                br
+                                                | （NBR)
+                                            td.bfblue
+                                                | クロロプレンゴム
+                                                br
+                                                | （CR)
+                                        tr 
+                                            td.bfblue
+                                                | ウレタンゴム
+                                                br
+                                                | （U）
+                                            td.bfblue
+                                                | シリコーンゴム
+                                                br
+                                                | （Q)
+                                            td.bfblue
+                                                | フッ素ゴム
+                                                br
+                                                | （FKM)
+                                            td.bfblue
+                                                | スチレンブタジエンゴム
+                                                br
+                                                | （SBR)
+                                        tr 
+                                            td.bfblue
+                                                | 環境対応ゴム
+                                            td.bfblue
+                                                | 耐磨耗性ゴム
+                                            td.bfblue
+                                                | 導電性ゴム
+                                            td.bfblue
+                                                | CRスポンジ
+                                        tr 
+                                            td.bfblue
+                                                | シリコーンスポンジ
+                                            td.bfblue
+                                                | EPDMスポンジ
+                                            td.bfblue
+                                                | 樹脂類
+                                            td.bfblue
+                                                | 各種材料全般
+                            .c-gr-button.mxauto.mt70.mt50sp
+                                a.c-button.button-outline.min-width.icon-right.custom-button(href="news.html")
+                                    strong 一覧へ戻る
+                                    i.c-icon.ic-arrow-right-black-3
+    include ./layouts/_footer

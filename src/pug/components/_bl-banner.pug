@@ -1,0 +1,12 @@
+mixin blockBanner(title, description, img, breadcrumb)
+    - let number = 1
+
+    section.c-banner.box-content
+        .contents.bg-contents.gradient-bg.wfull.contents-center.tcm
+            h3.c-title.text52.text32tb.text22sp
+                strong.lineheight14= title
+            span.c-subtitle.text15.text13sp.clwhite.mt15.mt10sp= description
+        .banner.wfull
+            img.lazy(data-src=img)
+    include _breadcrumb
+    +blockBreadcrumb(breadcrumb)

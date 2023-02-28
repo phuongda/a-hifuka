@@ -1,0 +1,46 @@
+{
+  "name": "template-agl",
+  "version": "1.0.0",
+  "description": "AGL's template, HTML ver",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cross-env NODE_ENV=production gulp build",
+    "dev": "gulp dev",
+    "lint": "gulp lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khoa-allgrow/template-agl.git"
+  },
+  "author": "AGL",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/khoa-allgrow/template-agl/issues"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.27.4",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-minify": "^3.1.0",
+    "gulp-postcss": "^9.0.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-sass-glob": "^1.1.0",
+    "gulp-terser": "^2.1.0",
+    "gulp-webp": "^4.0.1",
+    "postcss": "^8.3.6",
+    "sass": "^1.35.1"
+  },
+  "homepage": "https://github.com/khoa-allgrow/template-agl#readme",
+  "main": "index.js",
+  "dependencies": {
+    "autoprefixer": "^10.3.1",
+    "css-declaration-sorter": "^6.1.1",
+    "del": "^6.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-html-beautify": "^1.0.1",
+    "gulp-htmlhint": "^4.0.1",
+    "gulp-pug": "^5.0.0",
+    "gulp-rename": "^2.0.0"
+  }
+}

@@ -1,0 +1,39 @@
+@charset "utf-8"
+
+// ---------------------------------------------------------------
+//  core - mixin và cài đặt phông chữ, v.v.
+// ---------------------------------------------------------------
+@import "core/variable/**"
+@import "core/mixin/**"
+
+// ---------------------------------------------------------------
+//  foundation
+//  - tất cả CSS cơ sở
+//  - về cơ bản không có mã nào được thêm vào
+// ---------------------------------------------------------------
+@import "foundation/_reset"
+@import "foundation/_base"
+@import "foundation/_master"
+@import "foundation/_common"
+@import "foundation/_responsive"
+
+// ---------------------------------------------------------------
+//  layout
+//  - xác định vị trí của các bộ phận cũng như chiều rộng và chiều cao của trình bao bọc
+//  - tiền tố bắt đầu bằng l-
+// ---------------------------------------------------------------
+@import "layout/**"
+
+// ---------------------------------------------------------------
+//  page - trang cụ thể
+// ---------------------------------------------------------------
+@import "./page/**"
+
+// ---------------------------------------------------------------
+//  object - trang cụ thể
+//  - phần khác nhau được sử dụng trên các trang
+//  - xác định kiểu cho những phần hoạt động tương tự
+// ---------------------------------------------------------------
+@import "/object/components/**"
+@import "/object/project/**"
+@import "/object/utility/**"

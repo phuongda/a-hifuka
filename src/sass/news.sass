@@ -1,0 +1,28 @@
+/* top page */
+@import "core/mixin/_mixin"
+@import "core/variable/_color"
+
+.p-news
+
+    &-on
+
+        .c-stickers
+            position: absolute
+            top: 50%
+            left: -20px
+            transform: translate(-100%, -50%)
+
+        .post-content
+
+            p
+                font-size: 1.8rem
+
+@media screen and (max-width: 768px)
+    .p-news
+
+        &-on
+
+            .post-content
+
+                p
+                    font-size: 1.4rem

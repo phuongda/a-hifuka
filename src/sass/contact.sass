@@ -1,0 +1,246 @@
+/* profile page */
+@import "core/mixin/_mixin"
+@import "core/variable/_color"
+
+.c-form
+    @include box-100()
+
+    table
+        width: 100%
+
+        th,
+        td
+            padding-top: 25px
+            padding-bottom: 22px
+            border-top: 1px solid #cccccc
+            text-align: left
+
+            &.top
+                vertical-align: top
+
+        th
+            width: 30%
+            padding-left: 100px
+
+        td
+            width: 70%
+
+            span
+                margin-left: 36px
+                color: #aaaaaa
+
+    input:not([type="radio"]),
+    select
+        padding: 20px 23px
+        border: 0
+        background: #f6f6f6
+        color: #aaaaaa
+        font-size: 1.2rem
+        letter-spacing: 2px
+        vertical-align: middle
+
+    label.radio
+        @include box()
+        align-items: baseline
+        float: left
+        margin-bottom: -7px
+
+        &:not(:last-child)
+            margin-right: 30px
+
+        input
+            margin-right: 15px
+
+    textarea
+        padding: 20px 23px
+        border: 0
+        background-color: #f8f8f8
+        font-size: 1.2rem
+
+    .required
+        position: relative
+
+        &::before
+            content: "必須"
+            width: 46px
+            box-sizing: inherit
+            @include box()
+            justify-content: center
+            align-items: center
+            padding: 5px 10px 5px 10px
+            font-size: 1.1rem
+            line-height: 1.4
+            text-align: center
+            color: #ffffff
+            background-color: #d90000
+            position: absolute
+            top: -2px
+            left: calc(-46px + -24px)
+
+    .gr-btn
+        @include box-100()
+        justify-content: center
+        padding: 53px 0 58px 0
+        border-top: 1px solid #cccccc
+        text-align: center
+
+        button:not(:last-child)
+            margin-right: 20px
+
+    button
+        @include box-100()
+        justify-content: center
+        align-items: center
+        max-width: 300px
+        height: 80px
+        padding: 10px 15px
+        border: 2px solid $color-blue
+        border-radius: 50px
+        background: $color-blue
+        font-size: 1.4rem
+        line-height: 1.4
+        color: #ffffff
+        transition: 0.5s
+        cursor: pointer
+
+        span
+            @include box-100()
+            justify-content: center
+            align-items: center
+
+            &::before
+                content: ""
+                width: 10px
+                height: 10px
+                float: left
+                margin-right: 14px
+                border-radius: 50px
+                background: #ffffff
+
+        &::hover
+            opacity: 0.5
+
+    .sm
+        width: 360px
+
+    .md
+        width: 500px
+
+    .lg
+        width: 680px
+
+@media screen and (max-width: 991px)
+    .c-form
+        // margin-top: 50px
+
+        input:not([type="radio"]),
+        select
+            width: 100%!important
+
+        // label.radio input
+        //     width: 15px!important
+        //     height: 15px!important
+
+        textarea
+            width: 100%!important
+
+        table
+            @include box()
+
+            tbody
+                width: 100%
+
+            tr
+                @include box-100()
+
+            th,
+            td
+                width: 100%
+
+            th
+                padding-left: 0
+
+            td
+                padding-top: 0
+                border-top: 0
+
+                span
+                    display: block
+                    margin: 15px 0 0 15px
+
+            .required::before
+                position: unset
+                float: left
+                margin-top: -2px
+                margin-right: 15px
+
+        .gr-btn
+
+            button
+                width: calc((100% - 20px) / 2)
+
+@media screen and (max-width: 580px)
+    .c-form
+
+        .gr-btn
+            padding-top: 30px
+
+            button
+                height: 54px
+                // width: 100%
+                // max-width: unset
+                // margin-right: 0!important
+
+                // &:not(:last-child)
+                //     margin-bottom: 20px
+
+// .p-contact
+//     @include box-100()
+
+//     .l-contact
+
+//         dl
+//             @include box-100()
+//             margin-bottom: 40px
+
+//             dt
+//                 margin-bottom: 30px
+
+//             dd
+//                 ul,
+//                 p
+//                     margin-bottom: 30px
+//                     font-size: 1.2rem
+//                     line-height: 1.8
+
+// @media screen and (min-width: 769px)
+//     .p-contact
+
+//         .l-contact
+//             margin-bottom: 47px
+//             padding-top: 28px
+
+//             .c-title
+//                 margin-bottom: 60px
+
+//             .c-form
+//                 margin-top: 52px
+
+//             .c-form+blockquote
+//                 margin-bottom: 92px
+
+// @media screen and (max-width: 768px)
+//     .p-contact
+
+//         .l-contact
+//             margin-bottom: 30px
+//             padding-top: 40px
+
+//             .c-title
+//                 margin-bottom: 60px
+
+//             .c-form
+//                 margin-top: 50px
+
+//             .c-form+blockquote
+//                 margin-bottom: 70px

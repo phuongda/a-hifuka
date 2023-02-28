@@ -1,0 +1,71 @@
+@import "core/mixin/_media-query"
+
+/* responsive */
+$mq-breakpoints: ('sm': 576px, 'md': 768px, 'lg': 992px, 'xl': 1200px, 'xxl': 1240px, )
+
+@mixin mq($breakpoint: md, $rule: min, $subtraction: true)
+    $breakpoint: map_get($mq-breakpoints, $breakpoint)
+
+    @if $rule==max and $subtraction
+        $breakpoint: $breakpoint - 1
+
+    @media screen and (#{$rule}-width: $breakpoint)
+        @content
+
+.sp1500,
+.sp1200,
+.sp1024,
+.sp992,
+.sp768,
+.sp580,
+.sp480
+    display: none
+
+@media only screen and (max-width: 1500px)
+    .sp1500
+        display: block
+
+    .pc1500
+        display: none
+
+@media only screen and (max-width: 1200px)
+    .sp1200
+        display: block
+
+    .pc1200
+        display: none
+
+@media only screen and (max-width: 1024px)
+    .sp1024
+        display: block
+
+    .pc1024
+        display: none
+
+@media only screen and (max-width: 992px)
+    .sp992
+        display: block
+
+    .pc992
+        display: none
+
+@media only screen and (max-width: 768px)
+    .sp768
+        display: block
+
+    .pc768
+        display: none
+
+@media only screen and (max-width: 580px)
+    .sp580
+        display: block
+
+    .pc580
+        display: none
+
+@media only screen and (max-width: 480px)
+    .sp480
+        display: block
+
+    .pc480
+        display: none

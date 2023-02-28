@@ -1,0 +1,8808 @@
+@import "core/variable/_color"
+
+@charset "UTF-8"
+
+/*------------------------------------------------------------
+ *  Layout
+ *------------------------------------------------------------
+
+@import url("https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap")
+
+*
+    -webkit-box-sizing: border-box
+    box-sizing: border-box
+    *behavior: url(/scripts/boxsizing.htc)
+
+// @font-face
+//     font-family: Futura
+//     font-style: normal
+//     font-weight: 500
+//     src: url(../font/futura-light-bt.ttf)
+
+// @font-face
+//     font-family: A-OTF-R
+//     font-style: normal
+//     font-weight: 400
+//     src: url(../font/A-OTF-RyuminPro-Regular.otf)
+
+// @font-face
+//     font-family: 'Meiryo'
+//     font-style: normal
+//     font-weight: 400
+//     src: url(../font/meiryo.ttc)
+
+// @font-face
+//     font-family: Yu Gothic
+//     font-style: normal
+//     font-weight: 400
+//     src: url(../font/YuGothM.ttc)
+
+/* 全体構成
+ *----------------------------------------------------------------
+// html
+//     // font-size: 62.5%
+//     /*ベースを10pxにしています
+
+body
+    margin: 0 auto
+    padding: 0
+    height: auto
+    width: 100%
+    font-size: 14px
+    color: #111
+    min-width: 320px
+    line-height: 160%
+    font-weight: 500
+    /* background: #FFFBF7;
+    /*スマホ対応
+    /* font-family: 'Noto Serif JP', serif;
+    // font-family: 'メイリオ', 'Meiryo', sans-serif
+    font-family: YuGothic, "Yu Gothic", sans-serif
+    /* font-family: 'Meiryo';
+    -webkit-text-size-adjust: 100%
+    -moz-text-size-adjust: 100%
+    -ms-text-size-adjust: 100%
+    text-size-adjust: 100%
+    // overflow-y: scroll
+
+    /*ローディングのガタツキ防止
+    letter-spacing: 2px
+
+html
+    height: 100%
+
+img
+    margin: 0
+    padding: 0
+    vertical-align: bottom
+    line-height: 0px
+
+ul
+    margin: 0
+    padding: 0
+
+li
+    margin: 0
+    padding: 0
+    list-style: none
+
+dl
+    margin: 0
+    padding: 0
+
+dd
+    margin: 0
+    padding: 0
+    list-style: none
+
+figure
+    margin: 0
+
+p
+    margin: 0
+    padding: 0
+    vertical-align: bottom
+
+a
+    outline: none
+    -webkit-transition: 0.5s
+    transition: 0.5s
+
+.ovh
+    overflow: hidden
+
+.h-nav-wrap .bg-logo
+    background: none
+
+.container-16
+    width: 100%
+    max-width: 1600px
+    margin: 0 auto
+
+/* h系
+ *---------------------------------------------------
+
+h1, h2, h3, h4, h5
+    margin: 0
+    padding: 0
+
+.bold
+    font-weight: bold
+
+.bold-none
+    font-weight: normal
+
+.position-relative
+    position: relative
+
+/*fontsize-style
+ *---------------------------------------
+
+.text8
+    font-size: 0.8rem!important
+
+.text9
+    font-size: 0.9rem!important
+
+.text10
+    font-size: 1rem!important
+
+.text11
+    font-size: 1.1rem!important
+
+.text12
+    font-size: 1.2rem!important
+
+.text13
+    font-size: 1.3rem!important
+
+.text14
+    font-size: 1.4rem!important
+
+.text15
+    font-size: 1.5rem!important
+
+.text16
+    font-size: 1.6rem!important
+
+.text18
+    font-size: 1.8rem!important
+
+.text20
+    font-size: 2rem!important
+
+.text22
+    font-size: 2.2rem!important
+
+.text24
+    font-size: 2.4rem!important
+
+.text25
+    font-size: 2.5rem!important
+
+.text26
+    font-size: 2.6rem!important
+
+.text28
+    font-size: 2.8rem!important
+
+.text30
+    font-size: 3rem!important
+
+.text32
+    font-size: 3.2rem!important
+
+.text34
+    font-size: 3.4rem!important
+
+.text36
+    font-size: 3.6rem!important
+
+.text38
+    font-size: 3.8rem!important
+
+.text40
+    font-size: 4rem!important
+
+.text42
+    font-size: 4.2rem!important
+
+.text43
+    font-size: 4.3rem!important
+
+.text44
+    font-size: 4.4rem!important
+
+.text45
+    font-size: 4.5rem!important
+
+.text46
+    font-size: 4.6rem!important
+
+.text48
+    font-size: 4.8rem!important
+
+.text50
+    font-size: 5rem!important
+
+.text52
+    font-size: 5.2rem!important
+
+.text54
+    font-size: 5.4rem!important
+
+.text58
+    font-size: 5.8rem!important
+
+.text60
+    font-size: 6rem!important
+
+.text62
+    font-size: 6.2rem!important
+
+.text64
+    font-size: 6.4rem!important
+
+.text68
+    font-size: 6.8rem!important
+
+.text70
+    font-size: 7rem!important
+
+.text72
+    font-size: 7.2rem!important
+
+.text74
+    font-size: 7.4rem!important
+
+.text80
+    font-size: 8rem!important
+
+.text82
+    font-size: 8.2rem!important
+
+.text84
+    font-size: 8.4rem!important
+
+.text90
+    font-size: 9rem!important
+
+.text91
+    font-size: 9.1rem!important
+
+.text96
+    font-size: 9.6rem!important
+
+.lineheight10
+    line-height: 1!important
+
+.lineheight12
+    line-height: 1.2!important
+
+.lineheight14
+    line-height: 1.4!important
+
+.lineheight15
+    line-height: 1.5!important
+
+.lineheight16
+    line-height: 1.6!important
+
+.lineheight18
+    line-height: 1.8!important
+
+.lineheight20
+    line-height: 2!important
+
+/*color-style
+ *---------------------------------------
+
+.red
+    color: #990000!important
+
+.blue
+    color: #000099!important
+
+.green
+    color: #009900!important
+
+.yellow
+    color: #ffff00!important
+
+.clgray
+    color: $color-gray!important
+
+.clblack
+    color: $color-black!important
+
+.clred
+    color: $color-red!important
+
+.clblue
+    color: $color-blue!important
+
+.clgreen
+    color: $color-green!important
+
+.clorange
+    color: $color-orange!important
+
+.clwhite
+    color: white!important
+
+.bggray
+    background: $color-gray!important
+
+.bgblack
+    background: $color-black!important
+
+.bgred
+    background: $color-red!important
+
+.bgblue
+    background: $color-blue!important
+
+.bggreen
+    background: $color-green!important
+
+.bgorange
+    background: $color-orange!important
+
+.bgwhite
+    background: white!important
+
+.bgtransparent
+    background: transparent!important
+
+.bfgray
+
+    &::before
+        background: $color-gray!important
+
+.bfblack
+
+    &::before
+        background: $color-black!important
+
+.bfred
+
+    &::before
+        background: $color-red!important
+
+.bfblue
+
+    &::before
+        background: $color-blue!important
+
+.bfgreen
+
+    &::before
+        background: $color-green!important
+
+.bforange
+
+    &::before
+        background: $color-orange!important
+
+.bfwhite
+
+    &::before
+        background: white!important
+
+.afgray
+
+    &::after
+        background: $color-gray!important
+
+.afblack
+
+    &::after
+        background: $color-black!important
+
+.afred
+
+    &::after
+        background: $color-red!important
+
+.afblue
+
+    &::after
+        background: $color-blue!important
+
+.afgreen
+
+    &::after
+        background: $color-green!important
+
+.aforange
+
+    &::after
+        background: $color-orange!important
+
+.afwhite
+
+    &::after
+        background: white!important
+
+.bafgray
+
+    &::before,
+    &::after
+        background: $color-gray!important
+
+.bafblack
+
+    &::before,
+    &::after
+        background: $color-black!important
+
+.bafred
+
+    &::before,
+    &::after
+        background: $color-red!important
+
+.bafblue
+
+    &::before,
+    &::after
+        background: $color-blue!important
+
+.bafgreen
+
+    &::before,
+    &::after
+        background: $color-green!important
+
+.baforange
+
+    &::before,
+    &::after
+        background: $color-orange!important
+
+.bafwhite
+
+    &::before,
+    &::after
+        background: white!important
+
+.bdgray
+    border-color: $color-gray!important
+
+.bdblack
+    border-color: $color-black!important
+
+.bdred
+    border-color: $color-red!important
+
+.bdblue
+    border-color: $color-blue!important
+
+.bdgreen
+    border-color: $color-green!important
+
+.bdorange
+    border-color: $color-orange!important
+
+.bdwhite
+    border-color: white!important
+
+/*link-style
+ *---------------------------------------
+
+a
+    color: inherit
+
+    &:hover
+        text-decoration: none
+
+/*** CLEAR-FIX **
+
+.clearfix
+    zoom: 1
+
+    &:after
+        clear: both
+        content: "."
+        display: block
+        height: 0
+        line-height: 0
+        visibility: hidden
+
+/*** ROLL-OVER  **
+
+.alphaOver a:hover img
+    opacity: 0.7
+    filter: alpha(opacity = 70)
+    -moz-opacity: 0.7
+
+.alphaOver_png a:hover img
+    opacity: 0.7
+    -moz-opacity: 0.7
+
+.none
+    opacity: 0.4
+    filter: alpha(opacity = 40)
+    -moz-opacity: 0.4
+
+/*** FLOAT **
+
+.fr
+    float: right
+
+.fl
+    float: left
+
+.fn
+    float: none
+
+.tcm
+    text-align: center
+
+img
+    max-width: 100%
+
+.cb
+    clear: both
+
+/*** PADDING **
+
+.p0
+    padding: 0 !important
+
+.p1
+    padding: 1px !important
+
+.p2
+    padding: 2px !important
+
+.p3
+    padding: 3px !important
+
+.p4
+    padding: 4px !important
+
+.p5
+    padding: 5px !important
+
+.p6
+    padding: 6px !important
+
+.p7
+    padding: 7px !important
+
+.p8
+    padding: 8px !important
+
+.p9
+    padding: 9px !important
+
+.p10
+    padding: 10px !important
+
+.p15
+    padding: 15px !important
+
+.p20
+    padding: 20px !important
+
+.p25
+    padding: 25px !important
+
+.p30
+    padding: 30px !important
+
+.p35
+    padding: 35px !important
+
+.p40
+    padding: 40px !important
+
+.p45
+    padding: 45px !important
+
+.p50
+    padding: 50px !important
+
+.p55
+    padding: 55px !important
+
+.p60
+    padding: 60px !important
+
+.p65
+    padding: 65px !important
+
+.p70
+    padding: 70px !important
+
+.p75
+    padding: 75px !important
+
+.p80
+    padding: 80px !important
+
+.p85
+    padding: 85px !important
+
+.p90
+    padding: 90px !important
+
+.p95
+    padding: 95px !important
+
+.p100
+    padding: 100px !important
+
+.p105
+    padding: 105px !important
+
+.p110
+    padding: 110px !important
+
+.p115
+    padding: 115px !important
+
+.p120
+    padding: 120px !important
+
+.pt0
+    padding-top: 0 !important
+
+.pt1
+    padding-top: 1px !important
+
+.pt2
+    padding-top: 2px !important
+
+.pt3
+    padding-top: 3px !important
+
+.pt4
+    padding-top: 4px !important
+
+.pt5
+    padding-top: 5px !important
+
+.pt6
+    padding-top: 6px !important
+
+.pt7
+    padding-top: 7px !important
+
+.pt8
+    padding-top: 8px !important
+
+.pt9
+    padding-top: 9px !important
+
+.pt10
+    padding-top: 10px !important
+
+.pt15
+    padding-top: 15px !important
+
+.pt20
+    padding-top: 20px !important
+
+.pt25
+    padding-top: 25px !important
+
+.pt30
+    padding-top: 30px !important
+
+.pt35
+    padding-top: 35px !important
+
+.pt40
+    padding-top: 40px !important
+
+.pt45
+    padding-top: 45px !important
+
+.pt50
+    padding-top: 50px !important
+
+.pt55
+    padding-top: 55px !important
+
+.pt60
+    padding-top: 60px !important
+
+.pt65
+    padding-top: 65px !important
+
+.pt70
+    padding-top: 70px !important
+
+.pt75
+    padding-top: 75px !important
+
+.pt80
+    padding-top: 80px !important
+
+.pt85
+    padding-top: 85px !important
+
+.pt90
+    padding-top: 90px !important
+
+.pt95
+    padding-top: 95px !important
+
+.pt100
+    padding-top: 100px !important
+
+.pt105
+    padding-top: 105px !important
+
+.pt110
+    padding-top: 110px !important
+
+.pt115
+    padding-top: 115px !important
+
+.pt120
+    padding-top: 120px !important
+
+.pr0
+    padding-right: 0 !important
+
+.pr1
+    padding-right: 1px !important
+
+.pr2
+    padding-right: 2px !important
+
+.pr3
+    padding-right: 3px !important
+
+.pr4
+    padding-right: 4px !important
+
+.pr5
+    padding-right: 5px !important
+
+.pr6
+    padding-right: 6px !important
+
+.pr7
+    padding-right: 7px !important
+
+.pr8
+    padding-right: 8px !important
+
+.pr9
+    padding-right: 9px !important
+
+.pr10
+    padding-right: 10px !important
+
+.pr15
+    padding-right: 15px !important
+
+.pr20
+    padding-right: 20px !important
+
+.pr25
+    padding-right: 25px !important
+
+.pr30
+    padding-right: 30px !important
+
+.pr35
+    padding-right: 35px !important
+
+.pr40
+    padding-right: 40px !important
+
+.pr45
+    padding-right: 45px !important
+
+.pr50
+    padding-right: 50px !important
+
+.pr55
+    padding-right: 55px !important
+
+.pr60
+    padding-right: 60px !important
+
+.pr65
+    padding-right: 65px !important
+
+.pr70
+    padding-right: 70px !important
+
+.pr75
+    padding-right: 75px !important
+
+.pr80
+    padding-right: 80px !important
+
+.pr85
+    padding-right: 85px !important
+
+.pr90
+    padding-right: 90px !important
+
+.pr95
+    padding-right: 95px !important
+
+.pr100
+    padding-right: 100px !important
+
+.pr105
+    padding-right: 105px !important
+
+.pr110
+    padding-right: 110px !important
+
+.pr115
+    padding-right: 115px !important
+
+.pr120
+    padding-right: 120px !important
+
+.pl0
+    padding-left: 0 !important
+
+.pl1
+    padding-left: 1px !important
+
+.pl2
+    padding-left: 2px !important
+
+.pl3
+    padding-left: 3px !important
+
+.pl4
+    padding-left: 4px !important
+
+.pl5
+    padding-left: 5px !important
+
+.pl6
+    padding-left: 6px !important
+
+.pl7
+    padding-left: 7px !important
+
+.pl8
+    padding-left: 8px !important
+
+.pl9
+    padding-left: 9px !important
+
+.pl10
+    padding-left: 10px !important
+
+.pl15
+    padding-left: 15px !important
+
+.pl20
+    padding-left: 20px !important
+
+.pl25
+    padding-left: 25px !important
+
+.pl30
+    padding-left: 30px !important
+
+.pl35
+    padding-left: 35px !important
+
+.pl40
+    padding-left: 40px !important
+
+.pl45
+    padding-left: 45px !important
+
+.pl50
+    padding-left: 50px !important
+
+.pl55
+    padding-left: 55px !important
+
+.pl60
+    padding-left: 60px !important
+
+.pl65
+    padding-left: 65px !important
+
+.pl70
+    padding-left: 70px !important
+
+.pl75
+    padding-left: 75px !important
+
+.pl80
+    padding-left: 80px !important
+
+.pl85
+    padding-left: 85px !important
+
+.pl90
+    padding-left: 90px !important
+
+.pl95
+    padding-left: 95px !important
+
+.pl100
+    padding-left: 100px !important
+
+.pl105
+    padding-left: 105px !important
+
+.pl110
+    padding-left: 110px !important
+
+.pl115
+    padding-left: 115px !important
+
+.pl120
+    padding-left: 120px !important
+
+.pb0
+    padding-bottom: 0 !important
+
+.pb1
+    padding-bottom: 1px !important
+
+.pb2
+    padding-bottom: 2px !important
+
+.pb3
+    padding-bottom: 3px !important
+
+.pb4
+    padding-bottom: 4px !important
+
+.pb5
+    padding-bottom: 5px !important
+
+.pb6
+    padding-bottom: 6px !important
+
+.pb7
+    padding-bottom: 7px !important
+
+.pb8
+    padding-bottom: 8px !important
+
+.pb9
+    padding-bottom: 9px !important
+
+.pb10
+    padding-bottom: 10px !important
+
+.pb15
+    padding-bottom: 15px !important
+
+.pb20
+    padding-bottom: 20px !important
+
+.pb25
+    padding-bottom: 25px !important
+
+.pb30
+    padding-bottom: 30px !important
+
+.pb35
+    padding-bottom: 35px !important
+
+.pb40
+    padding-bottom: 40px !important
+
+.pb45
+    padding-bottom: 45px !important
+
+.pb50
+    padding-bottom: 50px !important
+
+.pb55
+    padding-bottom: 55px !important
+
+.pb60
+    padding-bottom: 60px !important
+
+.pb65
+    padding-bottom: 65px !important
+
+.pb70
+    padding-bottom: 70px !important
+
+.pb75
+    padding-bottom: 75px !important
+
+.pb80
+    padding-bottom: 80px !important
+
+.pb85
+    padding-bottom: 85px !important
+
+.pb90
+    padding-bottom: 90px !important
+
+.pb95
+    padding-bottom: 95px !important
+
+.pb100
+    padding-bottom: 100px !important
+
+.pb105
+    padding-bottom: 105px !important
+
+.pb110
+    padding-bottom: 110px !important
+
+.pb115
+    padding-bottom: 115px !important
+
+.pb120
+    padding-bottom: 120px !important
+
+.px0
+    padding-left: 0 !important
+    padding-right: 0!important
+
+.px1
+    padding-left: 1px !important
+    padding-right: 1px !important
+
+.px2
+    padding-left: 2px !important
+    padding-right: 2px !important
+
+.px3
+    padding-left: 3px !important
+    padding-right: 3px !important
+
+.px4
+    padding-left: 4px !important
+    padding-right: 4px !important
+
+.px5
+    padding-left: 5px !important
+    padding-right: 5px !important
+
+.px6
+    padding-left: 6px !important
+    padding-right: 6px !important
+
+.px7
+    padding-left: 7px !important
+    padding-right: 7px !important
+
+.px8
+    padding-left: 8px !important
+    padding-right: 8px !important
+
+.px9
+    padding-left: 9px !important
+    padding-right: 9px !important
+
+.px10
+    padding-left: 10px !important
+    padding-right: 10px !important
+
+.px15
+    padding-left: 15px !important
+    padding-right: 15px !important
+
+.px20
+    padding-left: 20px !important
+    padding-right: 20px !important
+
+.px25
+    padding-left: 25px !important
+    padding-right: 25px !important
+
+.px30
+    padding-left: 30px !important
+    padding-right: 30px !important
+
+.px35
+    padding-left: 35px !important
+    padding-right: 35px !important
+
+.px40
+    padding-left: 40px !important
+    padding-right: 40px !important
+
+.px45
+    padding-left: 45px !important
+    padding-right: 45px !important
+
+.px50
+    padding-left: 50px !important
+    padding-right: 50px !important
+
+.px55
+    padding-left: 55px !important
+    padding-right: 55px !important
+
+.px60
+    padding-left: 60px !important
+    padding-right: 60px !important
+
+.px65
+    padding-left: 65px !important
+    padding-right: 65px !important
+
+.px70
+    padding-left: 70px !important
+    padding-right: 70px !important
+
+.px75
+    padding-left: 75px !important
+    padding-right: 75px !important
+
+.px80
+    padding-left: 80px !important
+    padding-right: 80px !important
+
+.px85
+    padding-left: 85px !important
+    padding-right: 85px !important
+
+.px90
+    padding-left: 90px !important
+    padding-right: 90px !important
+
+.px95
+    padding-left: 95px !important
+    padding-right: 95px !important
+
+.px100
+    padding-left: 100px !important
+    padding-right: 100px !important
+
+.px105
+    padding-left: 105px !important
+    padding-right: 105px !important
+
+.px110
+    padding-left: 110px !important
+    padding-right: 110px !important
+
+.px115
+    padding-left: 115px !important
+    padding-right: 115px !important
+
+.px120
+    padding-left: 120px !important
+    padding-right: 120px !important
+
+.py0
+    padding-top: 0 !important
+    padding-bottom: 0!important
+
+.py1
+    padding-top: 1px !important
+    padding-bottom: 1px !important
+
+.py2
+    padding-top: 2px !important
+    padding-bottom: 2px !important
+
+.py3
+    padding-top: 3px !important
+    padding-bottom: 3px !important
+
+.py4
+    padding-top: 4px !important
+    padding-bottom: 4px !important
+
+.py5
+    padding-top: 5px !important
+    padding-bottom: 5px !important
+
+.py6
+    padding-top: 6px !important
+    padding-bottom: 6px !important
+
+.py7
+    padding-top: 7px !important
+    padding-bottom: 7px !important
+
+.py8
+    padding-top: 8px !important
+    padding-bottom: 8px !important
+
+.py9
+    padding-top: 9px !important
+    padding-bottom: 9px !important
+
+.py10
+    padding-top: 10px !important
+    padding-bottom: 10px !important
+
+.py15
+    padding-top: 15px !important
+    padding-bottom: 15px !important
+
+.py20
+    padding-top: 20px !important
+    padding-bottom: 20px !important
+
+.py25
+    padding-top: 25px !important
+    padding-bottom: 25px !important
+
+.py30
+    padding-top: 30px !important
+    padding-bottom: 30px !important
+
+.py35
+    padding-top: 35px !important
+    padding-bottom: 35px !important
+
+.py40
+    padding-top: 40px !important
+    padding-bottom: 40px !important
+
+.py45
+    padding-top: 45px !important
+    padding-bottom: 45px !important
+
+.py50
+    padding-top: 50px !important
+    padding-bottom: 50px !important
+
+.py55
+    padding-top: 55px !important
+    padding-bottom: 55px !important
+
+.py60
+    padding-top: 60px !important
+    padding-bottom: 60px !important
+
+.py65
+    padding-top: 65px !important
+    padding-bottom: 65px !important
+
+.py70
+    padding-top: 70px !important
+    padding-bottom: 70px !important
+
+.py75
+    padding-top: 75px !important
+    padding-bottom: 75px !important
+
+.py80
+    padding-top: 80px !important
+    padding-bottom: 80px !important
+
+.py85
+    padding-top: 85px !important
+    padding-bottom: 85px !important
+
+.py90
+    padding-top: 90px !important
+    padding-bottom: 90px !important
+
+.py95
+    padding-top: 95px !important
+    padding-bottom: 95px !important
+
+.py100
+    padding-top: 100px !important
+    padding-bottom: 100px !important
+
+.py105
+    padding-top: 105px!important
+    padding-bottom: 105px !important
+
+.py110
+    padding-top: 110px!important
+    padding-bottom: 110px !important
+
+.py115
+    padding-top: 115px!important
+    padding-bottom: 115px !important
+
+.py120
+    padding-top: 120px!important
+    padding-bottom: 120px !important
+
+/*** MARGIN **
+
+.m0
+    margin: 0 !important
+
+.m1
+    margin: 1px !important
+
+.m2
+    margin: 2px !important
+
+.m3
+    margin: 3px !important
+
+.m4
+    margin: 4px !important
+
+.m5
+    margin: 5px !important
+
+.m6
+    margin: 6px !important
+
+.m7
+    margin: 7px !important
+
+.m8
+    margin: 8px !important
+
+.m9
+    margin: 9px !important
+
+.m10
+    margin: 10px !important
+
+.m15
+    margin: 15px !important
+
+.m20
+    margin: 20px !important
+
+.m25
+    margin: 25px !important
+
+.m30
+    margin: 30px !important
+
+.m35
+    margin: 35px !important
+
+.m40
+    margin: 40px !important
+
+.m45
+    margin: 45px !important
+
+.m50
+    margin: 50px !important
+
+.m55
+    margin: 55px !important
+
+.m60
+    margin: 60px !important
+
+.m65
+    margin: 65px !important
+
+.m70
+    margin: 70px !important
+
+.m75
+    margin: 75px !important
+
+.m80
+    margin: 80px !important
+
+.m85
+    margin: 85px !important
+
+.m90
+    margin: 90px !important
+
+.m95
+    margin: 95px !important
+
+.m100
+    margin: 100px !important
+
+.m105
+    margin: 105px !important
+
+.m110
+    margin: 110px !important
+
+.m115
+    margin: 115px !important
+
+.m120
+    margin: 120px !important
+
+.mt0
+    margin-top: 0 !important
+
+.mt1
+    margin-top: 1px !important
+
+.mt2
+    margin-top: 2px !important
+
+.mt3
+    margin-top: 3px !important
+
+.mt4
+    margin-top: 4px !important
+
+.mt5
+    margin-top: 5px !important
+
+.mt6
+    margin-top: 6px !important
+
+.mt7
+    margin-top: 7px !important
+
+.mt8
+    margin-top: 8px !important
+
+.mt9
+    margin-top: 9px !important
+
+.mt10
+    margin-top: 10px !important
+
+.mt15
+    margin-top: 15px !important
+
+.mt20
+    margin-top: 20px !important
+
+.mt25
+    margin-top: 25px !important
+
+.mt30
+    margin-top: 30px !important
+
+.mt35
+    margin-top: 35px !important
+
+.mt40
+    margin-top: 40px !important
+
+.mt45
+    margin-top: 45px !important
+
+.mt50
+    margin-top: 50px !important
+
+.mt55
+    margin-top: 55px !important
+
+.mt60
+    margin-top: 60px !important
+
+.mt65
+    margin-top: 65px !important
+
+.mt70
+    margin-top: 70px !important
+
+.mt75
+    margin-top: 75px !important
+
+.mt80
+    margin-top: 80px !important
+
+.mt85
+    margin-top: 85px !important
+
+.mt90
+    margin-top: 90px !important
+
+.mt95
+    margin-top: 95px !important
+
+.mt100
+    margin-top: 100px !important
+
+.mt105
+    margin-top: 105px !important
+
+.mt110
+    margin-top: 110px !important
+
+.mt115
+    margin-top: 115px !important
+
+.mt120
+    margin-top: 120px !important
+
+.mr0
+    margin-right: 0 !important
+
+.mr1
+    margin-right: 1px !important
+
+.mr2
+    margin-right: 2px !important
+
+.mr3
+    margin-right: 3px !important
+
+.mr4
+    margin-right: 4px !important
+
+.mr5
+    margin-right: 5px !important
+
+.mr6
+    margin-right: 6px !important
+
+.mr7
+    margin-right: 7px !important
+
+.mr8
+    margin-right: 8px !important
+
+.mr9
+    margin-right: 9px !important
+
+.mr10
+    margin-right: 10px !important
+
+.mr15
+    margin-right: 15px !important
+
+.mr20
+    margin-right: 20px !important
+
+.mr25
+    margin-right: 25px !important
+
+.mr30
+    margin-right: 30px !important
+
+.mr35
+    margin-right: 35px !important
+
+.mr40
+    margin-right: 40px !important
+
+.mr45
+    margin-right: 45px !important
+
+.mr50
+    margin-right: 50px !important
+
+.mr55
+    margin-right: 55px !important
+
+.mr60
+    margin-right: 60px !important
+
+.mr65
+    margin-right: 65px !important
+
+.mr70
+    margin-right: 70px !important
+
+.mr75
+    margin-right: 75px !important
+
+.mr80
+    margin-right: 80px !important
+
+.mr85
+    margin-right: 85px !important
+
+.mr90
+    margin-right: 90px !important
+
+.mr95
+    margin-right: 95px !important
+
+.mr100
+    margin-right: 100px !important
+
+.mr105
+    margin-right: 105px !important
+
+.mr110
+    margin-right: 110px !important
+
+.mr115
+    margin-right: 115px !important
+
+.mr120
+    margin-right: 120px !important
+
+.ml0
+    margin-left: 0 !important
+
+.ml1
+    margin-left: 1px !important
+
+.ml2
+    margin-left: 2px !important
+
+.ml3
+    margin-left: 3px !important
+
+.ml4
+    margin-left: 4px !important
+
+.ml5
+    margin-left: 5px !important
+
+.ml6
+    margin-left: 6px !important
+
+.ml7
+    margin-left: 7px !important
+
+.ml8
+    margin-left: 8px !important
+
+.ml9
+    margin-left: 9px !important
+
+.ml10
+    margin-left: 10px !important
+
+.ml15
+    margin-left: 15px !important
+
+.ml20
+    margin-left: 20px !important
+
+.ml25
+    margin-left: 25px !important
+
+.ml30
+    margin-left: 30px !important
+
+.ml35
+    margin-left: 35px !important
+
+.ml40
+    margin-left: 40px !important
+
+.ml45
+    margin-left: 45px !important
+
+.ml50
+    margin-left: 50px !important
+
+.ml55
+    margin-left: 55px !important
+
+.ml60
+    margin-left: 60px !important
+
+.ml65
+    margin-left: 65px !important
+
+.ml70
+    margin-left: 70px !important
+
+.ml75
+    margin-left: 75px !important
+
+.ml80
+    margin-left: 80px !important
+
+.ml85
+    margin-left: 85px !important
+
+.ml90
+    margin-left: 90px !important
+
+.ml95
+    margin-left: 95px !important
+
+.ml100
+    margin-left: 100px !important
+
+.ml105
+    margin-left: 105px !important
+
+.ml110
+    margin-left: 110px !important
+
+.ml115
+    margin-left: 115px !important
+
+.ml120
+    margin-left: 120px !important
+
+.mb0
+    margin-bottom: 0 !important
+
+.mb1
+    margin-bottom: 1px !important
+
+.mb2
+    margin-bottom: 2px !important
+
+.mb3
+    margin-bottom: 3px !important
+
+.mb4
+    margin-bottom: 4px !important
+
+.mb5
+    margin-bottom: 5px !important
+
+.mb6
+    margin-bottom: 6px !important
+
+.mb7
+    margin-bottom: 7px !important
+
+.mb8
+    margin-bottom: 8px !important
+
+.mb9
+    margin-bottom: 9px !important
+
+.mb10
+    margin-bottom: 10px !important
+
+.mb15
+    margin-bottom: 15px !important
+
+.mb20
+    margin-bottom: 20px !important
+
+.mb25
+    margin-bottom: 25px !important
+
+.mb30
+    margin-bottom: 30px !important
+
+.mb35
+    margin-bottom: 35px !important
+
+.mb40
+    margin-bottom: 40px !important
+
+.mb45
+    margin-bottom: 45px !important
+
+.mb50
+    margin-bottom: 50px !important
+
+.mb55
+    margin-bottom: 55px !important
+
+.mb60
+    margin-bottom: 60px !important
+
+.mb65
+    margin-bottom: 65px !important
+
+.mb70
+    margin-bottom: 70px !important
+
+.mb75
+    margin-bottom: 75px !important
+
+.mb80
+    margin-bottom: 80px !important
+
+.mb85
+    margin-bottom: 85px !important
+
+.mb90
+    margin-bottom: 90px !important
+
+.mb95
+    margin-bottom: 95px !important
+
+.mb100
+    margin-bottom: 100px !important
+
+.mb105
+    margin-bottom: 105px !important
+
+.mb110
+    margin-bottom: 110px !important
+
+.mb115
+    margin-bottom: 115px !important
+
+.mb120
+    margin-bottom: 120px !important
+
+.mx0
+    margin-left: 0 !important
+    margin-right: 0!important
+
+.mx1
+    margin-left: 1px !important
+    margin-right: 1px !important
+
+.mx2
+    margin-left: 2px !important
+    margin-right: 2px !important
+
+.mx3
+    margin-left: 3px !important
+    margin-right: 3px !important
+
+.mx4
+    margin-left: 4px !important
+    margin-right: 4px !important
+
+.mx5
+    margin-left: 5px !important
+    margin-right: 5px !important
+
+.mx6
+    margin-left: 6px !important
+    margin-right: 6px !important
+
+.mx7
+    margin-left: 7px !important
+    margin-right: 7px !important
+
+.mx8
+    margin-left: 8px !important
+    margin-right: 8px !important
+
+.mx9
+    margin-left: 9px !important
+    margin-right: 9px !important
+
+.mx10
+    margin-left: 10px !important
+    margin-right: 10px !important
+
+.mx15
+    margin-left: 15px !important
+    margin-right: 15px !important
+
+.mx20
+    margin-left: 20px !important
+    margin-right: 20px !important
+
+.mx25
+    margin-left: 25px !important
+    margin-right: 25px !important
+
+.mx30
+    margin-left: 30px !important
+    margin-right: 30px !important
+
+.mx35
+    margin-left: 35px !important
+    margin-right: 35px !important
+
+.mx40
+    margin-left: 40px !important
+    margin-right: 40px !important
+
+.mx45
+    margin-left: 45px !important
+    margin-right: 45px !important
+
+.mx50
+    margin-left: 50px !important
+    margin-right: 50px !important
+
+.mx55
+    margin-left: 55px !important
+    margin-right: 55px !important
+
+.mx60
+    margin-left: 60px !important
+    margin-right: 60px !important
+
+.mx65
+    margin-left: 65px !important
+    margin-right: 65px !important
+
+.mx70
+    margin-left: 70px !important
+    margin-right: 70px !important
+
+.mx75
+    margin-left: 75px !important
+    margin-right: 75px !important
+
+.mx80
+    margin-left: 80px !important
+    margin-right: 80px !important
+
+.mx85
+    margin-left: 85px !important
+    margin-right: 85px !important
+
+.mx90
+    margin-left: 90px !important
+    margin-right: 90px !important
+
+.mx95
+    margin-left: 95px !important
+    margin-right: 95px !important
+
+.mx100
+    margin-left: 100px !important
+    margin-right: 100px !important
+
+.mx105
+    margin-left: 105px !important
+    margin-right: 105px !important
+
+.mx110
+    margin-left: 110px !important
+    margin-right: 110px !important
+
+.mx115
+    margin-left: 115px !important
+    margin-right: 115px !important
+
+.mx120
+    margin-left: 120px !important
+    margin-right: 120px !important
+
+.my0
+    margin-top: 0 !important
+    margin-bottom: 0!important
+
+.my1
+    margin-top: 1px !important
+    margin-bottom: 1px !important
+
+.my2
+    margin-top: 2px !important
+    margin-bottom: 2px !important
+
+.my3
+    margin-top: 3px !important
+    margin-bottom: 3px !important
+
+.my4
+    margin-top: 4px !important
+    margin-bottom: 4px !important
+
+.my5
+    margin-top: 5px !important
+    margin-bottom: 5px !important
+
+.my6
+    margin-top: 6px !important
+    margin-bottom: 6px !important
+
+.my7
+    margin-top: 7px !important
+    margin-bottom: 7px !important
+
+.my8
+    margin-top: 8px !important
+    margin-bottom: 8px !important
+
+.my9
+    margin-top: 9px !important
+    margin-bottom: 9px !important
+
+.my10
+    margin-top: 10px !important
+    margin-bottom: 10px !important
+
+.my15
+    margin-top: 15px !important
+    margin-bottom: 15px !important
+
+.my20
+    margin-top: 20px !important
+    margin-bottom: 20px !important
+
+.my25
+    margin-top: 25px !important
+    margin-bottom: 25px !important
+
+.my30
+    margin-top: 30px !important
+    margin-bottom: 30px !important
+
+.my35
+    margin-top: 35px !important
+    margin-bottom: 35px !important
+
+.my40
+    margin-top: 40px !important
+    margin-bottom: 40px !important
+
+.my45
+    margin-top: 45px !important
+    margin-bottom: 45px !important
+
+.my50
+    margin-top: 50px !important
+    margin-bottom: 50px !important
+
+.my55
+    margin-top: 55px !important
+    margin-bottom: 55px !important
+
+.my60
+    margin-top: 60px !important
+    margin-bottom: 60px !important
+
+.my65
+    margin-top: 65px !important
+    margin-bottom: 65px !important
+
+.my70
+    margin-top: 70px !important
+    margin-bottom: 70px !important
+
+.my75
+    margin-top: 75px !important
+    margin-bottom: 75px !important
+
+.my80
+    margin-top: 80px !important
+    margin-bottom: 80px !important
+
+.my85
+    margin-top: 85px !important
+    margin-bottom: 85px !important
+
+.my90
+    margin-top: 90px !important
+    margin-bottom: 90px !important
+
+.my95
+    margin-top: 95px !important
+    margin-bottom: 95px !important
+
+.my100
+    margin-top: 100px !important
+    margin-bottom: 100px !important
+
+.my105
+    margin-top: 105px!important
+    margin-bottom: 105px !important
+
+.my110
+    margin-top: 110px!important
+    margin-bottom: 110px !important
+
+.my115
+    margin-top: 115px!important
+    margin-bottom: 115px !important
+
+.my120
+    margin-top: 120px!important
+    margin-bottom: 120px !important
+
+.mlauto
+    margin-left: auto !important
+
+.mrauto
+    margin-right: auto !important
+
+.mxauto
+    margin-left: auto !important
+    margin-right: auto !important
+
+/*** WIDTH **
+
+.w100
+    width: 100px
+
+.w105
+    width: 105px
+
+.w110
+    width: 110px
+
+.w115
+    width: 115px
+
+.w120
+    width: 120px
+
+.w125
+    width: 125px
+
+.w130
+    width: 130px
+
+.w135
+    width: 135px
+
+.w140
+    width: 140px
+
+.w145
+    width: 145px
+
+.w150
+    width: 150px
+
+.w155
+    width: 155px
+
+.w160
+    width: 160px
+
+.w165
+    width: 165px
+
+.w170
+    width: 170px
+
+.w175
+    width: 175px
+
+.w180
+    width: 180px
+
+.w185
+    width: 185px
+
+.w190
+    width: 190px
+
+.w195
+    width: 195px
+
+.w200
+    width: 200px
+
+.w205
+    width: 205px
+
+.w210
+    width: 210px
+
+.w215
+    width: 215px
+
+.w220
+    width: 220px
+
+.w225
+    width: 225px
+
+.w230
+    width: 230px
+
+.w235
+    width: 235px
+
+.w240
+    width: 240px
+
+.w245
+    width: 245px
+
+.w250
+    width: 250px
+
+.w255
+    width: 255px
+
+.w260
+    width: 260px
+
+.w265
+    width: 265px
+
+.w270
+    width: 270px
+
+.w275
+    width: 275px
+
+.w280
+    width: 280px
+
+.w285
+    width: 285px
+
+.w290
+    width: 290px
+
+.w295
+    width: 295px
+
+.w300
+    width: 300px
+
+.w305
+    width: 305px
+
+.w310
+    width: 310px
+
+.w315
+    width: 315px
+
+.w320
+    width: 320px
+
+.w325
+    width: 325px
+
+.w330
+    width: 330px
+
+.w335
+    width: 335px
+
+.w340
+    width: 340px
+
+.w345
+    width: 345px
+
+.w350
+    width: 350px
+
+.w355
+    width: 355px
+
+.w360
+    width: 360px
+
+.w365
+    width: 365px
+
+.w370
+    width: 370px
+
+.w375
+    width: 375px
+
+.w380
+    width: 380px
+
+.w385
+    width: 385px
+
+.w390
+    width: 390px
+
+.w395
+    width: 395px
+
+.w400
+    width: 400px
+
+.w405
+    width: 405px
+
+.w410
+    width: 410px
+
+.w415
+    width: 415px
+
+.w420
+    width: 420px
+
+.w425
+    width: 425px
+
+.w430
+    width: 430px
+
+.w435
+    width: 435px
+
+.w440
+    width: 440px
+
+.w445
+    width: 445px
+
+.w450
+    width: 450px
+
+.w455
+    width: 455px
+
+.w460
+    width: 460px
+
+.w465
+    width: 465px
+
+.w470
+    width: 470px
+
+.w475
+    width: 475px
+
+.w480
+    width: 480px
+
+.w485
+    width: 485px
+
+.w490
+    width: 490px
+
+.w495
+    width: 495px
+
+.w500
+    width: 500px
+
+.w505
+    width: 505px
+
+.w510
+    width: 510px
+
+.w515
+    width: 515px
+
+.w520
+    width: 520px
+
+.w525
+    width: 525px
+
+.w530
+    width: 530px
+
+.w535
+    width: 535px
+
+.w540
+    width: 540px
+
+.w545
+    width: 545px
+
+.w550
+    width: 550px
+
+.w555
+    width: 555px
+
+.w560
+    width: 560px
+
+.w565
+    width: 565px
+
+.w570
+    width: 570px
+
+.w575
+    width: 575px
+
+.w580
+    width: 580px
+
+.w585
+    width: 585px
+
+.w590
+    width: 590px
+
+.w595
+    width: 595px
+
+.w600
+    max-width: 600px
+    width: 100%
+    margin: auto
+
+.w605
+    width: 605px
+
+.w610
+    width: 610px
+
+.w615
+    width: 615px
+
+.w620
+    width: 620px
+
+.w625
+    width: 625px
+
+.w630
+    width: 630px
+
+.w635
+    width: 635px
+
+.w640
+    width: 640px
+
+.w645
+    width: 645px
+
+.w650
+    width: 650px
+
+.w655
+    width: 655px
+
+.w660
+    width: 660px
+
+.w665
+    width: 665px
+
+.w670
+    width: 670px
+
+.w675
+    width: 675px
+
+.w680
+    width: 680px
+
+.w685
+    width: 685px
+
+.w690
+    width: 690px
+
+.w695
+    width: 695px
+
+.w700
+    width: 700px
+
+.w705
+    width: 705px
+
+.w710
+    width: 710px
+
+.w715
+    width: 715px
+
+.w720
+    width: 720px
+
+.w725
+    width: 725px
+
+.w730
+    width: 730px
+
+.w735
+    width: 735px
+
+.w740
+    width: 740px
+
+.w745
+    width: 745px
+
+.w750
+    width: 750px
+
+.w755
+    width: 755px
+
+.w760
+    width: 760px
+
+.w765
+    width: 765px
+
+.w770
+    width: 770px
+
+.w775
+    width: 775px
+
+.w780
+    width: 780px
+
+.w785
+    width: 785px
+
+.w790
+    width: 790px
+
+.w795
+    width: 795px
+
+.w800
+    width: 100%
+    max-width: 800px
+    margin: auto
+
+.w805
+    width: 805px
+
+.w810
+    width: 810px
+
+.w815
+    width: 815px
+
+.w820
+    width: 820px
+
+.w825
+    width: 825px
+
+.w830
+    width: 830px
+
+.w835
+    width: 835px
+
+.w840
+    width: 840px
+
+.w845
+    width: 845px
+
+.w850
+    width: 100%
+    margin: auto
+    max-width: 850px
+
+.w855
+    width: 855px
+
+.w860
+    width: 860px
+
+.w865
+    width: 865px
+
+.w870
+    width: 870px
+
+.w875
+    width: 875px
+
+.w880
+    width: 880px
+
+.w885
+    width: 885px
+
+.w890
+    width: 890px
+
+.w895
+    width: 895px
+
+.w900
+    max-width: 900px
+    width: 100%
+    margin: auto
+
+.w905
+    width: 905px
+
+.w910
+    width: 910px
+
+.w915
+    width: 915px
+
+.w920
+    width: 920px
+
+.w925
+    width: 925px
+
+.w930
+    width: 930px
+
+.w935
+    width: 935px
+
+.w940
+    width: 940px
+
+.w945
+    width: 945px
+
+.w950
+    width: 950px
+
+.w955
+    width: 955px
+
+.w960
+    width: 960px
+
+.w1k
+    width: 100%
+    max-width: 1000px
+    margin: 0 auto
+
+.w1k160
+    width: 100%
+    max-width: 1160px
+    margin: 0 auto
+
+.w1k2
+    width: 100%
+    max-width: 1200px
+    margin: 0 auto
+
+.w1
+    width: 100%
+
+.wfull
+    width: 100%
+
+.wauto
+    width: auto
+
+.height
+
+    &50
+        height: 50px
+
+    &100
+        height: 100px
+
+    &150
+        height: 150px
+
+    &180
+        height: 180px
+
+    &200
+        height: 200px
+
+    &220
+        height: 220px
+
+    &210
+        height: 210px
+
+    &240
+        height: 240px
+
+    &250
+        height: 250px
+
+    &300
+        height: 300px
+
+    &320
+        height: 320px
+
+    &330
+        height: 330px
+
+    &340
+        height: 300px
+
+    &350
+        height: 350px
+
+    &360
+        height: 360px
+
+    &380
+        height: 360px
+
+    &400
+        height: 400px
+
+    &420
+        height: 420px
+
+    &440
+        height: 440px
+
+    &450
+        height: 450px
+
+    &460
+        height: 460px
+
+    &480
+        height: 480px
+
+    &500
+        height: 500px
+
+    &540
+        height: 540px
+
+    &600
+        height: 600px
+
+    &640
+        height: 640px
+
+.hfull
+    height: 100%
+
+.hauto
+    height: auto
+
+.center
+    margin-left: auto !important
+    margin-right: auto !important
+
+/*** ALIGN **
+
+.tc
+    text-align: center
+
+.tr
+    text-align: right
+
+.tl
+    text-align: left
+
+img
+    max-width: 100%
+
+/*** Center middle **
+
+.ce
+    position: absolute
+    top: 50%
+    left: 50%
+    -webkit-transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%)
+
+.vegas-animation-mykenburns
+    -webkit-animation: mykenburns cubic-bezier(0, 0, 0.58, 1) 1s
+    animation: mykenburns cubic-bezier(0, 0, 0.58, 1) 1s
+
+@-webkit-keyframes mykenburns
+  0%
+    -webkit-transform: scale(1.2) translate(0, -5%)
+    transform: scale(1.2) translate(0, -5%)
+
+  100%
+    -webkit-transform: scale(1) translate(0, 0)
+    transform: scale(1) translate(0, 0)
+
+@keyframes mykenburns
+    0%
+        -webkit-transform: scale(1.2) translate(0, -5%)
+        transform: scale(1.2) translate(0, -5%)
+
+    100%
+        -webkit-transform: scale(1) translate(0, 0)
+        transform: scale(1) translate(0, 0)
+
+#Y_sclorebox
+    position: absolute
+    bottom: 0
+    right: 50px
+    z-index: 100
+
+#Y_sclore
+    max-width: 35px
+    margin: 0 auto
+    display: flex
+    align-items: flex-start
+
+    div
+        background: #fff
+        height: 172px
+        display: block
+        width: 1px
+
+    span
+        display: block
+        margin: 0 auto
+        -webkit-animation: sdb 1.5s infinite
+        animation: sdb 1.5s infinite
+        text-align: center
+        -webkit-box-sizing: border-box
+        box-sizing: border-box
+
+        /* padding-left: 13px;
+        background: #c71c20
+        width: 2px
+        height: 20px
+
+    p
+        text-align: center
+        color: #fff
+        margin-top: 17px
+        margin-left: -6px
+        z-index: 99
+        font-size: 11px
+        letter-spacing: 2px
+
+        /* font-weight: bold;
+        -webkit-transform: rotate(90deg)
+        -moz-transform: rotate(90deg)
+        -ms-transform: rotate(90deg)
+        -o-transform: rotate(90deg)
+        transform: rotate(90deg)
+
+@-webkit-keyframes sdb
+  0%
+    -webkit-transform: rotate(0deg) translate(0, 0)
+    opacity: 1
+
+  50%
+    opacity: 1
+
+  100%
+    -webkit-transform: rotate(0deg) translate(0, 127px)
+    opacity: 1
+
+@keyframes sdb
+    0%
+        -webkit-transform: rotate(0deg) translate(0, 0)
+        transform: rotate(0deg) translate(0, 0)
+        opacity: 1
+
+    50%
+        opacity: 1
+
+    100%
+        -webkit-transform: rotate(0deg) translate(0, 127px)
+        transform: rotate(0deg) translate(0, 127px)
+        opacity: 1
+
+.ibg
+    text-indent: 100%
+    white-space: nowrap
+    overflow: hidden
+    background-repeat: no-repeat
+    background-position: center
+    -webkit-box-sizing: content-box
+    box-sizing: content-box
+
+.l-flex
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+
+.f-ce
+    -ms-flex-wrap: wrap
+    flex-wrap: wrap
+    -webkit-box-pack: center
+    -ms-flex-pack: center
+    justify-content: center
+    -webkit-box-align: center
+    -ms-flex-align: center
+    align-items: center
+    -ms-flex-line-pack: center
+    align-content: center
+
+.l-2
+    width: 50%
+
+.l-3
+    width: calc(100% / 3)
+
+.l-4
+    width: 25%
+
+.l-5
+    width: 20%
+
+.p-delay_1s
+    -webkit-animation-delay: 0.1s !important
+    animation-delay: 0.1s !important
+
+.p-delay_2s
+    -webkit-animation-delay: 0.2s !important
+    animation-delay: 0.2s !important
+
+.p-delay_3s
+    -webkit-animation-delay: 0.3s !important
+    animation-delay: 0.3s !important
+
+.p-delay_4s
+    -webkit-animation-delay: 0.4s !important
+    animation-delay: 0.4s !important
+
+.p-delay_5s
+    -webkit-animation-delay: 0.5s !important
+    animation-delay: 0.5s !important
+
+.p-delay_6s
+    -webkit-animation-delay: 0.6s !important
+    animation-delay: 0.6s !important
+
+.p-delay_7s
+    -webkit-animation-delay: 0.7s !important
+    animation-delay: 0.7s !important
+
+.p-delay_8s
+    -webkit-animation-delay: 0.8s !important
+    animation-delay: 0.8s !important
+
+.p-delay_9s
+    -webkit-animation-delay: 0.9s !important
+    animation-delay: 0.9s !important
+
+.p-delay_10s
+    -webkit-animation-delay: 1s !important
+    animation-delay: 1s !important
+
+.p-delay_11s
+    -webkit-animation-delay: 1.1s !important
+    animation-delay: 1.1s !important
+
+.p-delay_12s
+    -webkit-animation-delay: 1.2s !important
+    animation-delay: 1.2s !important
+
+.p-delay_13s
+    -webkit-animation-delay: 1.3s !important
+    animation-delay: 1.3s !important
+
+.p-delay_14s
+    -webkit-animation-delay: 1.4s !important
+    animation-delay: 1.4s !important
+
+.p-delay_15s
+    -webkit-animation-delay: 1.5s !important
+    animation-delay: 1.5s !important
+
+.p-delay_16s
+    -webkit-animation-delay: 1.6s !important
+    animation-delay: 1.6s !important
+
+.p-delay_17s
+    -webkit-animation-delay: 1.7s !important
+    animation-delay: 1.7s !important
+
+.p-delay_18s
+    -webkit-animation-delay: 1.8s !important
+    animation-delay: 1.8s !important
+
+.p-delay_19s
+    -webkit-animation-delay: 1.9s !important
+    animation-delay: 1.9s !important
+
+.p-delay_20s
+    -webkit-animation-delay: 2s !important
+    animation-delay: 2s !important
+
+.p-ani-fadeInUp
+    -webkit-animation: p-ani-fadeInUp 1.5s ease 0s both 1 normal
+    animation: p-ani-fadeInUp 1.5s ease 0s both 1 normal
+    visibility: visible !important
+
+.p-ani-fadeIn
+    -webkit-animation: p-ani-fadeIn 1.5s ease 0s both 1 normal
+    animation: p-ani-fadeIn 1.5s ease 0s both 1 normal
+    visibility: visible !important
+
+.p-ani-fadeInBlur
+    -webkit-animation: p-ani-fadeInBlur 2s ease 0s backwards 1 normal
+    animation: p-ani-fadeInBlur 2s ease 0s backwards 1 normal
+    visibility: visible !important
+
+.p-ani-fadeInScale
+    -webkit-animation: p-ani-fadeInScale 2s ease 0s backwards 1 normal
+    animation: p-ani-fadeInScale 2s ease 0s backwards 1 normal
+    visibility: visible !important
+
+.p-ani-fadeInLeft
+    -webkit-animation: p-ani-fadeInLeft 1.5s ease 0s backwards 1 normal
+    animation: p-ani-fadeInLeft 1.5s ease 0s backwards 1 normal
+    visibility: visible !important
+
+.p-ani-fadeOut
+    -webkit-animation: p-ani-fadeOut 1.5s ease 0s both 1 normal
+    animation: p-ani-fadeOut 1.5s ease 0s both 1 normal
+    visibility: hidden !important
+
+.p-ani-width
+    -webkit-animation-name: p-ani-width
+    animation-name: p-ani-width
+    -webkit-animation-duration: 1s
+    animation-duration: 1s
+    -webkit-animation-timing-function: ease
+    animation-timing-function: ease
+    -webkit-animation-delay: 0s
+    animation-delay: 0s
+    -webkit-animation-iteration-count: 1
+    animation-iteration-count: 1
+    -webkit-animation-direction: normal
+    animation-direction: normal
+    -webkit-animation-fill-mode: both
+    animation-fill-mode: both
+    -webkit-animation-play-state: running
+    animation-play-state: running
+    visibility: visible !important
+
+.p-ani-height
+    -webkit-animation: p-ani-height 1s ease 0s both 1 normal
+    animation: p-ani-height 1s ease 0s both 1 normal
+    visibility: visible !important
+
+.p-animation__dummybox-gray
+    position: absolute
+    top: 0
+    left: 0
+    z-index: -1
+    background-color: #eee
+    width: 100%
+    height: 100%
+
+.p-animation__dummybox-white
+    position: absolute
+    top: 0
+    left: 0
+    z-index: -1
+    background-color: #fff
+    width: 100%
+    height: 100%
+
+.p-ani-slide-scaleUp
+    -webkit-animation-name: p-ani-slide-scaleUp
+    animation-name: p-ani-slide-scaleUp
+    -webkit-animation-duration: 15s
+    animation-duration: 15s
+    -webkit-animation-timing-function: linear
+    animation-timing-function: linear
+    -webkit-animation-delay: 0s
+    animation-delay: 0s
+    -webkit-animation-iteration-count: 1
+    animation-iteration-count: 1
+    -webkit-animation-direction: normal
+    animation-direction: normal
+    -webkit-animation-fill-mode: both
+    animation-fill-mode: both
+    -webkit-animation-play-state: running
+    animation-play-state: running
+
+@-webkit-keyframes p-ani-fadeIn
+  0%
+    opacity: 0
+
+  100%
+    opacity: 1
+
+@keyframes p-ani-fadeIn
+    0%
+        opacity: 0
+
+    100%
+        opacity: 1
+
+@-webkit-keyframes p-ani-fadeOut
+  0%
+    opacity: 1
+
+  100%
+    display: none
+    opacity: 0.5
+
+@keyframes p-ani-fadeOut
+    0%
+        opacity: 1
+
+    100%
+        display: none
+        opacity: 0.5
+
+@-webkit-keyframes p-ani-fadeInUp
+  0%
+    opacity: 0
+    -webkit-transform: translateY(20px)
+    transform: translateY(20px)
+
+  100%
+    opacity: 1
+    -webkit-transform: none
+    transform: none
+
+@keyframes p-ani-fadeInUp
+    0%
+        opacity: 0
+        -webkit-transform: translateY(20px)
+        transform: translateY(20px)
+
+    100%
+        opacity: 1
+        -webkit-transform: none
+        transform: none
+
+@-webkit-keyframes p-ani-fadeInBlur
+  0%
+    opacity: 0
+    -webkit-filter: blur(5px)
+    filter: blur(5px)
+    -webkit-transform: scale(1.03)
+    transform: scale(1.03)
+
+  100%
+    opacity: 1
+    -webkit-filter: none
+    filter: none
+    -webkit-transform: none
+    transform: none
+
+@keyframes p-ani-fadeInBlur
+    0%
+        opacity: 0
+        -webkit-filter: blur(5px)
+        filter: blur(5px)
+        -webkit-transform: scale(1.03)
+        transform: scale(1.03)
+
+    100%
+        opacity: 1
+        -webkit-filter: none
+        filter: none
+        -webkit-transform: none
+        transform: none
+
+@-webkit-keyframes p-ani-fadeInScale
+  0%
+    opacity: 0
+    -webkit-transform: scale(1.04)
+    transform: scale(1.04)
+
+  100%
+    opacity: 1
+    -webkit-transform: none
+    transform: none
+
+@keyframes p-ani-fadeInScale
+    0%
+        opacity: 0
+        -webkit-transform: scale(1.04)
+        transform: scale(1.04)
+
+    100%
+        opacity: 1
+        -webkit-transform: none
+        transform: none
+
+@-webkit-keyframes p-ani-fadeInLeft
+  0%
+    opacity: 0
+    -webkit-transform: translateX(-20px)
+    transform: translateX(-20px)
+
+  100%
+    opacity: 1
+    -webkit-transform: none
+    transform: none
+
+@keyframes p-ani-fadeInLeft
+    0%
+        opacity: 0
+        -webkit-transform: translateX(-20px)
+        transform: translateX(-20px)
+
+    100%
+        opacity: 1
+        -webkit-transform: none
+        transform: none
+
+@-webkit-keyframes p-ani-width
+  0%
+    width: 0%
+
+  100%
+    width: 100%
+
+@keyframes p-ani-width
+    0%
+        width: 0%
+
+    100%
+        width: 100%
+
+@-webkit-keyframes p-ani-height
+  0%
+    height: 0%
+
+  100%
+    height: 100%
+
+@keyframes p-ani-height
+    0%
+        height: 0%
+
+    100%
+        height: 100%
+
+@-webkit-keyframes p-ani-slide-scaleUp
+//   0%
+
+  100%
+    -webkit-transform: scaleX(1.2) scaleY(1.2)
+    transform: scaleX(1.2) scaleY(1.2)
+
+@keyframes p-ani-slide-scaleUp
+    // 0%
+
+    100%
+        -webkit-transform: scaleX(1.2) scaleY(1.2)
+        transform: scaleX(1.2) scaleY(1.2)
+
+/* new style */
+
+.radius
+
+    &2
+        border-radius: 2px
+
+        &.radius-left
+            border-radius: 0 2px 2px 0
+
+        &.radius-right
+            border-radius: 2px 0 0 2px
+
+    &5
+        border-radius: 5px
+
+        &.radius-left
+            border-radius: 0 5px 5px 0
+
+        &.radius-right
+            border-radius: 5px 0 0 5px
+
+    &8
+        border-radius: 8px
+
+        &.radius-left
+            border-radius: 0 8px 8px 0
+
+        &.radius-right
+            border-radius: 8px 0 0 8px
+
+    &10
+        border-radius: 10px
+
+        &.radius-left
+            border-radius: 0 10px 10px 0
+
+        &.radius-right
+            border-radius: 10px 0 0 10px
+
+    &20
+        border-radius: 20px
+
+        &.radius-left
+            border-radius: 0 20px 20px 0
+
+        &.radius-right
+            border-radius: 20px 0 0 20px
+
+    &cl
+        border-radius: 50%
+
+    &0
+        border-radius: 0
+
+        &i
+            border-radius: 0!important
+
+.bd
+    border: 1px solid !important
+
+.bdtop
+    border-top: 1px solid !important
+
+.bdright
+    border-right: 1px solid !important
+
+.bdbottom
+    border-bottom: 1px solid !important
+
+.bdleft
+    border-left: 1px solid !important
+
+.bd0
+    border: 0 !important
+
+.bdtop0
+    border-top: 0 !important
+
+.bdright0
+    border-right: 0 !important
+
+.bdbottom0
+    border-bottom: 0 !important
+
+.bdleft0
+    border-left: 0 !important
+
+.d-none
+    display: none !important
+
+.d-inline-block
+    display: inline-block !important
+
+.d-block
+    display: block !important
+
+.d-flex
+    display: flex !important
+
+.d-inline-flex
+    display: inline-flex !important
+
+.flex-row
+    flex-direction: row !important
+
+.flex-column
+    flex-direction: column !important
+
+.flex-row-reverse
+    flex-direction: row-reverse !important
+
+.flex-column-reverse
+    flex-direction: column-reverse !important
+
+.flex-wrap
+    flex-wrap: wrap !important
+
+.flex-nowrap
+    flex-wrap: nowrap !important
+
+.justify-content-start
+    justify-content: flex-start !important
+
+.justify-content-end
+    justify-content: flex-end !important
+
+.justify-content-center
+    justify-content: center !important
+
+.justify-content-between
+    justify-content: space-between !important
+
+.justify-content-around
+    justify-content: space-around !important
+
+.align-items-start
+    align-items: flex-start !important
+
+.align-items-end
+    align-items: flex-end !important
+
+.align-items-center
+    align-items: center !important
+
+.align-items-baseline
+    align-items: baseline !important
+
+.align-items-stretch
+    align-items: stretch !important
+
+.align-content-start
+    align-content: flex-start !important
+
+.align-content-end
+    align-content: flex-end !important
+
+.align-content-center
+    align-content: center !important
+
+.align-content-between
+    align-content: space-between !important
+
+.align-content-around
+    align-content: space-around !important
+
+.align-content-stretch
+    align-content: stretch !important
+
+.align-self-auto
+    align-self: auto !important
+
+.align-self-start
+    align-self: flex-start !important
+
+.align-self-end
+    align-self: flex-end !important
+
+.align-self-center
+    align-self: center !important
+
+.align-self-baseline
+    align-self: baseline !important
+
+.align-self-stretch
+    align-self: stretch !important
+
+.justify
+    text-align: justify !important
+
+.lowercase
+    text-transform: lowercase !important
+
+.uppercase
+    text-transform: uppercase !important
+
+.capitalize
+    text-transform: capitalize !important
+
+.light
+    font-weight: 300 !important
+
+.normal
+    font-weight: 500 !important
+
+.bold
+    font-weight: 700 !important
+
+.italic
+    font-style: italic !important
+
+.visible
+    visibility: visible !important
+
+.invisible
+    visibility: hidden !important
+
+/* responsive master */
+
+@media only screen and (max-width: 992px)
+    .text8tb
+        font-size: 0.8rem!important
+
+    .text9tb
+        font-size: 0.9rem!important
+
+    .text10tb
+        font-size: 1rem!important
+
+    .text11tb
+        font-size: 1.1rem!important
+
+    .text12tb
+        font-size: 1.2rem!important
+
+    .text13tb
+        font-size: 1.3rem!important
+
+    .text14tb
+        font-size: 1.4rem!important
+
+    .text15tb
+        font-size: 1.5rem!important
+
+    .text16tb
+        font-size: 1.6rem!important
+
+    .text18tb
+        font-size: 1.8rem!important
+
+    .text20tb
+        font-size: 2rem!important
+
+    .text22tb
+        font-size: 2.2rem!important
+
+    .text24tb
+        font-size: 2.4rem!important
+
+    .text25tb
+        font-size: 2.5rem!important
+
+    .text26tb
+        font-size: 2.6rem!important
+
+    .text28tb
+        font-size: 2.8rem!important
+
+    .text30tb
+        font-size: 3rem!important
+
+    .text32tb
+        font-size: 3.2rem!important
+
+    .text34tb
+        font-size: 3.4rem!important
+
+    .text36tb
+        font-size: 3.6rem!important
+
+    .text38tb
+        font-size: 3.8rem!important
+
+    .text40tb
+        font-size: 4rem!important
+
+    .text42tb
+        font-size: 4.2rem!important
+
+    .text43tb
+        font-size: 4.3rem!important
+
+    .text44tb
+        font-size: 4.4rem!important
+
+    .text45tb
+        font-size: 4.5rem!important
+
+    .text46tb
+        font-size: 4.6rem!important
+
+    .text48tb
+        font-size: 4.8rem!important
+
+    .text50tb
+        font-size: 5rem!important
+
+    .text52tb
+        font-size: 5.2rem!important
+
+    .text54tb
+        font-size: 5.4rem!important
+
+    .text58tb
+        font-size: 5.8rem!important
+
+    .text60tb
+        font-size: 6rem!important
+
+    .text62tb
+        font-size: 6.2rem!important
+
+    .text64tb
+        font-size: 6.4rem!important
+
+    .text68tb
+        font-size: 6.8rem!important
+
+    .text70tb
+        font-size: 7rem!important
+
+    .text72tb
+        font-size: 7.2rem!important
+
+    .text74tb
+        font-size: 7.4rem!important
+
+    .text80tb
+        font-size: 8rem!important
+
+    .text82tb
+        font-size: 8.2rem!important
+
+    .text84tb
+        font-size: 8.4rem!important
+
+    .text90tb
+        font-size: 9rem!important
+
+    .text91tb
+        font-size: 9.1rem!important
+
+    .text96tb
+        font-size: 9.6rem!important
+
+    .p0tb
+        padding: 0 !important
+
+    .p1tb
+        padding: 1px !important
+
+    .p2tb
+        padding: 2px !important
+
+    .p3tb
+        padding: 3px !important
+
+    .p4tb
+        padding: 4px !important
+
+    .p5tb
+        padding: 5px !important
+
+    .p6tb
+        padding: 6px !important
+
+    .p7tb
+        padding: 7px !important
+
+    .p8tb
+        padding: 8px !important
+
+    .p9tb
+        padding: 9px !important
+
+    .p10tb
+        padding: 10px !important
+
+    .p15tb
+        padding: 15px !important
+
+    .p20tb
+        padding: 20px !important
+
+    .p25tb
+        padding: 25px !important
+
+    .p30tb
+        padding: 30px !important
+
+    .p35tb
+        padding: 35px !important
+
+    .p40tb
+        padding: 40px !important
+
+    .p45tb
+        padding: 45px !important
+
+    .p50tb
+        padding: 50px !important
+
+    .p55tb
+        padding: 55px !important
+
+    .p60tb
+        padding: 60px !important
+
+    .p65tb
+        padding: 65px !important
+
+    .p70tb
+        padding: 70px !important
+
+    .p75tb
+        padding: 75px !important
+
+    .p80tb
+        padding: 80px !important
+
+    .p85tb
+        padding: 85px !important
+
+    .p90tb
+        padding: 90px !important
+
+    .p95tb
+        padding: 95px !important
+
+    .p100tb
+        padding: 100px !important
+
+    .p105tb
+        padding: 105px !important
+
+    .p110tb
+        padding: 110px !important
+
+    .p115tb
+        padding: 115px !important
+
+    .p120tb
+        padding: 120px !important
+
+    .pt0tb
+        padding-top: 0 !important
+
+    .pt1tb
+        padding-top: 1px !important
+
+    .pt2tb
+        padding-top: 2px !important
+
+    .pt3tb
+        padding-top: 3px !important
+
+    .pt4tb
+        padding-top: 4px !important
+
+    .pt5tb
+        padding-top: 5px !important
+
+    .pt6tb
+        padding-top: 6px !important
+
+    .pt7tb
+        padding-top: 7px !important
+
+    .pt8tb
+        padding-top: 8px !important
+
+    .pt9tb
+        padding-top: 9px !important
+
+    .pt10tb
+        padding-top: 10px !important
+
+    .pt15tb
+        padding-top: 15px !important
+
+    .pt20tb
+        padding-top: 20px !important
+
+    .pt25tb
+        padding-top: 25px !important
+
+    .pt30tb
+        padding-top: 30px !important
+
+    .pt35tb
+        padding-top: 35px !important
+
+    .pt40tb
+        padding-top: 40px !important
+
+    .pt45tb
+        padding-top: 45px !important
+
+    .pt50tb
+        padding-top: 50px !important
+
+    .pt55tb
+        padding-top: 55px !important
+
+    .pt60tb
+        padding-top: 60px !important
+
+    .pt65tb
+        padding-top: 65px !important
+
+    .pt70tb
+        padding-top: 70px !important
+
+    .pt75tb
+        padding-top: 75px !important
+
+    .pt80tb
+        padding-top: 80px !important
+
+    .pt85tb
+        padding-top: 85px !important
+
+    .pt90tb
+        padding-top: 90px !important
+
+    .pt95tb
+        padding-top: 95px !important
+
+    .pt100tb
+        padding-top: 100px !important
+
+    .pt105tb
+        padding-top: 105px !important
+
+    .pt110tb
+        padding-top: 110px !important
+
+    .pt115tb
+        padding-top: 115px !important
+
+    .pt120tb
+        padding-top: 120px !important
+
+    .pr0tb
+        padding-right: 0 !important
+
+    .pr1tb
+        padding-right: 1px !important
+
+    .pr2tb
+        padding-right: 2px !important
+
+    .pr3tb
+        padding-right: 3px !important
+
+    .pr4tb
+        padding-right: 4px !important
+
+    .pr5tb
+        padding-right: 5px !important
+
+    .pr6tb
+        padding-right: 6px !important
+
+    .pr7tb
+        padding-right: 7px !important
+
+    .pr8tb
+        padding-right: 8px !important
+
+    .pr9tb
+        padding-right: 9px !important
+
+    .pr10tb
+        padding-right: 10px !important
+
+    .pr15tb
+        padding-right: 15px !important
+
+    .pr20tb
+        padding-right: 20px !important
+
+    .pr25tb
+        padding-right: 25px !important
+
+    .pr30tb
+        padding-right: 30px !important
+
+    .pr35tb
+        padding-right: 35px !important
+
+    .pr40tb
+        padding-right: 40px !important
+
+    .pr45tb
+        padding-right: 45px !important
+
+    .pr50tb
+        padding-right: 50px !important
+
+    .pr55tb
+        padding-right: 55px !important
+
+    .pr60tb
+        padding-right: 60px !important
+
+    .pr65tb
+        padding-right: 65px !important
+
+    .pr70tb
+        padding-right: 70px !important
+
+    .pr75tb
+        padding-right: 75px !important
+
+    .pr80tb
+        padding-right: 80px !important
+
+    .pr85tb
+        padding-right: 85px !important
+
+    .pr90tb
+        padding-right: 90px !important
+
+    .pr95tb
+        padding-right: 95px !important
+
+    .pr100tb
+        padding-right: 100px !important
+
+    .pr105tb
+        padding-right: 105px !important
+
+    .pr110tb
+        padding-right: 110px !important
+
+    .pr115tb
+        padding-right: 115px !important
+
+    .pr120tb
+        padding-right: 120px !important
+
+    .pl0tb
+        padding-left: 0 !important
+
+    .pl1tb
+        padding-left: 1px !important
+
+    .pl2tb
+        padding-left: 2px !important
+
+    .pl3tb
+        padding-left: 3px !important
+
+    .pl4tb
+        padding-left: 4px !important
+
+    .pl5tb
+        padding-left: 5px !important
+
+    .pl6tb
+        padding-left: 6px !important
+
+    .pl7tb
+        padding-left: 7px !important
+
+    .pl8tb
+        padding-left: 8px !important
+
+    .pl9tb
+        padding-left: 9px !important
+
+    .pl10tb
+        padding-left: 10px !important
+
+    .pl15tb
+        padding-left: 15px !important
+
+    .pl20tb
+        padding-left: 20px !important
+
+    .pl25tb
+        padding-left: 25px !important
+
+    .pl30tb
+        padding-left: 30px !important
+
+    .pl35tb
+        padding-left: 35px !important
+
+    .pl40tb
+        padding-left: 40px !important
+
+    .pl45tb
+        padding-left: 45px !important
+
+    .pl50tb
+        padding-left: 50px !important
+
+    .pl55tb
+        padding-left: 55px !important
+
+    .pl60tb
+        padding-left: 60px !important
+
+    .pl65tb
+        padding-left: 65px !important
+
+    .pl70tb
+        padding-left: 70px !important
+
+    .pl75tb
+        padding-left: 75px !important
+
+    .pl80tb
+        padding-left: 80px !important
+
+    .pl85tb
+        padding-left: 85px !important
+
+    .pl90tb
+        padding-left: 90px !important
+
+    .pl95tb
+        padding-left: 95px !important
+
+    .pl100tb
+        padding-left: 100px !important
+
+    .pl105tb
+        padding-left: 105px !important
+
+    .pl110tb
+        padding-left: 110px !important
+
+    .pl115tb
+        padding-left: 115px !important
+
+    .pl120tb
+        padding-left: 120px !important
+
+    .pb0tb
+        padding-bottom: 0 !important
+
+    .pb1tb
+        padding-bottom: 1px !important
+
+    .pb2tb
+        padding-bottom: 2px !important
+
+    .pb3tb
+        padding-bottom: 3px !important
+
+    .pb4tb
+        padding-bottom: 4px !important
+
+    .pb5tb
+        padding-bottom: 5px !important
+
+    .pb6tb
+        padding-bottom: 6px !important
+
+    .pb7tb
+        padding-bottom: 7px !important
+
+    .pb8tb
+        padding-bottom: 8px !important
+
+    .pb9tb
+        padding-bottom: 9px !important
+
+    .pb10tb
+        padding-bottom: 10px !important
+
+    .pb15tb
+        padding-bottom: 15px !important
+
+    .pb20tb
+        padding-bottom: 20px !important
+
+    .pb25tb
+        padding-bottom: 25px !important
+
+    .pb30tb
+        padding-bottom: 30px !important
+
+    .pb35tb
+        padding-bottom: 35px !important
+
+    .pb40tb
+        padding-bottom: 40px !important
+
+    .pb45tb
+        padding-bottom: 45px !important
+
+    .pb50tb
+        padding-bottom: 50px !important
+
+    .pb55tb
+        padding-bottom: 55px !important
+
+    .pb60tb
+        padding-bottom: 60px !important
+
+    .pb65tb
+        padding-bottom: 65px !important
+
+    .pb70tb
+        padding-bottom: 70px !important
+
+    .pb75tb
+        padding-bottom: 75px !important
+
+    .pb80tb
+        padding-bottom: 80px !important
+
+    .pb85tb
+        padding-bottom: 85px !important
+
+    .pb90tb
+        padding-bottom: 90px !important
+
+    .pb95tb
+        padding-bottom: 95px !important
+
+    .pb100tb
+        padding-bottom: 100px !important
+
+    .pb105tb
+        padding-bottom: 105px !important
+
+    .pb110tb
+        padding-bottom: 110px !important
+
+    .pb115tb
+        padding-bottom: 115px !important
+
+    .pb120tb
+        padding-bottom: 120px !important
+
+    .px0tb
+        padding-left: 0 !important
+        padding-right: 0 !important
+
+    .px1tb
+        padding-left: 1px !important
+        padding-right: 1px !important
+
+    .px2tb
+        padding-left: 2px !important
+        padding-right: 2px !important
+
+    .px3tb
+        padding-left: 3px !important
+        padding-right: 3px !important
+
+    .px4tb
+        padding-left: 4px !important
+        padding-right: 4px !important
+
+    .px5tb
+        padding-left: 5px !important
+        padding-right: 5px !important
+
+    .px6tb
+        padding-left: 6px !important
+        padding-right: 6px !important
+
+    .px7tb
+        padding-left: 7px !important
+        padding-right: 7px !important
+
+    .px8tb
+        padding-left: 8px !important
+        padding-right: 8px !important
+
+    .px9tb
+        padding-left: 9px !important
+        padding-right: 9px !important
+
+    .px10tb
+        padding-left: 10px !important
+        padding-right: 10px !important
+
+    .px15tb
+        padding-left: 15px !important
+        padding-right: 15px !important
+
+    .px20tb
+        padding-left: 20px !important
+        padding-right: 20px !important
+
+    .px25tb
+        padding-left: 25px !important
+        padding-right: 25px !important
+
+    .px30tb
+        padding-left: 30px !important
+        padding-right: 30px !important
+
+    .px35tb
+        padding-left: 35px !important
+        padding-right: 35px !important
+
+    .px40tb
+        padding-left: 40px !important
+        padding-right: 40px !important
+
+    .px45tb
+        padding-left: 45px !important
+        padding-right: 45px !important
+
+    .px50tb
+        padding-left: 50px !important
+        padding-right: 50px !important
+
+    .px55tb
+        padding-left: 55px !important
+        padding-right: 55px !important
+
+    .px60tb
+        padding-left: 60px !important
+        padding-right: 60px !important
+
+    .px65tb
+        padding-left: 65px !important
+        padding-right: 65px !important
+
+    .px70tb
+        padding-left: 70px !important
+        padding-right: 70px !important
+
+    .px75tb
+        padding-left: 75px !important
+        padding-right: 75px !important
+
+    .px80tb
+        padding-left: 80px !important
+        padding-right: 80px !important
+
+    .px85tb
+        padding-left: 85px !important
+        padding-right: 85px !important
+
+    .px90tb
+        padding-left: 90px !important
+        padding-right: 90px !important
+
+    .px95tb
+        padding-left: 95px !important
+        padding-right: 95px !important
+
+    .px100tb
+        padding-left: 100px !important
+        padding-right: 100px !important
+
+    .px105tb
+        padding-left: 105px !important
+        padding-right: 105px !important
+
+    .px110tb
+        padding-left: 110px !important
+        padding-right: 110px !important
+
+    .px115tb
+        padding-left: 115px !important
+        padding-right: 115px !important
+
+    .px120tb
+        padding-left: 120px !important
+        padding-right: 120px !important
+
+    .py0tb
+        padding-top: 0!important
+        padding-bottom: 0 !important
+
+    .py1tb
+        padding-top: 1px!important
+        padding-bottom: 1px !important
+
+    .py2tb
+        padding-top: 2px!important
+        padding-bottom: 2px !important
+
+    .py3tb
+        padding-top: 3px!important
+        padding-bottom: 3px !important
+
+    .py4tb
+        padding-top: 4px!important
+        padding-bottom: 4px !important
+
+    .py5tb
+        padding-top: 5px!important
+        padding-bottom: 5px !important
+
+    .py6tb
+        padding-top: 6px!important
+        padding-bottom: 6px !important
+
+    .py7tb
+        padding-top: 7px!important
+        padding-bottom: 7px !important
+
+    .py8tb
+        padding-top: 8px!important
+        padding-bottom: 8px !important
+
+    .py9tb
+        padding-top: 9px!important
+        padding-bottom: 9px !important
+
+    .py10tb
+        padding-top: 10px!important
+        padding-bottom: 10px !important
+
+    .py15tb
+        padding-top: 15px!important
+        padding-bottom: 15px !important
+
+    .py20tb
+        padding-top: 20px!important
+        padding-bottom: 20px !important
+
+    .py25tb
+        padding-top: 25px!important
+        padding-bottom: 25px !important
+
+    .py30tb
+        padding-top: 30px!important
+        padding-bottom: 30px !important
+
+    .py35tb
+        padding-top: 35px!important
+        padding-bottom: 35px !important
+
+    .py40tb
+        padding-top: 40px!important
+        padding-bottom: 40px !important
+
+    .py45tb
+        padding-top: 45px!important
+        padding-bottom: 45px !important
+
+    .py50tb
+        padding-top: 50px!important
+        padding-bottom: 50px !important
+
+    .py55tb
+        padding-top: 55px!important
+        padding-bottom: 55px !important
+
+    .py60tb
+        padding-top: 60px!important
+        padding-bottom: 60px !important
+
+    .py65tb
+        padding-top: 65px!important
+        padding-bottom: 65px !important
+
+    .py70tb
+        padding-top: 70px!important
+        padding-bottom: 70px !important
+
+    .py75tb
+        padding-top: 75px!important
+        padding-bottom: 75px !important
+
+    .py80tb
+        padding-top: 80px!important
+        padding-bottom: 80px !important
+
+    .py85tb
+        padding-top: 85px!important
+        padding-bottom: 85px !important
+
+    .py90tb
+        padding-top: 90px!important
+        padding-bottom: 90px !important
+
+    .py95tb
+        padding-top: 95px!important
+        padding-bottom: 95px !important
+
+    .py100tb
+        padding-top: 100px!important
+        padding-bottom: 100px !important
+
+    .py105tb
+        padding-top: 105px!important
+        padding-bottom: 105px !important
+
+    .py110tb
+        padding-top: 110px!important
+        padding-bottom: 110px !important
+
+    .py115tb
+        padding-top: 115px!important
+        padding-bottom: 115px !important
+
+    .py120tb
+        padding-top: 120px!important
+        padding-bottom: 120px !important
+
+    .m0tb
+        margin: 0 !important
+
+    .m1tb
+        margin: 1px !important
+
+    .m2tb
+        margin: 2px !important
+
+    .m3tb
+        margin: 3px !important
+
+    .m4tb
+        margin: 4px !important
+
+    .m5tb
+        margin: 5px !important
+
+    .m6tb
+        margin: 6px !important
+
+    .m7tb
+        margin: 7px !important
+
+    .m8tb
+        margin: 8px !important
+
+    .m9tb
+        margin: 9px !important
+
+    .m10tb
+        margin: 10px !important
+
+    .m15tb
+        margin: 15px !important
+
+    .m20tb
+        margin: 20px !important
+
+    .m25tb
+        margin: 25px !important
+
+    .m30tb
+        margin: 30px !important
+
+    .m35tb
+        margin: 35px !important
+
+    .m40tb
+        margin: 40px !important
+
+    .m45tb
+        margin: 45px !important
+
+    .m50tb
+        margin: 50px !important
+
+    .m55tb
+        margin: 55px !important
+
+    .m60tb
+        margin: 60px !important
+
+    .m65tb
+        margin: 65px !important
+
+    .m70tb
+        margin: 70px !important
+
+    .m75tb
+        margin: 75px !important
+
+    .m80tb
+        margin: 80px !important
+
+    .m85tb
+        margin: 85px !important
+
+    .m90tb
+        margin: 90px !important
+
+    .m95tb
+        margin: 95px !important
+
+    .m100tb
+        margin: 100px !important
+
+    .m105tb
+        margin: 105px !important
+
+    .m110tb
+        margin: 110px !important
+
+    .m115tb
+        margin: 115px !important
+
+    .m120tb
+        margin: 120px !important
+
+    .mt0tb
+        margin-top: 0 !important
+
+    .mt1tb
+        margin-top: 1px !important
+
+    .mt2tb
+        margin-top: 2px !important
+
+    .mt3tb
+        margin-top: 3px !important
+
+    .mt4tb
+        margin-top: 4px !important
+
+    .mt5tb
+        margin-top: 5px !important
+
+    .mt6tb
+        margin-top: 6px !important
+
+    .mt7tb
+        margin-top: 7px !important
+
+    .mt8tb
+        margin-top: 8px !important
+
+    .mt9tb
+        margin-top: 9px !important
+
+    .mt10tb
+        margin-top: 10px !important
+
+    .mt15tb
+        margin-top: 15px !important
+
+    .mt20tb
+        margin-top: 20px !important
+
+    .mt25tb
+        margin-top: 25px !important
+
+    .mt30tb
+        margin-top: 30px !important
+
+    .mt35tb
+        margin-top: 35px !important
+
+    .mt40tb
+        margin-top: 40px !important
+
+    .mt45tb
+        margin-top: 45px !important
+
+    .mt50tb
+        margin-top: 50px !important
+
+    .mt55tb
+        margin-top: 55px !important
+
+    .mt60tb
+        margin-top: 60px !important
+
+    .mt65tb
+        margin-top: 65px !important
+
+    .mt70tb
+        margin-top: 70px !important
+
+    .mt75tb
+        margin-top: 75px !important
+
+    .mt80tb
+        margin-top: 80px !important
+
+    .mt85tb
+        margin-top: 85px !important
+
+    .mt90tb
+        margin-top: 90px !important
+
+    .mt95tb
+        margin-top: 95px !important
+
+    .mt100tb
+        margin-top: 100px !important
+
+    .mt105tb
+        margin-top: 105px !important
+
+    .mt110tb
+        margin-top: 110px !important
+
+    .mt115tb
+        margin-top: 115px !important
+
+    .mt120tb
+        margin-top: 120px !important
+
+    .mr0tb
+        margin-right: 0 !important
+
+    .mr1tb
+        margin-right: 1px !important
+
+    .mr2tb
+        margin-right: 2px !important
+
+    .mr3tb
+        margin-right: 3px !important
+
+    .mr4tb
+        margin-right: 4px !important
+
+    .mr5tb
+        margin-right: 5px !important
+
+    .mr6tb
+        margin-right: 6px !important
+
+    .mr7tb
+        margin-right: 7px !important
+
+    .mr8tb
+        margin-right: 8px !important
+
+    .mr9tb
+        margin-right: 9px !important
+
+    .mr10tb
+        margin-right: 10px !important
+
+    .mr15tb
+        margin-right: 15px !important
+
+    .mr20tb
+        margin-right: 20px !important
+
+    .mr25tb
+        margin-right: 25px !important
+
+    .mr30tb
+        margin-right: 30px !important
+
+    .mr35tb
+        margin-right: 35px !important
+
+    .mr40tb
+        margin-right: 40px !important
+
+    .mr45tb
+        margin-right: 45px !important
+
+    .mr50tb
+        margin-right: 50px !important
+
+    .mr55tb
+        margin-right: 55px !important
+
+    .mr60tb
+        margin-right: 60px !important
+
+    .mr65tb
+        margin-right: 65px !important
+
+    .mr70tb
+        margin-right: 70px !important
+
+    .mr75tb
+        margin-right: 75px !important
+
+    .mr80tb
+        margin-right: 80px !important
+
+    .mr85tb
+        margin-right: 85px !important
+
+    .mr90tb
+        margin-right: 90px !important
+
+    .mr95tb
+        margin-right: 95px !important
+
+    .mr100tb
+        margin-right: 100px !important
+
+    .mr105tb
+        margin-right: 105px !important
+
+    .mr110tb
+        margin-right: 110px !important
+
+    .mr115tb
+        margin-right: 115px !important
+
+    .mr120tb
+        margin-right: 120px !important
+
+    .ml0tb
+        margin-left: 0 !important
+
+    .ml1tb
+        margin-left: 1px !important
+
+    .ml2tb
+        margin-left: 2px !important
+
+    .ml3tb
+        margin-left: 3px !important
+
+    .ml4tb
+        margin-left: 4px !important
+
+    .ml5tb
+        margin-left: 5px !important
+
+    .ml6tb
+        margin-left: 6px !important
+
+    .ml7tb
+        margin-left: 7px !important
+
+    .ml8tb
+        margin-left: 8px !important
+
+    .ml9tb
+        margin-left: 9px !important
+
+    .ml10tb
+        margin-left: 10px !important
+
+    .ml15tb
+        margin-left: 15px !important
+
+    .ml20tb
+        margin-left: 20px !important
+
+    .ml25tb
+        margin-left: 25px !important
+
+    .ml30tb
+        margin-left: 30px !important
+
+    .ml35tb
+        margin-left: 35px !important
+
+    .ml40tb
+        margin-left: 40px !important
+
+    .ml45tb
+        margin-left: 45px !important
+
+    .ml50tb
+        margin-left: 50px !important
+
+    .ml55tb
+        margin-left: 55px !important
+
+    .ml60tb
+        margin-left: 60px !important
+
+    .ml65tb
+        margin-left: 65px !important
+
+    .ml70tb
+        margin-left: 70px !important
+
+    .ml75tb
+        margin-left: 75px !important
+
+    .ml80tb
+        margin-left: 80px !important
+
+    .ml85tb
+        margin-left: 85px !important
+
+    .ml90tb
+        margin-left: 90px !important
+
+    .ml95tb
+        margin-left: 95px !important
+
+    .ml100tb
+        margin-left: 100px !important
+
+    .ml105tb
+        margin-left: 105px !important
+
+    .ml110tb
+        margin-left: 110px !important
+
+    .ml115tb
+        margin-left: 115px !important
+
+    .ml120tb
+        margin-left: 120px !important
+
+    .mb0tb
+        margin-bottom: 0 !important
+
+    .mb1tb
+        margin-bottom: 1px !important
+
+    .mb2tb
+        margin-bottom: 2px !important
+
+    .mb3tb
+        margin-bottom: 3px !important
+
+    .mb4tb
+        margin-bottom: 4px !important
+
+    .mb5tb
+        margin-bottom: 5px !important
+
+    .mb6tb
+        margin-bottom: 6px !important
+
+    .mb7tb
+        margin-bottom: 7px !important
+
+    .mb8tb
+        margin-bottom: 8px !important
+
+    .mb9tb
+        margin-bottom: 9px !important
+
+    .mb10tb
+        margin-bottom: 10px !important
+
+    .mb15tb
+        margin-bottom: 15px !important
+
+    .mb20tb
+        margin-bottom: 20px !important
+
+    .mb25tb
+        margin-bottom: 25px !important
+
+    .mb30tb
+        margin-bottom: 30px !important
+
+    .mb35tb
+        margin-bottom: 35px !important
+
+    .mb40tb
+        margin-bottom: 40px !important
+
+    .mb45tb
+        margin-bottom: 45px !important
+
+    .mb50tb
+        margin-bottom: 50px !important
+
+    .mb55tb
+        margin-bottom: 55px !important
+
+    .mb60tb
+        margin-bottom: 60px !important
+
+    .mb65tb
+        margin-bottom: 65px !important
+
+    .mb70tb
+        margin-bottom: 70px !important
+
+    .mb75tb
+        margin-bottom: 75px !important
+
+    .mb80tb
+        margin-bottom: 80px !important
+
+    .mb85tb
+        margin-bottom: 85px !important
+
+    .mb90tb
+        margin-bottom: 90px !important
+
+    .mb95tb
+        margin-bottom: 95px !important
+
+    .mb100tb
+        margin-bottom: 100px !important
+
+    .mb105sp
+        margin-bottom: 105px !important
+
+    .mb110sp
+        margin-bottom: 110px !important
+
+    .mb115sp
+        margin-bottom: 115px !important
+
+    .mb120sp
+        margin-bottom: 120px !important
+
+    .mx0tb
+        margin-left: 0 !important
+        margin-right: 0 !important
+
+    .mx1tb
+        margin-left: 1px !important
+        margin-right: 1px !important
+
+    .mx2tb
+        margin-left: 2px !important
+        margin-right: 2px !important
+
+    .mx3tb
+        margin-left: 3px !important
+        margin-right: 3px !important
+
+    .mx4tb
+        margin-left: 4px !important
+        margin-right: 4px !important
+
+    .mx5tb
+        margin-left: 5px !important
+        margin-right: 5px !important
+
+    .mx6tb
+        margin-left: 6px !important
+        margin-right: 6px !important
+
+    .mx7tb
+        margin-left: 7px !important
+        margin-right: 7px !important
+
+    .mx8tb
+        margin-left: 8px !important
+        margin-right: 8px !important
+
+    .mx9tb
+        margin-left: 9px !important
+        margin-right: 9px !important
+
+    .mx10tb
+        margin-left: 10px !important
+        margin-right: 10px !important
+
+    .mx15tb
+        margin-left: 15px !important
+        margin-right: 15px !important
+
+    .mx20tb
+        margin-left: 20px !important
+        margin-right: 20px !important
+
+    .mx25tb
+        margin-left: 25px !important
+        margin-right: 25px !important
+
+    .mx30tb
+        margin-left: 30px !important
+        margin-right: 30px !important
+
+    .mx35tb
+        margin-left: 35px !important
+        margin-right: 35px !important
+
+    .mx40tb
+        margin-left: 40px !important
+        margin-right: 40px !important
+
+    .mx45tb
+        margin-left: 45px !important
+        margin-right: 45px !important
+
+    .mx50tb
+        margin-left: 50px !important
+        margin-right: 50px !important
+
+    .mx55tb
+        margin-left: 55px !important
+        margin-right: 55px !important
+
+    .mx60tb
+        margin-left: 60px !important
+        margin-right: 60px !important
+
+    .mx65tb
+        margin-left: 65px !important
+        margin-right: 65px !important
+
+    .mx70tb
+        margin-left: 70px !important
+        margin-right: 70px !important
+
+    .mx75tb
+        margin-left: 75px !important
+        margin-right: 75px !important
+
+    .mx80tb
+        margin-left: 80px !important
+        margin-right: 80px !important
+
+    .mx85tb
+        margin-left: 85px !important
+        margin-right: 85px !important
+
+    .mx90tb
+        margin-left: 90px !important
+        margin-right: 90px !important
+
+    .mx95tb
+        margin-left: 95px !important
+        margin-right: 95px !important
+
+    .mx100tb
+        margin-left: 100px !important
+        margin-right: 100px !important
+
+    .mx105tb
+        margin-left: 105px !important
+        margin-right: 105px !important
+
+    .mx110tb
+        margin-left: 110px !important
+        margin-right: 110px !important
+
+    .mx115tb
+        margin-left: 115px !important
+        margin-right: 115px !important
+
+    .mx120tb
+        margin-left: 120px !important
+        margin-right: 120px !important
+
+    .my0tb
+        margin-top: 0!important
+        margin-bottom: 0 !important
+
+    .my1tb
+        margin-top: 1px!important
+        margin-bottom: 1px !important
+
+    .my2tb
+        margin-top: 2px!important
+        margin-bottom: 2px !important
+
+    .my3tb
+        margin-top: 3px!important
+        margin-bottom: 3px !important
+
+    .my4tb
+        margin-top: 4px!important
+        margin-bottom: 4px !important
+
+    .my5tb
+        margin-top: 5px!important
+        margin-bottom: 5px !important
+
+    .my6tb
+        margin-top: 6px!important
+        margin-bottom: 6px !important
+
+    .my7tb
+        margin-top: 7px!important
+        margin-bottom: 7px !important
+
+    .my8tb
+        margin-top: 8px!important
+        margin-bottom: 8px !important
+
+    .my9tb
+        margin-top: 9px!important
+        margin-bottom: 9px !important
+
+    .my10tb
+        margin-top: 10px!important
+        margin-bottom: 10px !important
+
+    .my15tb
+        margin-top: 15px!important
+        margin-bottom: 15px !important
+
+    .my20tb
+        margin-top: 20px!important
+        margin-bottom: 20px !important
+
+    .my25tb
+        margin-top: 25px!important
+        margin-bottom: 25px !important
+
+    .my30tb
+        margin-top: 30px!important
+        margin-bottom: 30px !important
+
+    .my35tb
+        margin-top: 35px!important
+        margin-bottom: 35px !important
+
+    .my40tb
+        margin-top: 40px!important
+        margin-bottom: 40px !important
+
+    .my45tb
+        margin-top: 45px!important
+        margin-bottom: 45px !important
+
+    .my50tb
+        margin-top: 50px!important
+        margin-bottom: 50px !important
+
+    .my55tb
+        margin-top: 55px!important
+        margin-bottom: 55px !important
+
+    .my60tb
+        margin-top: 60px!important
+        margin-bottom: 60px !important
+
+    .my65tb
+        margin-top: 65px!important
+        margin-bottom: 65px !important
+
+    .my70tb
+        margin-top: 70px!important
+        margin-bottom: 70px !important
+
+    .my75tb
+        margin-top: 75px!important
+        margin-bottom: 75px !important
+
+    .my80tb
+        margin-top: 80px!important
+        margin-bottom: 80px !important
+
+    .my85tb
+        margin-top: 85px!important
+        margin-bottom: 85px !important
+
+    .my90tb
+        margin-top: 90px!important
+        margin-bottom: 90px !important
+
+    .my95tb
+        margin-top: 95px!important
+        margin-bottom: 95px !important
+
+    .my100tb
+        margin-top: 100px!important
+        margin-bottom: 100px !important
+
+    .my105tb
+        margin-top: 105px!important
+        margin-bottom: 105px !important
+
+    .my110tb
+        margin-top: 110px!important
+        margin-bottom: 110px !important
+
+    .my115tb
+        margin-top: 115px!important
+        margin-bottom: 115px !important
+
+    .my120tb
+        margin-top: 120px!important
+        margin-bottom: 120px !important
+
+    .mlautotb
+        margin-left: auto !important
+
+    .mrautotb
+        margin-right: auto !important
+
+    .mxautotb
+        margin-left: auto !important
+        margin-right: auto !important
+
+    .w1tb, .wfulltb
+        width: 100%
+
+    .centertb
+        margin-left: auto !important
+        margin-right: auto !important
+
+    .d-none-tb
+        display: none !important
+
+    .d-inline-block-tb
+        display: inline-block !important
+
+    .d-block-tb
+        display: block !important
+
+    .d-flex-tb
+        display: flex !important
+
+    .d-inline-flex-tb
+        display: inline-flex !important
+
+    .flex-row-tb
+        flex-direction: row !important
+
+    .flex-column-tb
+        flex-direction: column !important
+
+    .flex-row-reverse-tb
+        flex-direction: row-reverse !important
+
+    .flex-column-revers-tbe
+        flex-direction: column-reverse !important
+
+    .flex-wrap-tb
+        flex-wrap: wrap !important
+
+    .flex-nowrap-tb
+        flex-wrap: nowrap !important
+
+    .flex-wrap-reverse-tb
+        flex-wrap: wrap-reverse !important
+
+    .justify-content-start-tb
+        justify-content: flex-start !important
+
+    .justify-content-end-tb
+        justify-content: flex-end !important
+
+    .justify-content-center-tb
+        justify-content: center !important
+
+    .justify-content-between-tb
+        justify-content: space-between !important
+
+    .justify-content-around-tb
+        justify-content: space-around !important
+
+    .align-items-start-tb
+        align-items: flex-start !important
+
+    .align-items-end-tb
+        align-items: flex-end !important
+
+    .align-items-center-tb
+        align-items: center !important
+
+    .align-items-baseline-tb
+        align-items: baseline !important
+
+    .align-items-stretch-tb
+        align-items: stretch !important
+
+    .align-content-start-tb
+        align-content: flex-start !important
+
+    .align-content-end-tb
+        align-content: flex-end !important
+
+    .align-content-center-tb
+        align-content: center !important
+
+    .align-content-between-tb
+        align-content: space-between !important
+
+    .align-content-around-tb
+        align-content: space-around !important
+
+    .align-content-stretch-tb
+        align-content: stretch !important
+
+    .align-self-auto-tb
+        align-self: auto !important
+
+    .align-self-start-tb
+        align-self: flex-start !important
+
+    .align-self-end-tb
+        align-self: flex-end !important
+
+    .align-self-center-tb
+        align-self: center !important
+
+    .align-self-baseline-tb
+        align-self: baseline !important
+
+    .align-self-stretch-tb
+        align-self: stretch !important
+
+    .fr-tb
+        float: right
+
+    .fl-tb
+        float: left
+
+    .fn-tb
+        float: none
+
+    .tc-tb
+        text-align: center
+
+    .tr-tb
+        text-align: right
+
+    .tl-tb
+        text-align: left
+
+@media only screen and (max-width: 768px)
+    .text8sp
+        font-size: 0.8rem!important
+
+    .text9sp
+        font-size: 0.9rem!important
+
+    .text10sp
+        font-size: 1rem!important
+
+    .text11sp
+        font-size: 1.1rem!important
+
+    .text12sp
+        font-size: 1.2rem!important
+
+    .text13sp
+        font-size: 1.3rem!important
+
+    .text14sp
+        font-size: 1.4rem!important
+
+    .text15sp
+        font-size: 1.5rem!important
+
+    .text16sp
+        font-size: 1.6rem!important
+
+    .text18sp
+        font-size: 1.8rem!important
+
+    .text20sp
+        font-size: 2rem!important
+
+    .text22sp
+        font-size: 2.2rem!important
+
+    .text24sp
+        font-size: 2.4rem!important
+
+    .text25sp
+        font-size: 2.5rem!important
+
+    .text26sp
+        font-size: 2.6rem!important
+
+    .text28sp
+        font-size: 2.8rem!important
+
+    .text30sp
+        font-size: 3rem!important
+
+    .text32sp
+        font-size: 3.2rem!important
+
+    .text34sp
+        font-size: 3.4rem!important
+
+    .text36sp
+        font-size: 3.6rem!important
+
+    .text38sp
+        font-size: 3.8rem!important
+
+    .text40sp
+        font-size: 4rem!important
+
+    .text42sp
+        font-size: 4.2rem!important
+
+    .text43sp
+        font-size: 4.3rem!important
+
+    .text44sp
+        font-size: 4.4rem!important
+
+    .text45sp
+        font-size: 4.5rem!important
+
+    .text46sp
+        font-size: 4.6rem!important
+
+    .text48sp
+        font-size: 4.8rem!important
+
+    .text50sp
+        font-size: 5rem!important
+
+    .text52sp
+        font-size: 5.2rem!important
+
+    .text54sp
+        font-size: 5.4rem!important
+
+    .text58sp
+        font-size: 5.8rem!important
+
+    .text60sp
+        font-size: 6rem!important
+
+    .text62sp
+        font-size: 6.2rem!important
+
+    .text64sp
+        font-size: 6.4rem!important
+
+    .text68sp
+        font-size: 6.8rem!important
+
+    .text70sp
+        font-size: 7rem!important
+
+    .text72sp
+        font-size: 7.2rem!important
+
+    .text74sp
+        font-size: 7.4rem!important
+
+    .text80sp
+        font-size: 8rem!important
+
+    .text82sp
+        font-size: 8.2rem!important
+
+    .text84sp
+        font-size: 8.4rem!important
+
+    .text90sp
+        font-size: 9rem!important
+
+    .text91sp
+        font-size: 9.1rem!important
+
+    .text96sp
+        font-size: 9.6rem!important
+
+    .p0sp
+        padding: 0 !important
+
+    .p1sp
+        padding: 1px !important
+
+    .p2sp
+        padding: 2px !important
+
+    .p3sp
+        padding: 3px !important
+
+    .p4sp
+        padding: 4px !important
+
+    .p5sp
+        padding: 5px !important
+
+    .p6sp
+        padding: 6px !important
+
+    .p7sp
+        padding: 7px !important
+
+    .p8sp
+        padding: 8px !important
+
+    .p9sp
+        padding: 9px !important
+
+    .p10sp
+        padding: 10px !important
+
+    .p15sp
+        padding: 15px !important
+
+    .p20sp
+        padding: 20px !important
+
+    .p25sp
+        padding: 25px !important
+
+    .p30sp
+        padding: 30px !important
+
+    .p35sp
+        padding: 35px !important
+
+    .p40sp
+        padding: 40px !important
+
+    .p45sp
+        padding: 45px !important
+
+    .p50sp
+        padding: 50px !important
+
+    .p55sp
+        padding: 55px !important
+
+    .p60sp
+        padding: 60px !important
+
+    .p65sp
+        padding: 65px !important
+
+    .p70sp
+        padding: 70px !important
+
+    .p75sp
+        padding: 75px !important
+
+    .p80sp
+        padding: 80px !important
+
+    .p85sp
+        padding: 85px !important
+
+    .p90sp
+        padding: 90px !important
+
+    .p95sp
+        padding: 95px !important
+
+    .p100sp
+        padding: 100px !important
+
+    .p105sp
+        padding: 105px !important
+
+    .p110sp
+        padding: 110px !important
+
+    .p115sp
+        padding: 115px !important
+
+    .p120sp
+        padding: 120px !important
+
+    .pt0sp
+        padding-top: 0 !important
+
+    .pt1sp
+        padding-top: 1px !important
+
+    .pt2sp
+        padding-top: 2px !important
+
+    .pt3sp
+        padding-top: 3px !important
+
+    .pt4sp
+        padding-top: 4px !important
+
+    .pt5sp
+        padding-top: 5px !important
+
+    .pt6sp
+        padding-top: 6px !important
+
+    .pt7sp
+        padding-top: 7px !important
+
+    .pt8sp
+        padding-top: 8px !important
+
+    .pt9sp
+        padding-top: 9px !important
+
+    .pt10sp
+        padding-top: 10px !important
+
+    .pt15sp
+        padding-top: 15px !important
+
+    .pt20sp
+        padding-top: 20px !important
+
+    .pt25sp
+        padding-top: 25px !important
+
+    .pt30sp
+        padding-top: 30px !important
+
+    .pt35sp
+        padding-top: 35px !important
+
+    .pt40sp
+        padding-top: 40px !important
+
+    .pt45sp
+        padding-top: 45px !important
+
+    .pt50sp
+        padding-top: 50px !important
+
+    .pt55sp
+        padding-top: 55px !important
+
+    .pt60sp
+        padding-top: 60px !important
+
+    .pt65sp
+        padding-top: 65px !important
+
+    .pt70sp
+        padding-top: 70px !important
+
+    .pt75sp
+        padding-top: 75px !important
+
+    .pt80sp
+        padding-top: 80px !important
+
+    .pt85sp
+        padding-top: 85px !important
+
+    .pt90sp
+        padding-top: 90px !important
+
+    .pt95sp
+        padding-top: 95px !important
+
+    .pt100sp
+        padding-top: 100px !important
+
+    .pt105sp
+        padding-top: 105px !important
+
+    .pt110sp
+        padding-top: 110px !important
+
+    .pt115sp
+        padding-top: 115px !important
+
+    .pt120sp
+        padding-top: 120px !important
+
+    .pr0sp
+        padding-right: 0 !important
+
+    .pr1sp
+        padding-right: 1px !important
+
+    .pr2sp
+        padding-right: 2px !important
+
+    .pr3sp
+        padding-right: 3px !important
+
+    .pr4sp
+        padding-right: 4px !important
+
+    .pr5sp
+        padding-right: 5px !important
+
+    .pr6sp
+        padding-right: 6px !important
+
+    .pr7sp
+        padding-right: 7px !important
+
+    .pr8sp
+        padding-right: 8px !important
+
+    .pr9sp
+        padding-right: 9px !important
+
+    .pr10sp
+        padding-right: 10px !important
+
+    .pr15sp
+        padding-right: 15px !important
+
+    .pr20sp
+        padding-right: 20px !important
+
+    .pr25sp
+        padding-right: 25px !important
+
+    .pr30sp
+        padding-right: 30px !important
+
+    .pr35sp
+        padding-right: 35px !important
+
+    .pr40sp
+        padding-right: 40px !important
+
+    .pr45sp
+        padding-right: 45px !important
+
+    .pr50sp
+        padding-right: 50px !important
+
+    .pr55sp
+        padding-right: 55px !important
+
+    .pr60sp
+        padding-right: 60px !important
+
+    .pr65sp
+        padding-right: 65px !important
+
+    .pr70sp
+        padding-right: 70px !important
+
+    .pr75sp
+        padding-right: 75px !important
+
+    .pr80sp
+        padding-right: 80px !important
+
+    .pr85sp
+        padding-right: 85px !important
+
+    .pr90sp
+        padding-right: 90px !important
+
+    .pr95sp
+        padding-right: 95px !important
+
+    .pr100sp
+        padding-right: 100px !important
+
+    .pr105sp
+        padding-right: 105px !important
+
+    .pr110sp
+        padding-right: 110px !important
+
+    .pr115sp
+        padding-right: 115px !important
+
+    .pr120sp
+        padding-right: 120px !important
+
+    .pl0sp
+        padding-left: 0 !important
+
+    .pl1sp
+        padding-left: 1px !important
+
+    .pl2sp
+        padding-left: 2px !important
+
+    .pl3sp
+        padding-left: 3px !important
+
+    .pl4sp
+        padding-left: 4px !important
+
+    .pl5sp
+        padding-left: 5px !important
+
+    .pl6sp
+        padding-left: 6px !important
+
+    .pl7sp
+        padding-left: 7px !important
+
+    .pl8sp
+        padding-left: 8px !important
+
+    .pl9sp
+        padding-left: 9px !important
+
+    .pl10sp
+        padding-left: 10px !important
+
+    .pl15sp
+        padding-left: 15px !important
+
+    .pl20sp
+        padding-left: 20px !important
+
+    .pl25sp
+        padding-left: 25px !important
+
+    .pl30sp
+        padding-left: 30px !important
+
+    .pl35sp
+        padding-left: 35px !important
+
+    .pl40sp
+        padding-left: 40px !important
+
+    .pl45sp
+        padding-left: 45px !important
+
+    .pl50sp
+        padding-left: 50px !important
+
+    .pl55sp
+        padding-left: 55px !important
+
+    .pl60sp
+        padding-left: 60px !important
+
+    .pl65sp
+        padding-left: 65px !important
+
+    .pl70sp
+        padding-left: 70px !important
+
+    .pl75sp
+        padding-left: 75px !important
+
+    .pl80sp
+        padding-left: 80px !important
+
+    .pl85sp
+        padding-left: 85px !important
+
+    .pl90sp
+        padding-left: 90px !important
+
+    .pl95sp
+        padding-left: 95px !important
+
+    .pl100sp
+        padding-left: 100px !important
+
+    .pl105sp
+        padding-left: 105px !important
+
+    .pl110sp
+        padding-left: 110px !important
+
+    .pl115sp
+        padding-left: 115px !important
+
+    .pl120sp
+        padding-left: 120px !important
+
+    .pb0sp
+        padding-bottom: 0 !important
+
+    .pb1sp
+        padding-bottom: 1px !important
+
+    .pb2sp
+        padding-bottom: 2px !important
+
+    .pb3sp
+        padding-bottom: 3px !important
+
+    .pb4sp
+        padding-bottom: 4px !important
+
+    .pb5sp
+        padding-bottom: 5px !important
+
+    .pb6sp
+        padding-bottom: 6px !important
+
+    .pb7sp
+        padding-bottom: 7px !important
+
+    .pb8sp
+        padding-bottom: 8px !important
+
+    .pb9sp
+        padding-bottom: 9px !important
+
+    .pb10sp
+        padding-bottom: 10px !important
+
+    .pb15sp
+        padding-bottom: 15px !important
+
+    .pb20sp
+        padding-bottom: 20px !important
+
+    .pb25sp
+        padding-bottom: 25px !important
+
+    .pb30sp
+        padding-bottom: 30px !important
+
+    .pb35sp
+        padding-bottom: 35px !important
+
+    .pb40sp
+        padding-bottom: 40px !important
+
+    .pb45sp
+        padding-bottom: 45px !important
+
+    .pb50sp
+        padding-bottom: 50px !important
+
+    .pb55sp
+        padding-bottom: 55px !important
+
+    .pb60sp
+        padding-bottom: 60px !important
+
+    .pb65sp
+        padding-bottom: 65px !important
+
+    .pb70sp
+        padding-bottom: 70px !important
+
+    .pb75sp
+        padding-bottom: 75px !important
+
+    .pb80sp
+        padding-bottom: 80px !important
+
+    .pb85sp
+        padding-bottom: 85px !important
+
+    .pb90sp
+        padding-bottom: 90px !important
+
+    .pb95sp
+        padding-bottom: 95px !important
+
+    .pb100sp
+        padding-bottom: 100px !important
+
+    .pb105sp
+        padding-bottom: 105px !important
+
+    .pb110sp
+        padding-bottom: 110px !important
+
+    .pb115sp
+        padding-bottom: 115px !important
+
+    .pb120sp
+        padding-bottom: 120px !important
+
+    .px0sp
+        padding-left: 0 !important
+        padding-right: 0 !important
+
+    .px1sp
+        padding-left: 1px !important
+        padding-right: 1px !important
+
+    .px2sp
+        padding-left: 2px !important
+        padding-right: 2px !important
+
+    .px3sp
+        padding-left: 3px !important
+        padding-right: 3px !important
+
+    .px4sp
+        padding-left: 4px !important
+        padding-right: 4px !important
+
+    .px5sp
+        padding-left: 5px !important
+        padding-right: 5px !important
+
+    .px6sp
+        padding-left: 6px !important
+        padding-right: 6px !important
+
+    .px7sp
+        padding-left: 7px !important
+        padding-right: 7px !important
+
+    .px8sp
+        padding-left: 8px !important
+        padding-right: 8px !important
+
+    .px9sp
+        padding-left: 9px !important
+        padding-right: 9px !important
+
+    .px10sp
+        padding-left: 10px !important
+        padding-right: 10px !important
+
+    .px15sp
+        padding-left: 15px !important
+        padding-right: 15px !important
+
+    .px20sp
+        padding-left: 20px !important
+        padding-right: 20px !important
+
+    .px25sp
+        padding-left: 25px !important
+        padding-right: 25px !important
+
+    .px30sp
+        padding-left: 30px !important
+        padding-right: 30px !important
+
+    .px35sp
+        padding-left: 35px !important
+        padding-right: 35px !important
+
+    .px40sp
+        padding-left: 40px !important
+        padding-right: 40px !important
+
+    .px45sp
+        padding-left: 45px !important
+        padding-right: 45px !important
+
+    .px50sp
+        padding-left: 50px !important
+        padding-right: 50px !important
+
+    .px55sp
+        padding-left: 55px !important
+        padding-right: 55px !important
+
+    .px60sp
+        padding-left: 60px !important
+        padding-right: 60px !important
+
+    .px65sp
+        padding-left: 65px !important
+        padding-right: 65px !important
+
+    .px70sp
+        padding-left: 70px !important
+        padding-right: 70px !important
+
+    .px75sp
+        padding-left: 75px !important
+        padding-right: 75px !important
+
+    .px80sp
+        padding-left: 80px !important
+        padding-right: 80px !important
+
+    .px85sp
+        padding-left: 85px !important
+        padding-right: 85px !important
+
+    .px90sp
+        padding-left: 90px !important
+        padding-right: 90px !important
+
+    .px95sp
+        padding-left: 95px !important
+        padding-right: 95px !important
+
+    .px100sp
+        padding-left: 100px !important
+        padding-right: 100px !important
+
+    .px105sp
+        padding-left: 105px !important
+        padding-right: 105px !important
+
+    .px110sp
+        padding-left: 110px !important
+        padding-right: 110px !important
+
+    .px115sp
+        padding-left: 115px !important
+        padding-right: 115px !important
+
+    .px120sp
+        padding-left: 120px !important
+        padding-right: 120px !important
+
+    .py0sp
+        padding-top: 0!important
+        padding-bottom: 0 !important
+
+    .py1sp
+        padding-top: 1px!important
+        padding-bottom: 1px !important
+
+    .py2sp
+        padding-top: 2px!important
+        padding-bottom: 2px !important
+
+    .py3sp
+        padding-top: 3px!important
+        padding-bottom: 3px !important
+
+    .py4sp
+        padding-top: 4px!important
+        padding-bottom: 4px !important
+
+    .py5sp
+        padding-top: 5px!important
+        padding-bottom: 5px !important
+
+    .py6sp
+        padding-top: 6px!important
+        padding-bottom: 6px !important
+
+    .py7sp
+        padding-top: 7px!important
+        padding-bottom: 7px !important
+
+    .py8sp
+        padding-top: 8px!important
+        padding-bottom: 8px !important
+
+    .py9sp
+        padding-top: 9px!important
+        padding-bottom: 9px !important
+
+    .py10sp
+        padding-top: 10px!important
+        padding-bottom: 10px !important
+
+    .py15sp
+        padding-top: 15px!important
+        padding-bottom: 15px !important
+
+    .py20sp
+        padding-top: 20px!important
+        padding-bottom: 20px !important
+
+    .py25sp
+        padding-top: 25px!important
+        padding-bottom: 25px !important
+
+    .py30sp
+        padding-top: 30px!important
+        padding-bottom: 30px !important
+
+    .py35sp
+        padding-top: 35px!important
+        padding-bottom: 35px !important
+
+    .py40sp
+        padding-top: 40px!important
+        padding-bottom: 40px !important
+
+    .py45sp
+        padding-top: 45px!important
+        padding-bottom: 45px !important
+
+    .py50sp
+        padding-top: 50px!important
+        padding-bottom: 50px !important
+
+    .py55sp
+        padding-top: 55px!important
+        padding-bottom: 55px !important
+
+    .py60sp
+        padding-top: 60px!important
+        padding-bottom: 60px !important
+
+    .py65sp
+        padding-top: 65px!important
+        padding-bottom: 65px !important
+
+    .py70sp
+        padding-top: 70px!important
+        padding-bottom: 70px !important
+
+    .py75sp
+        padding-top: 75px!important
+        padding-bottom: 75px !important
+
+    .py80sp
+        padding-top: 80px!important
+        padding-bottom: 80px !important
+
+    .py85sp
+        padding-top: 85px!important
+        padding-bottom: 85px !important
+
+    .py90sp
+        padding-top: 90px!important
+        padding-bottom: 90px !important
+
+    .py95sp
+        padding-top: 95px!important
+        padding-bottom: 95px !important
+
+    .py100sp
+        padding-top: 100px!important
+        padding-bottom: 100px !important
+
+    .py105sp
+        padding-top: 105px!important
+        padding-bottom: 105px !important
+
+    .py110sp
+        padding-top: 110px!important
+        padding-bottom: 110px !important
+
+    .py115sp
+        padding-top: 115px!important
+        padding-bottom: 115px !important
+
+    .py120sp
+        padding-top: 120px!important
+        padding-bottom: 120px !important
+
+    .m0sp
+        margin: 0 !important
+
+    .m1sp
+        margin: 1px !important
+
+    .m2sp
+        margin: 2px !important
+
+    .m3sp
+        margin: 3px !important
+
+    .m4sp
+        margin: 4px !important
+
+    .m5sp
+        margin: 5px !important
+
+    .m6sp
+        margin: 6px !important
+
+    .m7sp
+        margin: 7px !important
+
+    .m8sp
+        margin: 8px !important
+
+    .m9sp
+        margin: 9px !important
+
+    .m10sp
+        margin: 10px !important
+
+    .m15sp
+        margin: 15px !important
+
+    .m20sp
+        margin: 20px !important
+
+    .m25sp
+        margin: 25px !important
+
+    .m30sp
+        margin: 30px !important
+
+    .m35sp
+        margin: 35px !important
+
+    .m40sp
+        margin: 40px !important
+
+    .m45sp
+        margin: 45px !important
+
+    .m50sp
+        margin: 50px !important
+
+    .m55sp
+        margin: 55px !important
+
+    .m60sp
+        margin: 60px !important
+
+    .m65sp
+        margin: 65px !important
+
+    .m70sp
+        margin: 70px !important
+
+    .m75sp
+        margin: 75px !important
+
+    .m80sp
+        margin: 80px !important
+
+    .m85sp
+        margin: 85px !important
+
+    .m90sp
+        margin: 90px !important
+
+    .m95sp
+        margin: 95px !important
+
+    .m100sp
+        margin: 100px !important
+
+    .m105sp
+        margin: 105px !important
+
+    .m110sp
+        margin: 110px !important
+
+    .m115sp
+        margin: 115px !important
+
+    .m120sp
+        margin: 120px !important
+
+    .mt0sp
+        margin-top: 0 !important
+
+    .mt1sp
+        margin-top: 1px !important
+
+    .mt2sp
+        margin-top: 2px !important
+
+    .mt3sp
+        margin-top: 3px !important
+
+    .mt4sp
+        margin-top: 4px !important
+
+    .mt5sp
+        margin-top: 5px !important
+
+    .mt6sp
+        margin-top: 6px !important
+
+    .mt7sp
+        margin-top: 7px !important
+
+    .mt8sp
+        margin-top: 8px !important
+
+    .mt9sp
+        margin-top: 9px !important
+
+    .mt10sp
+        margin-top: 10px !important
+
+    .mt15sp
+        margin-top: 15px !important
+
+    .mt20sp
+        margin-top: 20px !important
+
+    .mt25sp
+        margin-top: 25px !important
+
+    .mt30sp
+        margin-top: 30px !important
+
+    .mt35sp
+        margin-top: 35px !important
+
+    .mt40sp
+        margin-top: 40px !important
+
+    .mt45sp
+        margin-top: 45px !important
+
+    .mt50sp
+        margin-top: 50px !important
+
+    .mt55sp
+        margin-top: 55px !important
+
+    .mt60sp
+        margin-top: 60px !important
+
+    .mt65sp
+        margin-top: 65px !important
+
+    .mt70sp
+        margin-top: 70px !important
+
+    .mt75sp
+        margin-top: 75px !important
+
+    .mt80sp
+        margin-top: 80px !important
+
+    .mt85sp
+        margin-top: 85px !important
+
+    .mt90sp
+        margin-top: 90px !important
+
+    .mt95sp
+        margin-top: 95px !important
+
+    .mt100sp
+        margin-top: 100px !important
+
+    .mt105sp
+        margin-top: 105px !important
+
+    .mt110sp
+        margin-top: 110px !important
+
+    .mt115sp
+        margin-top: 115px !important
+
+    .mt120sp
+        margin-top: 120px !important
+
+    .mr0sp
+        margin-right: 0 !important
+
+    .mr1sp
+        margin-right: 1px !important
+
+    .mr2sp
+        margin-right: 2px !important
+
+    .mr3sp
+        margin-right: 3px !important
+
+    .mr4sp
+        margin-right: 4px !important
+
+    .mr5sp
+        margin-right: 5px !important
+
+    .mr6sp
+        margin-right: 6px !important
+
+    .mr7sp
+        margin-right: 7px !important
+
+    .mr8sp
+        margin-right: 8px !important
+
+    .mr9sp
+        margin-right: 9px !important
+
+    .mr10sp
+        margin-right: 10px !important
+
+    .mr15sp
+        margin-right: 15px !important
+
+    .mr20sp
+        margin-right: 20px !important
+
+    .mr25sp
+        margin-right: 25px !important
+
+    .mr30sp
+        margin-right: 30px !important
+
+    .mr35sp
+        margin-right: 35px !important
+
+    .mr40sp
+        margin-right: 40px !important
+
+    .mr45sp
+        margin-right: 45px !important
+
+    .mr50sp
+        margin-right: 50px !important
+
+    .mr55sp
+        margin-right: 55px !important
+
+    .mr60sp
+        margin-right: 60px !important
+
+    .mr65sp
+        margin-right: 65px !important
+
+    .mr70sp
+        margin-right: 70px !important
+
+    .mr75sp
+        margin-right: 75px !important
+
+    .mr80sp
+        margin-right: 80px !important
+
+    .mr85sp
+        margin-right: 85px !important
+
+    .mr90sp
+        margin-right: 90px !important
+
+    .mr95sp
+        margin-right: 95px !important
+
+    .mr100sp
+        margin-right: 100px !important
+
+    .mr105sp
+        margin-right: 105px !important
+
+    .mr110sp
+        margin-right: 110px !important
+
+    .mr115sp
+        margin-right: 115px !important
+
+    .mr120sp
+        margin-right: 120px !important
+
+    .ml0sp
+        margin-left: 0 !important
+
+    .ml1sp
+        margin-left: 1px !important
+
+    .ml2sp
+        margin-left: 2px !important
+
+    .ml3sp
+        margin-left: 3px !important
+
+    .ml4sp
+        margin-left: 4px !important
+
+    .ml5sp
+        margin-left: 5px !important
+
+    .ml6sp
+        margin-left: 6px !important
+
+    .ml7sp
+        margin-left: 7px !important
+
+    .ml8sp
+        margin-left: 8px !important
+
+    .ml9sp
+        margin-left: 9px !important
+
+    .ml10sp
+        margin-left: 10px !important
+
+    .ml15sp
+        margin-left: 15px !important
+
+    .ml20sp
+        margin-left: 20px !important
+
+    .ml25sp
+        margin-left: 25px !important
+
+    .ml30sp
+        margin-left: 30px !important
+
+    .ml35sp
+        margin-left: 35px !important
+
+    .ml40sp
+        margin-left: 40px !important
+
+    .ml45sp
+        margin-left: 45px !important
+
+    .ml50sp
+        margin-left: 50px !important
+
+    .ml55sp
+        margin-left: 55px !important
+
+    .ml60sp
+        margin-left: 60px !important
+
+    .ml65sp
+        margin-left: 65px !important
+
+    .ml70sp
+        margin-left: 70px !important
+
+    .ml75sp
+        margin-left: 75px !important
+
+    .ml80sp
+        margin-left: 80px !important
+
+    .ml85sp
+        margin-left: 85px !important
+
+    .ml90sp
+        margin-left: 90px !important
+
+    .ml95sp
+        margin-left: 95px !important
+
+    .ml100sp
+        margin-left: 100px !important
+
+    .ml105sp
+        margin-left: 105px !important
+
+    .ml110sp
+        margin-left: 110px !important
+
+    .ml115sp
+        margin-left: 115px !important
+
+    .ml120sp
+        margin-left: 120px !important
+
+    .mb0sp
+        margin-bottom: 0 !important
+
+    .mb1sp
+        margin-bottom: 1px !important
+
+    .mb2sp
+        margin-bottom: 2px !important
+
+    .mb3sp
+        margin-bottom: 3px !important
+
+    .mb4sp
+        margin-bottom: 4px !important
+
+    .mb5sp
+        margin-bottom: 5px !important
+
+    .mb6sp
+        margin-bottom: 6px !important
+
+    .mb7sp
+        margin-bottom: 7px !important
+
+    .mb8sp
+        margin-bottom: 8px !important
+
+    .mb9sp
+        margin-bottom: 9px !important
+
+    .mb10sp
+        margin-bottom: 10px !important
+
+    .mb15sp
+        margin-bottom: 15px !important
+
+    .mb20sp
+        margin-bottom: 20px !important
+
+    .mb25sp
+        margin-bottom: 25px !important
+
+    .mb30sp
+        margin-bottom: 30px !important
+
+    .mb35sp
+        margin-bottom: 35px !important
+
+    .mb40sp
+        margin-bottom: 40px !important
+
+    .mb45sp
+        margin-bottom: 45px !important
+
+    .mb50sp
+        margin-bottom: 50px !important
+
+    .mb55sp
+        margin-bottom: 55px !important
+
+    .mb60sp
+        margin-bottom: 60px !important
+
+    .mb65sp
+        margin-bottom: 65px !important
+
+    .mb70sp
+        margin-bottom: 70px !important
+
+    .mb75sp
+        margin-bottom: 75px !important
+
+    .mb80sp
+        margin-bottom: 80px !important
+
+    .mb85sp
+        margin-bottom: 85px !important
+
+    .mb90sp
+        margin-bottom: 90px !important
+
+    .mb95sp
+        margin-bottom: 95px !important
+
+    .mb100sp
+        margin-bottom: 100px !important
+
+    .mb105sp
+        margin-bottom: 105px !important
+
+    .mb110sp
+        margin-bottom: 110px !important
+
+    .mb115sp
+        margin-bottom: 115px !important
+
+    .mb120sp
+        margin-bottom: 120px !important
+
+    .mx0sp
+        margin-left: 0 !important
+        margin-right: 0 !important
+
+    .mx1sp
+        margin-left: 1px !important
+        margin-right: 1px !important
+
+    .mx2sp
+        margin-left: 2px !important
+        margin-right: 2px !important
+
+    .mx3sp
+        margin-left: 3px !important
+        margin-right: 3px !important
+
+    .mx4sp
+        margin-left: 4px !important
+        margin-right: 4px !important
+
+    .mx5sp
+        margin-left: 5px !important
+        margin-right: 5px !important
+
+    .mx6sp
+        margin-left: 6px !important
+        margin-right: 6px !important
+
+    .mx7sp
+        margin-left: 7px !important
+        margin-right: 7px !important
+
+    .mx8sp
+        margin-left: 8px !important
+        margin-right: 8px !important
+
+    .mx9sp
+        margin-left: 9px !important
+        margin-right: 9px !important
+
+    .mx10sp
+        margin-left: 10px !important
+        margin-right: 10px !important
+
+    .mx15sp
+        margin-left: 15px !important
+        margin-right: 15px !important
+
+    .mx20sp
+        margin-left: 20px !important
+        margin-right: 20px !important
+
+    .mx25sp
+        margin-left: 25px !important
+        margin-right: 25px !important
+
+    .mx30sp
+        margin-left: 30px !important
+        margin-right: 30px !important
+
+    .mx35sp
+        margin-left: 35px !important
+        margin-right: 35px !important
+
+    .mx40sp
+        margin-left: 40px !important
+        margin-right: 40px !important
+
+    .mx45sp
+        margin-left: 45px !important
+        margin-right: 45px !important
+
+    .mx50sp
+        margin-left: 50px !important
+        margin-right: 50px !important
+
+    .mx55sp
+        margin-left: 55px !important
+        margin-right: 55px !important
+
+    .mx60sp
+        margin-left: 60px !important
+        margin-right: 60px !important
+
+    .mx65sp
+        margin-left: 65px !important
+        margin-right: 65px !important
+
+    .mx70sp
+        margin-left: 70px !important
+        margin-right: 70px !important
+
+    .mx75sp
+        margin-left: 75px !important
+        margin-right: 75px !important
+
+    .mx80sp
+        margin-left: 80px !important
+        margin-right: 80px !important
+
+    .mx85sp
+        margin-left: 85px !important
+        margin-right: 85px !important
+
+    .mx90sp
+        margin-left: 90px !important
+        margin-right: 90px !important
+
+    .mx95sp
+        margin-left: 95px !important
+        margin-right: 95px !important
+
+    .mx100sp
+        margin-left: 100px !important
+        margin-right: 100px !important
+
+    .mx105sp
+        margin-left: 105px !important
+        margin-right: 105px !important
+
+    .mx110sp
+        margin-left: 110px !important
+        margin-right: 110px !important
+
+    .mx115sp
+        margin-left: 115px !important
+        margin-right: 115px !important
+
+    .mx120sp
+        margin-left: 120px !important
+        margin-right: 120px !important
+
+    .my0sp
+        margin-top: 0!important
+        margin-bottom: 0 !important
+
+    .my1sp
+        margin-top: 1px!important
+        margin-bottom: 1px !important
+
+    .my2sp
+        margin-top: 2px!important
+        margin-bottom: 2px !important
+
+    .my3sp
+        margin-top: 3px!important
+        margin-bottom: 3px !important
+
+    .my4sp
+        margin-top: 4px!important
+        margin-bottom: 4px !important
+
+    .my5sp
+        margin-top: 5px!important
+        margin-bottom: 5px !important
+
+    .my6sp
+        margin-top: 6px!important
+        margin-bottom: 6px !important
+
+    .my7sp
+        margin-top: 7px!important
+        margin-bottom: 7px !important
+
+    .my8sp
+        margin-top: 8px!important
+        margin-bottom: 8px !important
+
+    .my9sp
+        margin-top: 9px!important
+        margin-bottom: 9px !important
+
+    .my10sp
+        margin-top: 10px!important
+        margin-bottom: 10px !important
+
+    .my15sp
+        margin-top: 15px!important
+        margin-bottom: 15px !important
+
+    .my20sp
+        margin-top: 20px!important
+        margin-bottom: 20px !important
+
+    .my25sp
+        margin-top: 25px!important
+        margin-bottom: 25px !important
+
+    .my30sp
+        margin-top: 30px!important
+        margin-bottom: 30px !important
+
+    .my35sp
+        margin-top: 35px!important
+        margin-bottom: 35px !important
+
+    .my40sp
+        margin-top: 40px!important
+        margin-bottom: 40px !important
+
+    .my45sp
+        margin-top: 45px!important
+        margin-bottom: 45px !important
+
+    .my50sp
+        margin-top: 50px!important
+        margin-bottom: 50px !important
+
+    .my55sp
+        margin-top: 55px!important
+        margin-bottom: 55px !important
+
+    .my60sp
+        margin-top: 60px!important
+        margin-bottom: 60px !important
+
+    .my65sp
+        margin-top: 65px!important
+        margin-bottom: 65px !important
+
+    .my70sp
+        margin-top: 70px!important
+        margin-bottom: 70px !important
+
+    .my75sp
+        margin-top: 75px!important
+        margin-bottom: 75px !important
+
+    .my80sp
+        margin-top: 80px!important
+        margin-bottom: 80px !important
+
+    .my85sp
+        margin-top: 85px!important
+        margin-bottom: 85px !important
+
+    .my90sp
+        margin-top: 90px!important
+        margin-bottom: 90px !important
+
+    .my95sp
+        margin-top: 95px!important
+        margin-bottom: 95px !important
+
+    .my100sp
+        margin-top: 100px!important
+        margin-bottom: 100px !important
+
+    .my105sp
+        margin-top: 105px!important
+        margin-bottom: 105px !important
+
+    .my110sp
+        margin-top: 110px!important
+        margin-bottom: 110px !important
+
+    .my115sp
+        margin-top: 115px!important
+        margin-bottom: 115px !important
+
+    .my120sp
+        margin-top: 120px!important
+        margin-bottom: 120px !important
+
+    .mlautosp
+        margin-left: auto !important
+
+    .mrautosp
+        margin-right: auto !important
+
+    .mxautosp
+        margin-left: auto !important
+        margin-right: auto !important
+
+    .w1sp, .wfullsp
+        width: 100%
+
+    .centersp
+        margin-left: auto !important
+        margin-right: auto !important
+
+    .d-none-sp
+        display: none !important
+
+    .d-inline-block-sp
+        display: inline-block !important
+
+    .d-block-sp
+        display: block !important
+
+    .d-flex-sp
+        display: flex !important
+
+    .d-inline-flex-sp
+        display: inline-flex !important
+
+    .flex-row-sp
+        flex-direction: row !important
+
+    .flex-column-sp
+        flex-direction: column !important
+
+    .flex-row-reverse-sp
+        flex-direction: row-reverse !important
+
+    .flex-column-revers-spe
+        flex-direction: column-reverse !important
+
+    .flex-wrap-sp
+        flex-wrap: wrap !important
+
+    .flex-nowrap-sp
+        flex-wrap: nowrap !important
+
+    .flex-wrap-reverse-sp
+        flex-wrap: wrap-reverse !important
+
+    .justify-content-start-sp
+        justify-content: flex-start !important
+
+    .justify-content-end-sp
+        justify-content: flex-end !important
+
+    .justify-content-center-sp
+        justify-content: center !important
+
+    .justify-content-between-sp
+        justify-content: space-between !important
+
+    .justify-content-around-sp
+        justify-content: space-around !important
+
+    .align-items-start-sp
+        align-items: flex-start !important
+
+    .align-items-end-sp
+        align-items: flex-end !important
+
+    .align-items-center-sp
+        align-items: center !important
+
+    .align-items-baseline-sp
+        align-items: baseline !important
+
+    .align-items-stretch-sp
+        align-items: stretch !important
+
+    .align-content-start-sp
+        align-content: flex-start !important
+
+    .align-content-end-sp
+        align-content: flex-end !important
+
+    .align-content-center-sp
+        align-content: center !important
+
+    .align-content-between-sp
+        align-content: space-between !important
+
+    .align-content-around-sp
+        align-content: space-around !important
+
+    .align-content-stretch-sp
+        align-content: stretch !important
+
+    .align-self-auto-sp
+        align-self: auto !important
+
+    .align-self-start-sp
+        align-self: flex-start !important
+
+    .align-self-end-sp
+        align-self: flex-end !important
+
+    .align-self-center-sp
+        align-self: center !important
+
+    .align-self-baseline-sp
+        align-self: baseline !important
+
+    .align-self-stretch-sp
+        align-self: stretch !important
+
+    .fr-sp
+        float: right
+
+    .fl-sp
+        float: left
+
+    .fn-sp
+        float: none
+
+    .tc-sp
+        text-align: center
+
+    .tr-sp
+        text-align: right
+
+    .tl-sp
+        text-align: left
+
+@media only screen and (max-width: 580px)
+    .text8xs
+        font-size: 0.8rem!important
+
+    .text9xs
+        font-size: 0.9rem!important
+
+    .text10xs
+        font-size: 1rem!important
+
+    .text11xs
+        font-size: 1.1rem!important
+
+    .text12xs
+        font-size: 1.2rem!important
+
+    .text13xs
+        font-size: 1.3rem!important
+
+    .text14xs
+        font-size: 1.4rem!important
+
+    .text15xs
+        font-size: 1.5rem!important
+
+    .text16xs
+        font-size: 1.6rem!important
+
+    .text18xs
+        font-size: 1.8rem!important
+
+    .text20xs
+        font-size: 2rem!important
+
+    .text22xs
+        font-size: 2.2rem!important
+
+    .text24xs
+        font-size: 2.4rem!important
+
+    .text25xs
+        font-size: 2.5rem!important
+
+    .text26xs
+        font-size: 2.6rem!important
+
+    .text28xs
+        font-size: 2.8rem!important
+
+    .text30xs
+        font-size: 3rem!important
+
+    .text32xs
+        font-size: 3.2rem!important
+
+    .text34xs
+        font-size: 3.4rem!important
+
+    .text36xs
+        font-size: 3.6rem!important
+
+    .text38xs
+        font-size: 3.8rem!important
+
+    .text40xs
+        font-size: 4rem!important
+
+    .text42xs
+        font-size: 4.2rem!important
+
+    .text43xs
+        font-size: 4.3rem!important
+
+    .text44xs
+        font-size: 4.4rem!important
+
+    .text45xs
+        font-size: 4.5rem!important
+
+    .text46xs
+        font-size: 4.6rem!important
+
+    .text48xs
+        font-size: 4.8rem!important
+
+    .text50xs
+        font-size: 5rem!important
+
+    .text52xs
+        font-size: 5.2rem!important
+
+    .text54xs
+        font-size: 5.4rem!important
+
+    .text58xs
+        font-size: 5.8rem!important
+
+    .text60xs
+        font-size: 6rem!important
+
+    .text62xs
+        font-size: 6.2rem!important
+
+    .text64xs
+        font-size: 6.4rem!important
+
+    .text68xs
+        font-size: 6.8rem!important
+
+    .text70xs
+        font-size: 7rem!important
+
+    .text72xs
+        font-size: 7.2rem!important
+
+    .text74xs
+        font-size: 7.4rem!important
+
+    .text80xs
+        font-size: 8rem!important
+
+    .text82xs
+        font-size: 8.2rem!important
+
+    .text84xs
+        font-size: 8.4rem!important
+
+    .text90xs
+        font-size: 9rem!important
+
+    .text91xs
+        font-size: 9.1rem!important
+
+    .text96xs
+        font-size: 9.6rem!important
+
+    .p0xs
+        padding: 0 !important
+
+    .p1xs
+        padding: 1px !important
+
+    .p2xs
+        padding: 2px !important
+
+    .p3xs
+        padding: 3px !important
+
+    .p4xs
+        padding: 4px !important
+
+    .p5xs
+        padding: 5px !important
+
+    .p6xs
+        padding: 6px !important
+
+    .p7xs
+        padding: 7px !important
+
+    .p8xs
+        padding: 8px !important
+
+    .p9xs
+        padding: 9px !important
+
+    .p10xs
+        padding: 10px !important
+
+    .p15xs
+        padding: 15px !important
+
+    .p20xs
+        padding: 20px !important
+
+    .p25xs
+        padding: 25px !important
+
+    .p30xs
+        padding: 30px !important
+
+    .p35xs
+        padding: 35px !important
+
+    .p40xs
+        padding: 40px !important
+
+    .p45xs
+        padding: 45px !important
+
+    .p50xs
+        padding: 50px !important
+
+    .p55xs
+        padding: 55px !important
+
+    .p60xs
+        padding: 60px !important
+
+    .p65xs
+        padding: 65px !important
+
+    .p70xs
+        padding: 70px !important
+
+    .p75xs
+        padding: 75px !important
+
+    .p80xs
+        padding: 80px !important
+
+    .p85xs
+        padding: 85px !important
+
+    .p90xs
+        padding: 90px !important
+
+    .p95xs
+        padding: 95px !important
+
+    .p100xs
+        padding: 100px !important
+
+    .p105xs
+        padding: 105px !important
+
+    .p110xs
+        padding: 110px !important
+
+    .p115xs
+        padding: 115px !important
+
+    .p120xs
+        padding: 120px !important
+
+    .pt0xs
+        padding-top: 0 !important
+
+    .pt1xs
+        padding-top: 1px !important
+
+    .pt2xs
+        padding-top: 2px !important
+
+    .pt3xs
+        padding-top: 3px !important
+
+    .pt4xs
+        padding-top: 4px !important
+
+    .pt5xs
+        padding-top: 5px !important
+
+    .pt6xs
+        padding-top: 6px !important
+
+    .pt7xs
+        padding-top: 7px !important
+
+    .pt8xs
+        padding-top: 8px !important
+
+    .pt9xs
+        padding-top: 9px !important
+
+    .pt10xs
+        padding-top: 10px !important
+
+    .pt15xs
+        padding-top: 15px !important
+
+    .pt20xs
+        padding-top: 20px !important
+
+    .pt25xs
+        padding-top: 25px !important
+
+    .pt30xs
+        padding-top: 30px !important
+
+    .pt35xs
+        padding-top: 35px !important
+
+    .pt40xs
+        padding-top: 40px !important
+
+    .pt45xs
+        padding-top: 45px !important
+
+    .pt50xs
+        padding-top: 50px !important
+
+    .pt55xs
+        padding-top: 55px !important
+
+    .pt60xs
+        padding-top: 60px !important
+
+    .pt65xs
+        padding-top: 65px !important
+
+    .pt70xs
+        padding-top: 70px !important
+
+    .pt75xs
+        padding-top: 75px !important
+
+    .pt80xs
+        padding-top: 80px !important
+
+    .pt85xs
+        padding-top: 85px !important
+
+    .pt90xs
+        padding-top: 90px !important
+
+    .pt95xs
+        padding-top: 95px !important
+
+    .pt100xs
+        padding-top: 100px !important
+
+    .pt105xs
+        padding-top: 105px !important
+
+    .pt110xs
+        padding-top: 110px !important
+
+    .pt115xs
+        padding-top: 115px !important
+
+    .pt120xs
+        padding-top: 120px !important
+
+    .pr0xs
+        padding-right: 0 !important
+
+    .pr1xs
+        padding-right: 1px !important
+
+    .pr2xs
+        padding-right: 2px !important
+
+    .pr3xs
+        padding-right: 3px !important
+
+    .pr4xs
+        padding-right: 4px !important
+
+    .pr5xs
+        padding-right: 5px !important
+
+    .pr6xs
+        padding-right: 6px !important
+
+    .pr7xs
+        padding-right: 7px !important
+
+    .pr8xs
+        padding-right: 8px !important
+
+    .pr9xs
+        padding-right: 9px !important
+
+    .pr10xs
+        padding-right: 10px !important
+
+    .pr15xs
+        padding-right: 15px !important
+
+    .pr20xs
+        padding-right: 20px !important
+
+    .pr25xs
+        padding-right: 25px !important
+
+    .pr30xs
+        padding-right: 30px !important
+
+    .pr35xs
+        padding-right: 35px !important
+
+    .pr40xs
+        padding-right: 40px !important
+
+    .pr45xs
+        padding-right: 45px !important
+
+    .pr50xs
+        padding-right: 50px !important
+
+    .pr55xs
+        padding-right: 55px !important
+
+    .pr60xs
+        padding-right: 60px !important
+
+    .pr65xs
+        padding-right: 65px !important
+
+    .pr70xs
+        padding-right: 70px !important
+
+    .pr75xs
+        padding-right: 75px !important
+
+    .pr80xs
+        padding-right: 80px !important
+
+    .pr85xs
+        padding-right: 85px !important
+
+    .pr90xs
+        padding-right: 90px !important
+
+    .pr95xs
+        padding-right: 95px !important
+
+    .pr100xs
+        padding-right: 100px !important
+
+    .pr105xs
+        padding-right: 105px !important
+
+    .pr110xs
+        padding-right: 110px !important
+
+    .pr115xs
+        padding-right: 115px !important
+
+    .pr120xs
+        padding-right: 120px !important
+
+    .pl0xs
+        padding-left: 0 !important
+
+    .pl1xs
+        padding-left: 1px !important
+
+    .pl2xs
+        padding-left: 2px !important
+
+    .pl3xs
+        padding-left: 3px !important
+
+    .pl4xs
+        padding-left: 4px !important
+
+    .pl5xs
+        padding-left: 5px !important
+
+    .pl6xs
+        padding-left: 6px !important
+
+    .pl7xs
+        padding-left: 7px !important
+
+    .pl8xs
+        padding-left: 8px !important
+
+    .pl9xs
+        padding-left: 9px !important
+
+    .pl10xs
+        padding-left: 10px !important
+
+    .pl15xs
+        padding-left: 15px !important
+
+    .pl20xs
+        padding-left: 20px !important
+
+    .pl25xs
+        padding-left: 25px !important
+
+    .pl30xs
+        padding-left: 30px !important
+
+    .pl35xs
+        padding-left: 35px !important
+
+    .pl40xs
+        padding-left: 40px !important
+
+    .pl45xs
+        padding-left: 45px !important
+
+    .pl50xs
+        padding-left: 50px !important
+
+    .pl55xs
+        padding-left: 55px !important
+
+    .pl60xs
+        padding-left: 60px !important
+
+    .pl65xs
+        padding-left: 65px !important
+
+    .pl70xs
+        padding-left: 70px !important
+
+    .pl75xs
+        padding-left: 75px !important
+
+    .pl80xs
+        padding-left: 80px !important
+
+    .pl85xs
+        padding-left: 85px !important
+
+    .pl90xs
+        padding-left: 90px !important
+
+    .pl95xs
+        padding-left: 95px !important
+
+    .pl100xs
+        padding-left: 100px !important
+
+    .pl105xs
+        padding-left: 105px !important
+
+    .pl110xs
+        padding-left: 110px !important
+
+    .pl115xs
+        padding-left: 115px !important
+
+    .pl120xs
+        padding-left: 120px !important
+
+    .pb0xs
+        padding-bottom: 0 !important
+
+    .pb1xs
+        padding-bottom: 1px !important
+
+    .pb2xs
+        padding-bottom: 2px !important
+
+    .pb3xs
+        padding-bottom: 3px !important
+
+    .pb4xs
+        padding-bottom: 4px !important
+
+    .pb5xs
+        padding-bottom: 5px !important
+
+    .pb6xs
+        padding-bottom: 6px !important
+
+    .pb7xs
+        padding-bottom: 7px !important
+
+    .pb8xs
+        padding-bottom: 8px !important
+
+    .pb9xs
+        padding-bottom: 9px !important
+
+    .pb10xs
+        padding-bottom: 10px !important
+
+    .pb15xs
+        padding-bottom: 15px !important
+
+    .pb20xs
+        padding-bottom: 20px !important
+
+    .pb25xs
+        padding-bottom: 25px !important
+
+    .pb30xs
+        padding-bottom: 30px !important
+
+    .pb35xs
+        padding-bottom: 35px !important
+
+    .pb40xs
+        padding-bottom: 40px !important
+
+    .pb45xs
+        padding-bottom: 45px !important
+
+    .pb50xs
+        padding-bottom: 50px !important
+
+    .pb55xs
+        padding-bottom: 55px !important
+
+    .pb60xs
+        padding-bottom: 60px !important
+
+    .pb65xs
+        padding-bottom: 65px !important
+
+    .pb70xs
+        padding-bottom: 70px !important
+
+    .pb75xs
+        padding-bottom: 75px !important
+
+    .pb80xs
+        padding-bottom: 80px !important
+
+    .pb85xs
+        padding-bottom: 85px !important
+
+    .pb90xs
+        padding-bottom: 90px !important
+
+    .pb95xs
+        padding-bottom: 95px !important
+
+    .pb100xs
+        padding-bottom: 100px !important
+
+    .pb105xs
+        padding-bottom: 105px !important
+
+    .pb110xs
+        padding-bottom: 110px !important
+
+    .pb115xs
+        padding-bottom: 115px !important
+
+    .pb120xs
+        padding-bottom: 120px !important
+
+    .px0xs
+        padding-left: 0 !important
+        padding-right: 0 !important
+
+    .px1xs
+        padding-left: 1px !important
+        padding-right: 1px !important
+
+    .px2xs
+        padding-left: 2px !important
+        padding-right: 2px !important
+
+    .px3xs
+        padding-left: 3px !important
+        padding-right: 3px !important
+
+    .px4xs
+        padding-left: 4px !important
+        padding-right: 4px !important
+
+    .px5xs
+        padding-left: 5px !important
+        padding-right: 5px !important
+
+    .px6xs
+        padding-left: 6px !important
+        padding-right: 6px !important
+
+    .px7xs
+        padding-left: 7px !important
+        padding-right: 7px !important
+
+    .px8xs
+        padding-left: 8px !important
+        padding-right: 8px !important
+
+    .px9xs
+        padding-left: 9px !important
+        padding-right: 9px !important
+
+    .px10xs
+        padding-left: 10px !important
+        padding-right: 10px !important
+
+    .px15xs
+        padding-left: 15px !important
+        padding-right: 15px !important
+
+    .px20xs
+        padding-left: 20px !important
+        padding-right: 20px !important
+
+    .px25xs
+        padding-left: 25px !important
+        padding-right: 25px !important
+
+    .px30xs
+        padding-left: 30px !important
+        padding-right: 30px !important
+
+    .px35xs
+        padding-left: 35px !important
+        padding-right: 35px !important
+
+    .px40xs
+        padding-left: 40px !important
+        padding-right: 40px !important
+
+    .px45xs
+        padding-left: 45px !important
+        padding-right: 45px !important
+
+    .px50xs
+        padding-left: 50px !important
+        padding-right: 50px !important
+
+    .px55xs
+        padding-left: 55px !important
+        padding-right: 55px !important
+
+    .px60xs
+        padding-left: 60px !important
+        padding-right: 60px !important
+
+    .px65xs
+        padding-left: 65px !important
+        padding-right: 65px !important
+
+    .px70xs
+        padding-left: 70px !important
+        padding-right: 70px !important
+
+    .px75xs
+        padding-left: 75px !important
+        padding-right: 75px !important
+
+    .px80xs
+        padding-left: 80px !important
+        padding-right: 80px !important
+
+    .px85xs
+        padding-left: 85px !important
+        padding-right: 85px !important
+
+    .px90xs
+        padding-left: 90px !important
+        padding-right: 90px !important
+
+    .px95xs
+        padding-left: 95px !important
+        padding-right: 95px !important
+
+    .px100xs
+        padding-left: 100px !important
+        padding-right: 100px !important
+
+    .px105xs
+        padding-left: 105px !important
+        padding-right: 105px !important
+
+    .px110xs
+        padding-left: 110px !important
+        padding-right: 110px !important
+
+    .px115xs
+        padding-left: 115px !important
+        padding-right: 115px !important
+
+    .px120xs
+        padding-left: 120px !important
+        padding-right: 120px !important
+
+    .py0xs
+        padding-top: 0!important
+        padding-bottom: 0 !important
+
+    .py1xs
+        padding-top: 1px!important
+        padding-bottom: 1px !important
+
+    .py2xs
+        padding-top: 2px!important
+        padding-bottom: 2px !important
+
+    .py3xs
+        padding-top: 3px!important
+        padding-bottom: 3px !important
+
+    .py4xs
+        padding-top: 4px!important
+        padding-bottom: 4px !important
+
+    .py5xs
+        padding-top: 5px!important
+        padding-bottom: 5px !important
+
+    .py6xs
+        padding-top: 6px!important
+        padding-bottom: 6px !important
+
+    .py7xs
+        padding-top: 7px!important
+        padding-bottom: 7px !important
+
+    .py8xs
+        padding-top: 8px!important
+        padding-bottom: 8px !important
+
+    .py9xs
+        padding-top: 9px!important
+        padding-bottom: 9px !important
+
+    .py10xs
+        padding-top: 10px!important
+        padding-bottom: 10px !important
+
+    .py15xs
+        padding-top: 15px!important
+        padding-bottom: 15px !important
+
+    .py20xs
+        padding-top: 20px!important
+        padding-bottom: 20px !important
+
+    .py25xs
+        padding-top: 25px!important
+        padding-bottom: 25px !important
+
+    .py30xs
+        padding-top: 30px!important
+        padding-bottom: 30px !important
+
+    .py35xs
+        padding-top: 35px!important
+        padding-bottom: 35px !important
+
+    .py40xs
+        padding-top: 40px!important
+        padding-bottom: 40px !important
+
+    .py45xs
+        padding-top: 45px!important
+        padding-bottom: 45px !important
+
+    .py50xs
+        padding-top: 50px!important
+        padding-bottom: 50px !important
+
+    .py55xs
+        padding-top: 55px!important
+        padding-bottom: 55px !important
+
+    .py60xs
+        padding-top: 60px!important
+        padding-bottom: 60px !important
+
+    .py65xs
+        padding-top: 65px!important
+        padding-bottom: 65px !important
+
+    .py70xs
+        padding-top: 70px!important
+        padding-bottom: 70px !important
+
+    .py75xs
+        padding-top: 75px!important
+        padding-bottom: 75px !important
+
+    .py80xs
+        padding-top: 80px!important
+        padding-bottom: 80px !important
+
+    .py85xs
+        padding-top: 85px!important
+        padding-bottom: 85px !important
+
+    .py90xs
+        padding-top: 90px!important
+        padding-bottom: 90px !important
+
+    .py95xs
+        padding-top: 95px!important
+        padding-bottom: 95px !important
+
+    .py100xs
+        padding-top: 100px!important
+        padding-bottom: 100px !important
+
+    .py105xs
+        padding-top: 105px!important
+        padding-bottom: 105px !important
+
+    .py110xs
+        padding-top: 110px!important
+        padding-bottom: 110px !important
+
+    .py115xs
+        padding-top: 115px!important
+        padding-bottom: 115px !important
+
+    .py120xs
+        padding-top: 120px!important
+        padding-bottom: 120px !important
+
+    .m0xs
+        margin: 0 !important
+
+    .m1xs
+        margin: 1px !important
+
+    .m2xs
+        margin: 2px !important
+
+    .m3xs
+        margin: 3px !important
+
+    .m4xs
+        margin: 4px !important
+
+    .m5xs
+        margin: 5px !important
+
+    .m6xs
+        margin: 6px !important
+
+    .m7xs
+        margin: 7px !important
+
+    .m8xs
+        margin: 8px !important
+
+    .m9xs
+        margin: 9px !important
+
+    .m10xs
+        margin: 10px !important
+
+    .m15xs
+        margin: 15px !important
+
+    .m20xs
+        margin: 20px !important
+
+    .m25xs
+        margin: 25px !important
+
+    .m30xs
+        margin: 30px !important
+
+    .m35xs
+        margin: 35px !important
+
+    .m40xs
+        margin: 40px !important
+
+    .m45xs
+        margin: 45px !important
+
+    .m50xs
+        margin: 50px !important
+
+    .m55xs
+        margin: 55px !important
+
+    .m60xs
+        margin: 60px !important
+
+    .m65xs
+        margin: 65px !important
+
+    .m70xs
+        margin: 70px !important
+
+    .m75xs
+        margin: 75px !important
+
+    .m80xs
+        margin: 80px !important
+
+    .m85xs
+        margin: 85px !important
+
+    .m90xs
+        margin: 90px !important
+
+    .m95xs
+        margin: 95px !important
+
+    .m100xs
+        margin: 100px !important
+
+    .m105xs
+        margin: 105px !important
+
+    .m110xs
+        margin: 110px !important
+
+    .m115xs
+        margin: 115px !important
+
+    .m120xs
+        margin: 120px !important
+
+    .mt0xs
+        margin-top: 0 !important
+
+    .mt1xs
+        margin-top: 1px !important
+
+    .mt2xs
+        margin-top: 2px !important
+
+    .mt3xs
+        margin-top: 3px !important
+
+    .mt4xs
+        margin-top: 4px !important
+
+    .mt5xs
+        margin-top: 5px !important
+
+    .mt6xs
+        margin-top: 6px !important
+
+    .mt7xs
+        margin-top: 7px !important
+
+    .mt8xs
+        margin-top: 8px !important
+
+    .mt9xs
+        margin-top: 9px !important
+
+    .mt10xs
+        margin-top: 10px !important
+
+    .mt15xs
+        margin-top: 15px !important
+
+    .mt20xs
+        margin-top: 20px !important
+
+    .mt25xs
+        margin-top: 25px !important
+
+    .mt30xs
+        margin-top: 30px !important
+
+    .mt35xs
+        margin-top: 35px !important
+
+    .mt40xs
+        margin-top: 40px !important
+
+    .mt45xs
+        margin-top: 45px !important
+
+    .mt50xs
+        margin-top: 50px !important
+
+    .mt55xs
+        margin-top: 55px !important
+
+    .mt60xs
+        margin-top: 60px !important
+
+    .mt65xs
+        margin-top: 65px !important
+
+    .mt70xs
+        margin-top: 70px !important
+
+    .mt75xs
+        margin-top: 75px !important
+
+    .mt80xs
+        margin-top: 80px !important
+
+    .mt85xs
+        margin-top: 85px !important
+
+    .mt90xs
+        margin-top: 90px !important
+
+    .mt95xs
+        margin-top: 95px !important
+
+    .mt100xs
+        margin-top: 100px !important
+
+    .mt105xs
+        margin-top: 105px !important
+
+    .mt110xs
+        margin-top: 110px !important
+
+    .mt115xs
+        margin-top: 115px !important
+
+    .mt120xs
+        margin-top: 120px !important
+
+    .mr0xs
+        margin-right: 0 !important
+
+    .mr1xs
+        margin-right: 1px !important
+
+    .mr2xs
+        margin-right: 2px !important
+
+    .mr3xs
+        margin-right: 3px !important
+
+    .mr4xs
+        margin-right: 4px !important
+
+    .mr5xs
+        margin-right: 5px !important
+
+    .mr6xs
+        margin-right: 6px !important
+
+    .mr7xs
+        margin-right: 7px !important
+
+    .mr8xs
+        margin-right: 8px !important
+
+    .mr9xs
+        margin-right: 9px !important
+
+    .mr10xs
+        margin-right: 10px !important
+
+    .mr15xs
+        margin-right: 15px !important
+
+    .mr20xs
+        margin-right: 20px !important
+
+    .mr25xs
+        margin-right: 25px !important
+
+    .mr30xs
+        margin-right: 30px !important
+
+    .mr35xs
+        margin-right: 35px !important
+
+    .mr40xs
+        margin-right: 40px !important
+
+    .mr45xs
+        margin-right: 45px !important
+
+    .mr50xs
+        margin-right: 50px !important
+
+    .mr55xs
+        margin-right: 55px !important
+
+    .mr60xs
+        margin-right: 60px !important
+
+    .mr65xs
+        margin-right: 65px !important
+
+    .mr70xs
+        margin-right: 70px !important
+
+    .mr75xs
+        margin-right: 75px !important
+
+    .mr80xs
+        margin-right: 80px !important
+
+    .mr85xs
+        margin-right: 85px !important
+
+    .mr90xs
+        margin-right: 90px !important
+
+    .mr95xs
+        margin-right: 95px !important
+
+    .mr100xs
+        margin-right: 100px !important
+
+    .mr105xs
+        margin-right: 105px !important
+
+    .mr110xs
+        margin-right: 110px !important
+
+    .mr115xs
+        margin-right: 115px !important
+
+    .mr120xs
+        margin-right: 120px !important
+
+    .ml0xs
+        margin-left: 0 !important
+
+    .ml1xs
+        margin-left: 1px !important
+
+    .ml2xs
+        margin-left: 2px !important
+
+    .ml3xs
+        margin-left: 3px !important
+
+    .ml4xs
+        margin-left: 4px !important
+
+    .ml5xs
+        margin-left: 5px !important
+
+    .ml6xs
+        margin-left: 6px !important
+
+    .ml7xs
+        margin-left: 7px !important
+
+    .ml8xs
+        margin-left: 8px !important
+
+    .ml9xs
+        margin-left: 9px !important
+
+    .ml10xs
+        margin-left: 10px !important
+
+    .ml15xs
+        margin-left: 15px !important
+
+    .ml20xs
+        margin-left: 20px !important
+
+    .ml25xs
+        margin-left: 25px !important
+
+    .ml30xs
+        margin-left: 30px !important
+
+    .ml35xs
+        margin-left: 35px !important
+
+    .ml40xs
+        margin-left: 40px !important
+
+    .ml45xs
+        margin-left: 45px !important
+
+    .ml50xs
+        margin-left: 50px !important
+
+    .ml55xs
+        margin-left: 55px !important
+
+    .ml60xs
+        margin-left: 60px !important
+
+    .ml65xs
+        margin-left: 65px !important
+
+    .ml70xs
+        margin-left: 70px !important
+
+    .ml75xs
+        margin-left: 75px !important
+
+    .ml80xs
+        margin-left: 80px !important
+
+    .ml85xs
+        margin-left: 85px !important
+
+    .ml90xs
+        margin-left: 90px !important
+
+    .ml95xs
+        margin-left: 95px !important
+
+    .ml100xs
+        margin-left: 100px !important
+
+    .ml105xs
+        margin-left: 105px !important
+
+    .ml110xs
+        margin-left: 110px !important
+
+    .ml115xs
+        margin-left: 115px !important
+
+    .ml120xs
+        margin-left: 120px !important
+
+    .mb0xs
+        margin-bottom: 0 !important
+
+    .mb1xs
+        margin-bottom: 1px !important
+
+    .mb2xs
+        margin-bottom: 2px !important
+
+    .mb3xs
+        margin-bottom: 3px !important
+
+    .mb4xs
+        margin-bottom: 4px !important
+
+    .mb5xs
+        margin-bottom: 5px !important
+
+    .mb6xs
+        margin-bottom: 6px !important
+
+    .mb7xs
+        margin-bottom: 7px !important
+
+    .mb8xs
+        margin-bottom: 8px !important
+
+    .mb9xs
+        margin-bottom: 9px !important
+
+    .mb10xs
+        margin-bottom: 10px !important
+
+    .mb15xs
+        margin-bottom: 15px !important
+
+    .mb20xs
+        margin-bottom: 20px !important
+
+    .mb25xs
+        margin-bottom: 25px !important
+
+    .mb30xs
+        margin-bottom: 30px !important
+
+    .mb35xs
+        margin-bottom: 35px !important
+
+    .mb40xs
+        margin-bottom: 40px !important
+
+    .mb45xs
+        margin-bottom: 45px !important
+
+    .mb50xs
+        margin-bottom: 50px !important
+
+    .mb55xs
+        margin-bottom: 55px !important
+
+    .mb60xs
+        margin-bottom: 60px !important
+
+    .mb65xs
+        margin-bottom: 65px !important
+
+    .mb70xs
+        margin-bottom: 70px !important
+
+    .mb75xs
+        margin-bottom: 75px !important
+
+    .mb80xs
+        margin-bottom: 80px !important
+
+    .mb85xs
+        margin-bottom: 85px !important
+
+    .mb90xs
+        margin-bottom: 90px !important
+
+    .mb95xs
+        margin-bottom: 95px !important
+
+    .mb100xs
+        margin-bottom: 100px !important
+
+    .mb105xs
+        margin-bottom: 105px !important
+
+    .mb110xs
+        margin-bottom: 110px !important
+
+    .mb115xs
+        margin-bottom: 115px !important
+
+    .mb120xs
+        margin-bottom: 120px !important
+
+    .mx0xs
+        margin-left: 0 !important
+        margin-right: 0 !important
+
+    .mx1xs
+        margin-left: 1px !important
+        margin-right: 1px !important
+
+    .mx2xs
+        margin-left: 2px !important
+        margin-right: 2px !important
+
+    .mx3xs
+        margin-left: 3px !important
+        margin-right: 3px !important
+
+    .mx4xs
+        margin-left: 4px !important
+        margin-right: 4px !important
+
+    .mx5xs
+        margin-left: 5px !important
+        margin-right: 5px !important
+
+    .mx6xs
+        margin-left: 6px !important
+        margin-right: 6px !important
+
+    .mx7xs
+        margin-left: 7px !important
+        margin-right: 7px !important
+
+    .mx8xs
+        margin-left: 8px !important
+        margin-right: 8px !important
+
+    .mx9xs
+        margin-left: 9px !important
+        margin-right: 9px !important
+
+    .mx10xs
+        margin-left: 10px !important
+        margin-right: 10px !important
+
+    .mx15xs
+        margin-left: 15px !important
+        margin-right: 15px !important
+
+    .mx20xs
+        margin-left: 20px !important
+        margin-right: 20px !important
+
+    .mx25xs
+        margin-left: 25px !important
+        margin-right: 25px !important
+
+    .mx30xs
+        margin-left: 30px !important
+        margin-right: 30px !important
+
+    .mx35xs
+        margin-left: 35px !important
+        margin-right: 35px !important
+
+    .mx40xs
+        margin-left: 40px !important
+        margin-right: 40px !important
+
+    .mx45xs
+        margin-left: 45px !important
+        margin-right: 45px !important
+
+    .mx50xs
+        margin-left: 50px !important
+        margin-right: 50px !important
+
+    .mx55xs
+        margin-left: 55px !important
+        margin-right: 55px !important
+
+    .mx60xs
+        margin-left: 60px !important
+        margin-right: 60px !important
+
+    .mx65xs
+        margin-left: 65px !important
+        margin-right: 65px !important
+
+    .mx70xs
+        margin-left: 70px !important
+        margin-right: 70px !important
+
+    .mx75xs
+        margin-left: 75px !important
+        margin-right: 75px !important
+
+    .mx80xs
+        margin-left: 80px !important
+        margin-right: 80px !important
+
+    .mx85xs
+        margin-left: 85px !important
+        margin-right: 85px !important
+
+    .mx90xs
+        margin-left: 90px !important
+        margin-right: 90px !important
+
+    .mx95xs
+        margin-left: 95px !important
+        margin-right: 95px !important
+
+    .mx100xs
+        margin-left: 100px !important
+        margin-right: 100px !important
+
+    .mx105xs
+        margin-left: 105px !important
+        margin-right: 105px !important
+
+    .mx110xs
+        margin-left: 110px !important
+        margin-right: 110px !important
+
+    .mx115xs
+        margin-left: 115px !important
+        margin-right: 115px !important
+
+    .mx120xs
+        margin-left: 120px !important
+        margin-right: 120px !important
+
+    .my0xs
+        margin-top: 0!important
+        margin-bottom: 0 !important
+
+    .my1xs
+        margin-top: 1px!important
+        margin-bottom: 1px !important
+
+    .my2xs
+        margin-top: 2px!important
+        margin-bottom: 2px !important
+
+    .my3xs
+        margin-top: 3px!important
+        margin-bottom: 3px !important
+
+    .my4xs
+        margin-top: 4px!important
+        margin-bottom: 4px !important
+
+    .my5xs
+        margin-top: 5px!important
+        margin-bottom: 5px !important
+
+    .my6xs
+        margin-top: 6px!important
+        margin-bottom: 6px !important
+
+    .my7xs
+        margin-top: 7px!important
+        margin-bottom: 7px !important
+
+    .my8xs
+        margin-top: 8px!important
+        margin-bottom: 8px !important
+
+    .my9xs
+        margin-top: 9px!important
+        margin-bottom: 9px !important
+
+    .my10xs
+        margin-top: 10px!important
+        margin-bottom: 10px !important
+
+    .my15xs
+        margin-top: 15px!important
+        margin-bottom: 15px !important
+
+    .my20xs
+        margin-top: 20px!important
+        margin-bottom: 20px !important
+
+    .my25xs
+        margin-top: 25px!important
+        margin-bottom: 25px !important
+
+    .my30xs
+        margin-top: 30px!important
+        margin-bottom: 30px !important
+
+    .my35xs
+        margin-top: 35px!important
+        margin-bottom: 35px !important
+
+    .my40xs
+        margin-top: 40px!important
+        margin-bottom: 40px !important
+
+    .my45xs
+        margin-top: 45px!important
+        margin-bottom: 45px !important
+
+    .my50xs
+        margin-top: 50px!important
+        margin-bottom: 50px !important
+
+    .my55xs
+        margin-top: 55px!important
+        margin-bottom: 55px !important
+
+    .my60xs
+        margin-top: 60px!important
+        margin-bottom: 60px !important
+
+    .my65xs
+        margin-top: 65px!important
+        margin-bottom: 65px !important
+
+    .my70xs
+        margin-top: 70px!important
+        margin-bottom: 70px !important
+
+    .my75xs
+        margin-top: 75px!important
+        margin-bottom: 75px !important
+
+    .my80xs
+        margin-top: 80px!important
+        margin-bottom: 80px !important
+
+    .my85xs
+        margin-top: 85px!important
+        margin-bottom: 85px !important
+
+    .my90xs
+        margin-top: 90px!important
+        margin-bottom: 90px !important
+
+    .my95xs
+        margin-top: 95px!important
+        margin-bottom: 95px !important
+
+    .my100xs
+        margin-top: 100px!important
+        margin-bottom: 100px !important
+
+    .my105xs
+        margin-top: 105px!important
+        margin-bottom: 105px !important
+
+    .my110xs
+        margin-top: 110px!important
+        margin-bottom: 110px !important
+
+    .my115xs
+        margin-top: 115px!important
+        margin-bottom: 115px !important
+
+    .my120xs
+        margin-top: 120px!important
+        margin-bottom: 120px !important
+
+    .mlautoxs
+        margin-left: auto !important
+
+    .mrautoxs
+        margin-right: auto !important
+
+    .mxautoxs
+        margin-left: auto !important
+        margin-right: auto !important
+
+    .w1xs, .wfullxs
+        width: 100%
+
+    .centerxs
+        margin-left: auto !important
+        margin-right: auto !important
+
+    .d-none-xs
+        display: none !important
+
+    .d-inline-block-xs
+        display: inline-block !important
+
+    .d-block-xs
+        display: block !important
+
+    .d-flex-xs
+        display: flex !important
+
+    .d-inline-flex-xs
+        display: inline-flex !important
+
+    .flex-row-xs
+        flex-direction: row !important
+
+    .flex-column-xs
+        flex-direction: column !important
+
+    .flex-row-reverse-xs
+        flex-direction: row-reverse !important
+
+    .flex-column-revers-xse
+        flex-direction: column-reverse !important
+
+    .flex-wrap-xs
+        flex-wrap: wrap !important
+
+    .flex-nowrap-xs
+        flex-wrap: nowrap !important
+
+    .flex-wrap-reverse-xs
+        flex-wrap: wrap-reverse !important
+
+    .justify-content-start-xs
+        justify-content: flex-start !important
+
+    .justify-content-end-xs
+        justify-content: flex-end !important
+
+    .justify-content-center-xs
+        justify-content: center !important
+
+    .justify-content-between-xs
+        justify-content: space-between !important
+
+    .justify-content-around-xs
+        justify-content: space-around !important
+
+    .align-items-start-xs
+        align-items: flex-start !important
+
+    .align-items-end-xs
+        align-items: flex-end !important
+
+    .align-items-center-xs
+        align-items: center !important
+
+    .align-items-baseline-xs
+        align-items: baseline !important
+
+    .align-items-stretch-xs
+        align-items: stretch !important
+
+    .align-content-start-xs
+        align-content: flex-start !important
+
+    .align-content-end-xs
+        align-content: flex-end !important
+
+    .align-content-center-xs
+        align-content: center !important
+
+    .align-content-between-xs
+        align-content: space-between !important
+
+    .align-content-around-xs
+        align-content: space-around !important
+
+    .align-content-stretch-xs
+        align-content: stretch !important
+
+    .align-self-auto-xs
+        align-self: auto !important
+
+    .align-self-start-xs
+        align-self: flex-start !important
+
+    .align-self-end-xs
+        align-self: flex-end !important
+
+    .align-self-center-xs
+        align-self: center !important
+
+    .align-self-baseline-xs
+        align-self: baseline !important
+
+    .align-self-stretch-xs
+        align-self: stretch !important
+
+    .fr-xs
+        float: right
+
+    .fl-xs
+        float: left
+
+    .fn-xs
+        float: none
+
+    .tc-xs
+        text-align: center
+
+    .tr-xs
+        text-align: right
+
+    .tl-xs
+        text-align: left

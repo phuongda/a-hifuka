@@ -1,0 +1,74 @@
+footer.c-footer
+    .l-container-1200
+        .c-footer__left
+            a.c-footer__logo(href="index.html")
+                img.lazy(data-src="./assets/img/common/logo-white.svg", alt="")
+    .l-container-1200
+        .c-footer__left
+            .c-footer__address
+                p
+                    strong
+                        | 〒577-0005
+                        br
+                        | 大阪府東大阪市七軒家18番36号　
+            .c-footer__contacts
+                span.item
+                    strong
+                        | TEL：
+                        a(href="tel:0729618411") 06-6744-7555
+                span.item
+                    strong
+                        | FAX：
+                        a(href="javascript:void(0)") 06-6744-7311
+        .c-footer__middle.pt20.pt0tb
+            img.lazy(data-src="./assets/img/common/img-footer.jpg")
+            ul.c-footer__lisks
+                li.item
+                    a(href="profile.html")
+                        strong アクセスマップを見る
+                        i.c-icon.ic-arrow-circle-3
+        .c-footer__right
+            ul.c-footer__menu
+                li 
+                    a(href="index.html")
+                        strong ホーム
+                        span Home
+                li 
+                    a(href="index.html#A")
+                        strong 加工技術紹介
+                        span Service
+                li 
+                    a(href="profile.html")
+                        strong 会社案内
+                        span Profile
+                li 
+                    a(href="profile.html")
+                        strong アクセス
+                        span Access
+                li 
+                    a(href="news.html")
+                        strong お知らせ
+                        span News
+        .c-footer__bottom
+            p.c-copyright #{"COPYRIGHTⒸ 株式会社 松山 All Rights Reserved."}
+    .bg
+        img.img.img-cover.img-top.lazy(data-src="./assets/img/common/footer-bg.jpg")
+include ../partials/_script
+if page == "top"
+    script.
+        $(function() {
+            slideMainvisual();
+            //- slide();
+            slide2();
+            slideProductsSpecial();
+        });
+if page == "service"
+    script.
+        $(function() {
+            slide2();
+        });
+//- if page == "staff" || page == "profile"
+//-     script.
+//-         $(function() {  
+//-             slide3();
+//-         });

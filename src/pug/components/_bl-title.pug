@@ -1,0 +1,29 @@
+mixin blockTitle(title, description, element = "", style = "", color = true)
+    if (element == "h3")
+        h3.c-title.c-title--center
+            if (title.length > 2 && style != "style-2")
+                strong
+                    each char, index in title
+                        if index == 1 && color
+                            b=char
+                        else 
+                            =char
+            else if style == "style-2"
+                strong.text-blue=title
+            else
+                strong=title   
+            span=description
+    else if (!element)
+        h2.c-title.c-title--center
+            if (title.length > 2 && style != "style-2")
+                strong
+                    each char, index in title
+                        if index == 1 && color
+                            b=char
+                        else 
+                            =char
+            else if style == "style-2"
+                strong.text-blue=title
+            else
+                strong=title
+            span=description

@@ -1,0 +1,10 @@
+mixin blockBreadcrumb(array)
+    section.l-breadcrumb.breadcrumb-bg
+        .l-container
+            ul.c-breadcrumbs
+                each item in array
+                    li
+                        if item.link
+                            a(href=item.link)= item.title
+                        else 
+                            span= item.title

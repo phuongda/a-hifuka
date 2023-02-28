@@ -1,0 +1,77 @@
+/* profile page */
+@import "core/mixin/_mixin"
+@import "core/variable/_color"
+
+.p-demo
+
+    .c-demos
+        @include box-100()
+
+        .c-demo
+            @include box-100()
+            flex-direction: column
+
+            .name
+                @include box-100()
+                margin-bottom: 30px
+
+            .demo
+                @include box-100()
+                margin-bottom: 30px
+                border: 1px solid #eeeeee
+                padding: 20px
+
+            .code
+                @include box-100()
+                min-height: 300px
+                padding: 50px 0 0 0
+                background: #eeeeee
+                position: relative
+                overflow: hidden
+
+                pre
+                    padding: 20px 20px 20px 20px
+                    overflow: auto
+
+                code
+                    font-size: 1.6rem
+                    line-height: 2
+                    font-family: Consolas,Monaco,"Andale Mono","Ubuntu Mono",monospace
+                    text-align: left
+                    word-spacing: normal
+                    word-break: normal
+                    word-wrap: normal
+                    white-space: pre
+                    hyphens: none
+                    tab-size: 4
+
+                .btncopy
+                    width: 100px
+                    height: 40px
+                    @include box()
+                    justify-content: center
+                    align-items: center
+                    border-radius: 0 0 0 5px
+                    background: #707070
+                    font-size: 1.4rem
+                    color: white
+                    position: absolute
+                    top: 0
+                    right: 0
+                    z-index: 10
+                    cursor: pointer
+
+            &:not(:last-child)
+                margin-bottom: 50px
+
+@media screen and (min-width: 992px)
+
+@media screen and (max-width: 991px)
+
+@media screen and (min-width: 769px)
+
+@media screen and (max-width: 768px)
+
+@media screen and (max-width: 580px)
+
+@media screen and (max-width: 480px)

@@ -1,0 +1,14 @@
+- const base = "."
+- const home = true
+- const canonical = "/"
+- const page = "blog"
+
+doctype html
+html(lang="ja")
+    include ./partials/_head
+    body
+        include ./layouts/_header
+        include ./components/_bl-banner
+        +blockBanner("BLOG", "ブログ", "assets/img/blog/banner.jpg", [ { "link": "#", "title": "株式会社弥生金属" }, { "link": "", "title": "ブログ" } ])
+        img.lazy(data-src="assets/img/blog/img.jpg")
+    include ./layouts/_footer

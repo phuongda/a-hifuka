@@ -1,0 +1,97 @@
+/* top page */
+@import "core/mixin/_mixin"
+@import "core/variable/_color"
+
+.p-profile
+
+    .l-block
+
+        &-1
+
+            .txt
+                max-width: 577px
+
+    .c-icon
+
+        &.ic
+
+            &-gear
+                width: 24px
+                height: 24px
+
+    .c-dl
+
+        dt,
+        dd
+            font-size: 1.6rem
+
+        dt
+            width: 240px
+            max-width: 240px
+
+        dd
+            width: calc(100% - 240px)
+
+        &.space
+
+            &20
+
+                dd
+                    width: calc(100% - (240px + 20px))
+
+    .c-cols
+
+        &.c-col-73
+
+            .thumb
+                width: 42%
+                max-width: 440px
+
+                iframe
+                    width: 100%
+                    min-height: 320px
+
+            .contents
+                width: 58%
+                padding-left: 40px
+
+            &.flex-row-reverse
+
+                .contents
+                    padding-right: 40px
+
+@media screen and (max-width: 991px)
+    .p-profile
+
+        .c-cols
+
+            &.c-col-73
+
+                .thumb
+                    width: 100%
+
+                .contents
+                    width: 100%
+                    padding-left: 0
+
+                &.flex-row-reverse
+
+                    .contents
+                        padding-right: 0
+
+@media screen and (max-width: 580px)
+    .p-profile
+
+        .c-dl
+
+            dt
+                width: 100%
+                max-width: unset
+
+            dd
+                width: 100%
+
+            &.space20
+
+                dd
+                    width: 100%

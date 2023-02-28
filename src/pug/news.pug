@@ -1,0 +1,172 @@
+- const base = "."
+- const home = true
+- const canonical = "/"
+- const page = "news"
+
+doctype html
+html(lang="ja")
+    include ./partials/_head
+    body
+        include ./layouts/_header
+        include ./components/_bl-banner
+        +blockBanner("お知らせ", "News", "./assets/img/news/banner.jpg", [ { "link": "#", "title": "株式会社松山" }, { "link": "", "title": "お知らせ" } ])
+        //- img.lazy(data-src="./assets/img/news/img.jpg")
+        main#main.p-news
+            section.l-blocks.l-news.pt80.pt50sp.pb105.pb70sp
+                .l-container.p-fadein.p-delay_1s
+                    .l-blocks__title.mb50.mb30sp
+                        h3.c-title.title-center.title-border.title-border-short.bottom.text38.text28sp.text24xs.mxauto.pb35.pb20sp
+                            strong
+                                | 記
+                                b.clblue 事
+                                | 一覧
+                            span.c-subtitle.text11.mt15.mt10sp News list
+                    .l-blocks__main
+                        ul.c-news.col-4.have-image
+                            li.item
+                                a.mb40.mb0sp.pb40.pb20sp.bdbottom(href="news_on.html") 
+                                    figure.c-figure.height240.mb35.mb20sp
+                                        img.lazy(data-src="./assets/img/news/img-1.jpg")
+                                        .c-stickers
+                                            span.sticker-new new
+                                    .c-info
+                                        span.c-date.mb10 2023.01.01
+                                        h3.c-title.text18.text14sp.mb0
+                                            strong.blod 公式ホームページをリニューアル致しました。
+                            li.item
+                                a.mb40.mb0sp.pb40.pb20sp.bdbottom(href="news_on.html") 
+                                    figure.c-figure.height240.mb35.mb20sp
+                                        img.lazy(data-src="./assets/img/news/img-2.jpg")
+                                    .c-info
+                                        span.c-date.mb10 2023.01.01
+                                        h3.c-title.text18.text14sp.mb0
+                                            strong.blod 公式ホームページをリニューアル致しました。
+                            li.item
+                                a.mb40.mb0sp.pb40.pb20sp.bdbottom(href="news_on.html") 
+                                    figure.c-figure.height240.mb35.mb20sp
+                                        img.lazy(data-src="./assets/img/news/img-3.jpg")
+                                    .c-info
+                                        span.c-date.mb10 2023.01.01
+                                        h3.c-title.text18.text14sp.mb0
+                                            strong.blod 公式ホームページをリニューアル致しました。
+                            li.item
+                                a.mb40.mb0sp.pb40.pb20sp.bdbottom(href="news_on.html") 
+                                    figure.c-figure.height240.mb35.mb20sp
+                                        img.lazy(data-src="./assets/img/news/img-4.jpg")
+                                    .c-info
+                                        span.c-date.mb10 2023.01.01
+                                        h3.c-title.text18.text14sp.mb0
+                                            strong.blod 公式ホームページをリニューアル致しました。
+                            li.item
+                                a.mb40.mb0sp.pb40.pb20sp.bdbottom(href="news_on.html") 
+                                    figure.c-figure.height240.mb35.mb20sp
+                                        img.lazy(data-src="./assets/img/news/img-1.jpg")
+                                    .c-info
+                                        span.c-date.mb10 2023.01.01
+                                        h3.c-title.text18.text14sp.mb0
+                                            strong.blod 公式ホームページをリニューアル致しました。
+                            li.item
+                                a.mb40.mb0sp.pb40.pb20sp.bdbottom(href="news_on.html") 
+                                    figure.c-figure.height240.mb35.mb20sp
+                                        img.lazy(data-src="./assets/img/news/img-2.jpg")
+                                    .c-info
+                                        span.c-date.mb10 2023.01.01
+                                        h3.c-title.text18.text14sp.mb0
+                                            strong.blod 公式ホームページをリニューアル致しました。
+                            li.item
+                                a.mb40.mb0sp.pb40.pb20sp.bdbottom(href="news_on.html") 
+                                    figure.c-figure.height240.mb35.mb20sp
+                                        img.lazy(data-src="./assets/img/news/img-3.jpg")
+                                    .c-info
+                                        span.c-date.mb10 2023.01.01
+                                        h3.c-title.text18.text14sp.mb0
+                                            strong.blod 公式ホームページをリニューアル致しました。
+                            li.item
+                                a.mb40.mb0sp.pb40.pb20sp.bdbottom(href="news_on.html") 
+                                    figure.c-figure.height240.mb35.mb20sp
+                                        img.lazy(data-src="./assets/img/news/img-4.jpg")
+                                    .c-info
+                                        span.c-date.mb10 2023.01.01
+                                        h3.c-title.text18.text14sp.mb0
+                                            strong.blod 公式ホームページをリニューアル致しました。
+                            li.item
+                                a.mb40.mb0sp.pb40.pb20sp.bdbottom(href="news_on.html") 
+                                    figure.c-figure.height240.mb35.mb20sp
+                                        img.lazy(data-src="./assets/img/news/img-1.jpg")
+                                    .c-info
+                                        span.c-date.mb10 2023.01.01
+                                        h3.c-title.text18.text14sp.mb0
+                                            strong.blod 公式ホームページをリニューアル致しました。
+                            li.item
+                                a.mb40.mb0sp.pb40.pb20sp.bdbottom(href="news_on.html") 
+                                    figure.c-figure.height240.mb35.mb20sp
+                                        img.lazy(data-src="./assets/img/news/img-2.jpg")
+                                    .c-info
+                                        span.c-date.mb10 2023.01.01
+                                        h3.c-title.text18.text14sp.mb0
+                                            strong.blod 公式ホームページをリニューアル致しました。
+                            li.item
+                                a.mb40.mb0sp.pb40.pb20sp.bdbottom(href="news_on.html") 
+                                    figure.c-figure.height240.mb35.mb20sp
+                                        img.lazy(data-src="./assets/img/news/img-3.jpg")
+                                    .c-info
+                                        span.c-date.mb10 2023.01.01
+                                        h3.c-title.text18.text14sp.mb0
+                                            strong.blod 公式ホームページをリニューアル致しました。
+                            li.item
+                                a.mb40.mb0sp.pb40.pb20sp.bdbottom(href="news_on.html") 
+                                    figure.c-figure.height240.mb35.mb20sp
+                                        img.lazy(data-src="./assets/img/news/img-4.jpg")
+                                    .c-info
+                                        span.c-date.mb10 2023.01.01
+                                        h3.c-title.text18.text14sp.mb0
+                                            strong.blod 公式ホームページをリニューアル致しました。
+                            li.item
+                                a.mb40.mb0sp.pb40.pb20sp.bdbottom(href="news_on.html") 
+                                    figure.c-figure.height240.mb35.mb20sp
+                                        img.lazy(data-src="./assets/img/news/img-1.jpg")
+                                    .c-info
+                                        span.c-date.mb10 2023.01.01
+                                        h3.c-title.text18.text14sp.mb0
+                                            strong.blod 公式ホームページをリニューアル致しました。
+                            li.item
+                                a.mb40.mb0sp.pb40.pb20sp.bdbottom(href="news_on.html") 
+                                    figure.c-figure.height240.mb35.mb20sp
+                                        img.lazy(data-src="./assets/img/news/img-2.jpg")
+                                    .c-info
+                                        span.c-date.mb10 2023.01.01
+                                        h3.c-title.text18.text14sp.mb0
+                                            strong.blod 公式ホームページをリニューアル致しました。
+                            li.item
+                                a.mb40.mb0sp.pb40.pb20sp.bdbottom(href="news_on.html") 
+                                    figure.c-figure.height240.mb35.mb20sp
+                                        img.lazy(data-src="./assets/img/news/img-3.jpg")
+                                    .c-info
+                                        span.c-date.mb10 2023.01.01
+                                        h3.c-title.text18.text14sp.mb0
+                                            strong.blod 公式ホームページをリニューアル致しました。
+                            li.item
+                                a.mb40.mb0sp.pb40.pb20sp.bdbottom(href="news_on.html") 
+                                    figure.c-figure.height240.mb35.mb20sp
+                                        img.lazy(data-src="./assets/img/news/img-4.jpg")
+                                    .c-info
+                                        span.c-date.mb10 2023.01.01
+                                        h3.c-title.text18.text14sp.mb0
+                                            strong.blod 公式ホームページをリニューアル致しました。
+                        .c-pagination.mt70.mt50sp
+                            a.item(href="#")
+                                i.c-icon.ic-arrow-left-black
+                            a.item(href="#") 1
+                            a.item(href="#") 2
+                            a.item(href="#") 3
+                            span.item.current 4
+                            a.item(href="#") 5
+                            a.item(href="#") 6
+                            a.item(href="#") 7
+                            a.item(href="#") 8
+                            a.item(href="#") 9
+                            a.item(href="#") ...
+                            a.item(href="#") 18
+                            a.item(href="#")
+                                i.c-icon.ic-arrow-right-black
+    include ./layouts/_footer

@@ -1,0 +1,3006 @@
+@import "core/mixin/_media-query", "core/mixin/_mixin"
+@import "core/variable/_color", "core/variable/_fonts"
+
+@import url("https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap")
+
+// @font-face
+//     font-family: 'メイリオ'
+//     font-style: normal
+//     font-weight: 300
+//     src: url(../font/meiryo.ttc)
+
+// @font-face
+//     font-family: 'Meiryo'
+//     font-style: normal
+//     font-weight: 300
+//     src: url(../font/meiryo.ttc)
+
+@font-face
+    font-family: 'A-OTF-R'
+    font-style: normal
+    font-weight: 300
+    src: url(../font/A-OTF-RyuminPro-Regular.otf)
+
+@font-face
+    font-family: 'A-OTF-M'
+    font-style: normal
+    font-weight: 500
+    src: url(../font/A-OTF-RyuminPro-Medium.otf)
+
+// @font-face
+//     font-family: 'G-OTF-R'
+//     font-style: normal
+//     font-weight: 300
+//     src: url(../font/G-OTF-GRYUMINPRO-REGULAR.OTF)
+
+// @font-face
+//     font-family: 'Oswald-R'
+//     font-style: normal
+//     font-weight: 300
+//     src: url(../font/Oswald-Regular.ttf)
+
+// @font-face
+//     font-family: 'Oswald-M'
+//     font-style: normal
+//     font-weight: 300
+//     src: url(../font/Oswald-Medium.ttf)
+
+// @font-face
+//     font-family: MS Mincho
+//     font-style: normal
+//     font-weight: 300
+//     src: url(../font/MSMINCHO.TTC)
+
+// @font-face
+//     font-family: HGPMinchoB
+//     font-style: normal
+//     font-weight: 300
+//     src: url(../font/HGRMB.TTC)
+
+html
+    font-size: 10px
+    // font-size: 62.5%
+
+html,
+body
+    overflow-x: hidden
+
+body
+    // font-family: 'メイリオ', 'Meiryo', sans-serif
+    font-family: YuGothic, "Yu Gothic", sans-serif
+    font-size: 14px
+    line-height: 160%
+    font-weight: 500
+    color: $color-black
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+    text-size-adjust: 100%
+    letter-spacing: 2px
+
+a
+    color: $color-black
+    text-decoration: none
+    cursor: pointer
+
+    &:hover
+        text-decoration: none
+        color: inherit
+
+p
+    margin-bottom: 10px
+    font-size: 1.4rem
+    line-height: 1.8
+
+strong
+    font-weight: bold
+
+img
+    width: 100%
+
+.font-gothic
+    font-family: 'Yu Gothic'
+
+.font-aotf-r
+    font-family: 'A-OTF-R'
+
+.font-aotf-m
+    font-family: 'A-OTF-M'
+
+@include mq(lg, max)
+    img
+        max-width: 100%
+
+@include mq(lg, min)
+    .sp-only
+        display: none
+
+@include mq(lg, max)
+    .pc-only
+        display: none
+
+.l-container
+    max-width: 1400px
+    @include box-auto()
+
+    &-full
+        max-width: 100%
+        @include box-auto()
+
+    &-1800
+        max-width: 1800px
+        @include box-auto()
+
+    &-1760
+        max-width: 1760px
+        @include box-auto()
+
+    &-1720
+        max-width: 1720px
+        @include box-auto()
+
+    &-1630
+        max-width: 1630px
+        @include box-auto()
+
+    &-1600
+        max-width: 1600px
+        @include box-auto()
+
+    &-1550
+        max-width: 1550px
+        @include box-auto()
+
+    &-1520
+        max-width: 1520px
+        @include box-auto()
+
+    &-1500
+        max-width: 1500px
+        @include box-auto()
+
+    &-1480
+        max-width: 1480px
+        @include box-auto()
+
+    &-1450
+        max-width: 1450px
+        @include box-auto()
+
+    &-1430
+        max-width: 1430px
+        @include box-auto()
+
+    &-1380
+        max-width: 1380px
+        @include box-auto()
+
+    &-1370
+        max-width: 1370px
+        @include box-auto()
+
+    &-1360
+        max-width: 1360px
+        @include box-auto()
+
+    &-1340
+        max-width: 1340px
+        @include box-auto()
+
+    &-1300
+        max-width: 1300px
+        @include box-auto()
+
+    &-1280
+        max-width: 1280px
+        @include box-auto()
+
+    &-1200
+        max-width: 1200px
+        @include box-auto()
+
+    &-1180
+        max-width: 1180px
+        @include box-auto()
+
+    &-1120
+        max-width: 1120px
+        @include box-auto()
+
+    &-1100
+        max-width: 1100px
+        @include box-auto()
+
+    &-1050
+        max-width: 1050px
+        @include box-auto()
+
+    &-1040
+        max-width: 1040px
+        @include box-auto()
+
+    &-1000
+        max-width: 1000px
+        @include box-auto()
+
+    &-980
+        max-width: 980px
+        @include box-auto()
+
+    &-960
+        max-width: 960px
+        @include box-auto()
+
+    &-920
+        max-width: 920px
+        @include box-auto()
+
+    &-912
+        max-width: 912px
+        @include box-auto()
+
+    &-900
+        max-width: 900px
+        @include box-auto()
+
+    &-848
+        max-width: 848px
+        @include box-auto()
+
+    &-680
+        max-width: 680px
+        @include box-auto()
+
+    &-590
+        max-width: 590px
+        @include box-auto()
+
+    &-540
+        max-width: 540px
+        @include box-auto()
+
+    &-500
+        max-width: 500px
+        @include box-auto()
+
+    &-460
+        max-width: 460px
+        @include box-auto()
+
+.l-contents
+    @include box-100()
+
+.l-flex
+    @include box()
+
+.l-wrapper
+    width: 100%
+    overflow: auto
+
+.bg-img
+    background-position: center
+    background-repeat: no-repeat
+
+    &-cover
+        background-size: cover
+
+    &-contain
+        background-size: contain
+
+    &-top
+        background-position: top
+
+    &-bottom
+        background-position: bottom
+
+.img
+    height: 100%
+
+    &-cover
+        object-fit: cover
+
+    &-contain
+        object-fit: contain
+
+    &-top
+        object-position: top center
+
+    &-bottom
+        object-position: bottom center
+
+.bg
+    width: 100%
+    min-width: 1920px
+    @include box()
+    position: absolute
+    left: 50%
+    z-index: -1
+    transform: translateX(-50%)
+
+.parallax__container
+    position: absolute
+    clip: rect(0px, auto, auto, 0px)
+    width: 100%
+    height: 100%
+    top: 0px
+    right: 0px
+    z-index: -10
+
+.parallax
+    position: fixed
+    width: 100%
+    height: 100%
+    top: 0px
+    left: 0px
+
+    &-bg
+        min-height: 1000px
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: cover
+
+.c-box
+    background: white
+    box-shadow: 0 2px 4px rgb(0 0 0 / 16%)
+
+.c-box2
+    padding: 40px
+    border: 1px solid $color-gray3
+    background: rgba(255, 255, 255, 60%)
+    box-shadow: 0 2px 4px rgb(0 0 0 / 16%)
+
+.c-title
+    @include box()
+    flex-direction: row
+    line-height: 1.8
+    align-items: center
+    position: relative
+
+    strong
+        font-size: 3.4rem
+        font-weight: bold
+        line-height: 1.4
+        font-family: 'A-OTF-R'
+
+    small
+        font-size: 2.4rem
+
+    b
+        color: $color-pink
+
+    i
+        width: 20px
+        height: 20px
+        margin-right: 10px
+
+    &.title-border
+
+        &-short
+            position: relative
+
+            &::after
+                content: ""
+                width: 60px
+                height: 1px
+                background: $color-black
+                position: absolute
+                left: 50%
+                transform: translateX(-50%)
+
+            &.top
+                padding-top: 20px
+
+                &::after
+                    top: 0
+
+            &.bottom
+                padding-bottom: 20px
+
+                &::after
+                    bottom: 0
+
+            &.border-lg
+
+                &::after
+                    height: 2px
+
+            &.border-short
+
+                &-sm
+
+                    &::after
+                        width: 20px
+
+                &-md
+
+                    &::after
+                        width: 30px
+
+                &-lg
+
+                    &::after
+                        width: 60px
+
+        &-left
+            padding-left: 15px
+
+            &::after
+                content: ""
+                width: 1px
+                height: 100%
+                background: $color-black
+                position: absolute
+                left: 0
+                top: 0
+
+            &.border-sm
+
+                &::after
+                    width: 1px
+
+            &.border-md
+
+                &::after
+                    width: 2px
+
+            &.border-lg
+
+                &::after
+                    width: 2px
+
+            &.h25
+
+                &::after
+                    height: 25px
+                    top: 8px
+
+            &.h35
+
+                &::after
+                    height: 35px
+                    top: 5px
+
+            &.h45
+
+                &::after
+                    height: 45px
+
+            &.hf
+
+                &::after
+                    height: 100%
+
+        &-bottom
+            padding-bottom: 20px
+            border-bottom: 1px solid
+
+            &.border-sm
+                border-width: 1px
+
+            &.border-md
+                border-width: 2px
+
+            &.border-lg
+                border-width: 3px
+
+        &-left-right
+            padding-left: 50px
+            padding-right: 50px
+
+            &::after,
+            &::before
+                content: ""
+                width: 40px
+                height: 1px
+                background: $color-black
+                position: absolute
+                top: 50%
+                transform: translateY(-50%)
+
+            &::after
+                left: 0
+
+            &::before
+                right: 0
+
+            &.border-sm
+
+                &::after,
+                &::before
+                    height: 1px
+
+            &.border-md
+
+                &::after,
+                &::before
+                    height: 2px
+
+            &.border-lg
+
+                &::after,
+                &::before
+                    height: 3px
+
+            &.rotate
+
+                &::after,
+                &::before
+                    width: 1px
+                    height: 30px
+                    bottom: 6px
+
+                &::after
+                    left: -20px
+                    transform: rotate(-45deg)
+
+                &::before
+                    right: -20px
+                    transform: rotate(45deg)
+
+                &.border-sm
+
+                    &::after,
+                    &::before
+                        width: 1px
+                        height: 30px
+
+                &.border-md
+
+                    &::after,
+                    &::before
+                        width: 2px
+                        height: 30px
+
+                &.border-lg
+
+                    &::after,
+                    &::before
+                        width: 3px
+                        height: 30px
+
+    &.u-square
+        position: relative
+
+        &::before
+            content: ""
+            background: $color-blue
+            position: absolute
+            left: 0
+
+        &.square-sm
+            padding-left: 20px!important
+
+            &::before
+                width: 10px
+                height: 10px
+                top: 20px
+
+        &.square-md
+            padding-left: 25px!important
+
+            &::before
+                width: 15px
+                height: 15px
+                top: 12px
+
+        &.square-lg
+            padding-left: 30px!important
+
+            &::before
+                width: 20px
+                height: 20px
+                top: 14px
+
+    &.u-line
+        padding-left: 10px
+        position: relative
+
+        &::before
+            content: ""
+            width: 10px
+            height: 1px
+            background: $color-gray
+            position: absolute
+            left: 0
+
+        &.line-sm
+            padding-left: 20px
+
+            &::before
+                width: 10px
+
+        &.line-md
+            padding-left: 30px
+
+            &::before
+                width: 20px
+
+        &.line-lg
+            padding-left: 60px
+
+            &::before
+                width: 50px
+
+        &.line-top
+            padding-left: 0
+
+            &::before
+                top: 0
+
+        &.line-center
+
+            &::before
+                top: 50%
+
+        &.line-bottom
+
+            &::before
+                bottom: 20%
+
+        &.line-right
+            padding-left: 0
+            padding-right: 10px
+
+            &::before
+                left: unset
+                right: 0
+
+            &.line-sm
+                padding-right: 20px
+
+            &.line-md
+                padding-right: 30px
+
+            &.line-lg
+                padding-right: 60px
+
+    &.title-center
+        flex-direction: column
+        text-align: center
+
+        &.border-short
+
+            &::after
+                left: 50%
+                transform: translateX(-50%)
+
+    &.title-column
+        flex-direction: column
+        align-items: flex-start
+
+    &.subtitle
+        align-items: baseline
+
+        &:not(.flex-column)
+
+            .c-subtitle
+                margin-left: 10px
+
+    &.text
+
+        &10
+
+            strong
+                font-size: 1rem
+
+            small
+                font-size: 0.8rem
+
+        &12
+
+            strong
+                font-size: 1.2rem
+
+            small
+                font-size: 1rem
+
+        &13
+
+            strong
+                font-size: 1.3rem
+
+            small
+                font-size: 1rem
+
+        &14
+
+            strong
+                font-size: 1.4rem
+
+            small
+                font-size: 1rem
+
+        &15
+
+            strong
+                font-size: 1.5rem
+
+            small
+                font-size: 1rem
+
+        &16
+
+            strong
+                font-size: 1.6rem
+
+            small
+                font-size: 1rem
+
+        &18
+
+            strong
+                font-size: 1.8rem
+
+            small
+                font-size: 1rem
+
+        &20
+
+            strong
+                font-size: 2rem
+
+            small
+                font-size: 1rem
+
+        &22
+
+            strong
+                font-size: 2.2rem
+
+            small
+                font-size: 1.2rem
+
+        &24
+
+            strong
+                font-size: 2.4rem
+
+            small
+                font-size: 1.4rem
+
+        &28
+
+            strong
+                font-size: 2.8rem
+
+            small
+                font-size: 1.8rem
+
+        &30
+
+            strong
+                font-size: 3rem
+
+            small
+                font-size: 2rem
+
+        &32
+
+            strong
+                font-size: 3.2rem
+
+            small
+                font-size: 2.2rem
+
+        &34
+
+            strong
+                font-size: 3.4rem
+
+            small
+                font-size: 2.4rem
+
+        &36
+
+            strong
+                font-size: 3.6rem
+
+            small
+                font-size: 2.6rem
+
+        &38
+
+            strong
+                font-size: 3.8rem
+
+            small
+                font-size: 2.8rem
+
+        &40
+
+            strong
+                font-size: 4rem
+
+            small
+                font-size: 3rem
+
+        &42
+
+            strong
+                font-size: 4.2rem
+
+            small
+                font-size: 3.2rem
+
+        &44
+
+            strong
+                font-size: 4.4rem
+
+            small
+                font-size: 3.4rem
+
+        &46
+
+            strong
+                font-size: 4.6rem
+
+            small
+                font-size: 3.6rem
+
+        &48
+
+            strong
+                font-size: 4.8rem
+
+            small
+                font-size: 3.8rem
+
+        &50
+
+            strong
+                font-size: 5rem
+
+            small
+                font-size: 4rem
+
+        &52
+
+            strong
+                font-size: 5.2rem
+
+            small
+                font-size: 4.2rem
+
+        &54
+
+            strong
+                font-size: 5.4rem
+
+            small
+                font-size: 4.4rem
+
+        &58
+
+            strong
+                font-size: 5.8rem
+
+            small
+                font-size: 4.8rem
+
+        &60
+
+            strong
+                font-size: 6rem
+
+            small
+                font-size: 5rem
+
+        &64
+
+            strong
+                font-size: 6.4rem
+
+            small
+                font-size: 5.4rem
+
+        &68
+
+            strong
+                font-size: 6.8rem
+
+            small
+                font-size: 5.8rem
+
+        &72
+
+            strong
+                font-size: 7.2rem
+
+            small
+                font-size: 5.2rem
+
+        &80
+
+            strong
+                font-size: 8rem
+
+            small
+                font-size: 6rem
+
+        &82
+
+            strong
+                font-size: 8.2rem
+
+            small
+                font-size: 6.2rem
+
+        &89
+
+            strong
+                font-size: 8.9rem
+
+            small
+                font-size: 7.8rem
+
+        &92
+
+            strong
+                font-size: 9.2rem
+
+            small
+                font-size: 7.2rem
+
+        &96
+
+            strong
+                font-size: 9.6rem
+
+            small
+                font-size: 7.6rem
+
+    &[class*=maxline]
+        -webkit-box-orient: vertical
+        display: -webkit-box
+        overflow: hidden
+
+    &.maxline1
+        -webkit-line-clamp: 1
+
+    &.maxline2
+        -webkit-line-clamp: 2
+
+    &.maxline3
+        -webkit-line-clamp: 3
+
+    &.maxline4
+        -webkit-line-clamp: 4
+
+    &.maxline5
+        -webkit-line-clamp: 5
+
+.c-subtitle
+    font-size: 1.3rem
+    line-height: 1.4
+    color: $color-gray
+
+    &.line
+        padding-left: 10px
+        position: relative
+
+        &::before
+            content: ""
+            width: 10px
+            height: 1px
+            background: $color-gray
+            position: absolute
+            left: 0
+
+        &-sm
+            padding-left: 20px
+
+            &::before
+                width: 10px
+
+        &-md
+            padding-left: 30px
+
+            &::before
+                width: 20px
+
+        &-lg
+            padding-left: 60px
+
+            &::before
+                width: 50px
+
+        &-top
+            padding-left: 0
+
+            &::before
+                top: 0
+
+        &-center
+
+            &::before
+                top: 50%
+
+        &-bottom
+
+            &::before
+                bottom: 20%
+
+        &-right
+            padding-left: 0
+            padding-right: 10px
+
+            &::before
+                left: unset
+                right: 0
+
+            &.line-sm
+                padding-right: 20px
+
+            &.line-md
+                padding-right: 30px
+
+            &.line-lg
+                padding-right: 60px
+
+.u-circle
+    position: relative
+
+    &::after
+        content: ""
+        width: 5px
+        height: 5px
+        border-radius: 10px
+        background: $color-green
+        position: absolute
+        top: -5px
+        left: 50%
+        transform: translateX(-50%)
+
+    &.circle-sm
+
+        &::after
+            content: ""
+            width: 4px
+            height: 4px
+
+    &.circle-md
+
+        &::after
+            content: ""
+            width: 5px
+            height: 5px
+
+    &.circle-lg
+
+        &::after
+            content: ""
+            width: 10px
+            height: 10px
+
+.u-highlight
+    padding-bottom: 5px
+    background-image: linear-gradient(rgba(240, 128, 128, 40%), rgba(240, 128, 128, 40%))
+    background-position: 0 100%
+    background-size: 100% 1px
+    background-repeat: no-repeat
+
+    &.highlight-sm
+        background-size: 100% 1px
+
+    &.highlight-md
+        background-size: 100% 3px
+
+    &.highlight-lg
+        background-size: 100% 6px
+
+    &.highlight-10
+        background-size: 100% 10px
+
+    &.spill
+        margin-left: -10px
+        margin-right: -10px
+        padding-left: 10px
+        padding-right: 10px
+
+    &.spill-md
+        margin-left: -30px
+        margin-right: -30px
+        padding-left: 30px
+        padding-right: 30px
+
+    &.position80
+        background-position-y: 80%
+
+    // position: relative
+
+    // &::after
+    //     content: ''
+    //     width: 100%
+    //     height: 1px
+    //     background: $color-green
+    //     position: absolute
+    //     left: 0
+    //     bottom: -5px
+    //     z-index: -1
+
+    // &.highlight-sm
+
+    //     &::after
+    //         height: 1px
+
+    // &.highlight-md
+
+    //     &::after
+    //         height: 3px
+
+    // &.highlight-lg
+
+    //     &::after
+    //         height: 6px
+
+    // &.spill
+
+    //     &::after
+    //         width: calc(100% + 30px)
+    //         left: -15px
+
+.l-titles
+    @include box-100()
+    justify-content: space-between
+    align-items: baseline
+
+.c-description
+    width: 100%
+    line-height: 1.8
+
+    p
+        line-height: 1.8
+
+        &:last-child
+            margin-bottom: 0
+
+.c-blockquote
+    line-height: 1.8
+    font-family: 'A-OTF-R'
+
+    p
+        line-height: 1.8
+
+        &:last-child
+            margin-bottom: 0
+
+    footer
+        margin-top: 10px
+
+    &.blockquote-bg
+        padding: 20px
+        background: #f8f9fa
+
+    &.gothic
+        font-family: YuGothic, "Yu Gothic", sans-serif
+
+.c-button
+    @include box-100()
+    justify-content: center
+    align-items: center
+    min-height: 72px
+    padding: 10px 15px
+    font-size: 1.6rem
+    font-weight: bold
+    line-height: 1.4
+    transition: 0.5s
+
+    img
+        width: 15px
+        height: 15px
+        margin-right: 10px
+        transition: 0.5s
+
+    i
+        width: 20px
+        height: 24px
+        margin-right: 10px
+        background-size: contain
+        background-position: center center
+        background-repeat: no-repeat
+        transition: 0.5s
+
+    span
+        line-height: 1.4
+        margin-top: 4px
+
+    &.max-width
+        max-width: 260px!important
+
+        &-280
+            max-width: 280px!important
+
+        &-300
+            max-width: 300px!important
+
+        &-330
+            max-width: 330px!important
+
+    &.min-width
+        min-width: 260px!important
+
+        &-280
+            min-width: 280px!important
+
+        &-300
+            min-width: 300px!important
+
+        &-330
+            min-width: 330px!important
+
+    &.icon-right
+
+        i
+            margin-left: 10px
+            margin-right: 0
+
+    &.button-black
+        background: $color-black
+        color: white
+
+        &:not(.opacity):hover
+            border: 1px solid
+            background: transparent
+            color: $color-black
+
+    &.button-blue
+        background: $color-blue
+        color: white
+
+        &:not(.opacity):hover
+            border: 1px solid
+            background: transparent
+            color: $color-blue
+
+    &.button-green
+        background: $color-green
+        color: white
+
+        &:not(.opacity):hover
+            border: 1px solid
+            background: transparent
+            color: $color-green
+
+    &.button-orange
+        background: $color-orange
+        color: white
+
+        &:not(.opacity):hover
+            border: 1px solid
+            background: transparent
+            color: $color-orange
+
+    &.button-yellow
+        background: $color-yellow
+        color: white
+
+        &:not(.opacity):hover
+            border: 1px solid
+            background: transparent
+            color: $color-yellow
+
+    &.button-red
+        background: $color-red2
+        color: white
+
+        &:not(.opacity):hover
+            border: 1px solid
+            background: transparent
+            color: $color-red2
+
+    &.button-white
+        background: white
+        color: $color-text
+
+        &:not(.opacity):hover
+            background: $color-text
+            color: white
+
+    &.button-pink
+        background: $color-pink
+        color: white
+
+        &:not(.opacity):hover
+            border: 1px solid
+            background: transparent
+            color: $color-pink
+
+    &.button-outline
+        border: 2px solid
+        background: white
+
+        &.button-black
+            color: $color-black
+
+        &.button-blue
+            color: $color-blue
+
+        &.button-green
+            color: $color-green
+
+        &.button-orange
+            color: $color-orange
+
+        &.button-yellow
+            color: $color-yellow
+
+        &.button-red
+            color: $color-red
+
+        &.button-white
+            color: $color-text
+
+        &.button-pink
+            color: $color-pink
+
+        &:not(.opacity):hover
+            background: white
+            color: $color-blue
+
+            &.button-black
+                border-color: $color-green2
+                background: $color-green2
+                color: white
+
+            &.button-blue
+                border-color: $color-blue
+                background: $color-blue
+                color: white
+
+            &.button-green
+                border-color: $color-green
+                background: $color-green
+                color: white
+
+            &.button-orange
+                border-color: $color-orange
+                background: $color-orange
+                color: white
+
+            &.button-yellow
+                border-color: $color-yellow
+                background: $color-yellow
+                color: white
+
+            &.button-red
+                border-color: $color-red
+                background: $color-red
+                color: white
+
+            &.button-white
+                border-color: $color-text
+                background: $color-text
+                color: white
+
+            &.button-pink
+                border-color: $color-pink
+                background: $color-pink
+                color: white
+
+    &.opacity
+
+        &:hover
+            opacity: 0.5
+
+    &.border-bottom
+        border-bottom: 1px solid #cccccc
+
+        i
+            width: 12px
+            height: 20px
+            margin-right: 14px
+
+        &:not(.opacity):hover
+            color: $color-blue
+            border-color: $color-blue
+
+    &:not(.opacity):hover
+
+        .c-icon
+
+            &.ic
+
+                &-arrow-right-black-2
+                    background-image: url("../img/common/ic-arrow-right-blue.svg")
+
+                &-arrow-right-black-3
+                    background-image: url("../img/common/ic-arrow-right-3.svg")
+
+                &-arrow-circle-blue-2
+                    background-image: url("../img/common/ic-arrow-circle-2.svg")
+
+                &-cursor
+                    background-image: url("../img/common/ic-cursor-green.svg")
+
+                &-cursor-green
+                    background-image: url("../img/common/ic-cursor.svg")
+
+                &-cart-orange
+                    background-image: url("../img/common/ic-cart.svg")
+
+                &-phone-pink
+                    background-image: url("../img/common/ic-phone.svg")
+
+                &-pin-pink
+                    background-image: url("../img/common/ic-pin.svg")
+
+    &.custom-button
+        justify-content: space-between
+        padding: 20px 20px 20px 20px
+        font-size: 2rem
+        position: relative
+        overflow: hidden
+
+        i
+            margin-right: 10px
+
+        strong, i
+            z-index: 1
+
+        &:after
+            content: ""
+            width: 50px
+            height: calc(100% + 2px)
+            background: $color-blue
+            clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%)
+            position: absolute
+            top: -1px
+            right: -1px
+            z-index: 0
+            transition: all 0.35s ease-in-out
+
+        &:hover
+            border-color: $color-blue !important
+            background: transparent !important
+            color: white !important
+
+            &:after
+                width: calc(100% + 2px)
+                clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%)
+
+.c-gr-button
+    @include box()
+    flex-direction: row
+
+    &.gr-button-full
+        width: 100%
+
+    &.gr-button-auto
+        width: max-content
+
+    .c-button
+        min-width: 260px
+        flex: 1
+
+        &:not(:last-child)
+            margin-right: 20px
+
+.c-showmore
+    @include box()
+    font-size: 1.6rem
+    line-height: 1.8
+    position: relative
+    transition: .5s
+
+    &.icon-left
+        padding-left: 35px
+
+        &::before
+            content: ""
+            width: 22px
+            height: 22px
+            @include bg-img-contain()
+            background-image: url("../img/common/ic-arrow-circle-black.svg")
+            position: absolute
+            top: 50%
+            left: 0
+            transform: translateY(-50%)
+            transition: 0.5s
+
+    &.icon-right
+        align-items: center
+
+        i
+            width: 38px
+            height: 8px
+            margin-left: 12px
+            transition: 0.5s
+
+    &.opacity
+
+        &:hover
+            opacity: 0.5
+
+    &:not(.opacity):hover
+
+        .c-icon
+
+            &.ic
+
+                &-arrowlong-right-blue
+                    background-image: url("../img/common/ic-arrowlong-right-black.svg")
+
+        &.showmore-animation
+
+            .c-icon
+                animation: arrow_hover 1s cubic-bezier(0.19, 1, 0.22, 1) 0s infinite
+
+    .c-icon
+
+        &.ic
+
+            &-arrow-circle-black-3
+                width: 26px
+                height: 26px
+
+@keyframes arrow_hover
+    0%
+        transform: translate(10px)
+    to
+        transform: translate(0)
+
+.c-table
+    width: 100%
+    border-collapse: collapse
+    border-spacing: 0
+
+    th,
+    td
+        height: 80px
+        padding: 16px 5px
+        font-size: 1.5rem
+        vertical-align: middle
+
+        span
+            font-size: 1.3rem
+
+    thead,
+    tbody
+
+        th
+            font-weight: bold
+
+    &.height
+
+        &93
+
+            th,
+            td
+                height: 93px
+
+        &0
+
+            th,
+            td
+                height: auto
+
+    &.th-max-width
+
+        th
+            width: 200px
+            max-width: 200px
+
+    &.th-left
+
+        th
+            text-align: left
+
+    &.td-center
+
+        td
+            text-align: center
+
+    &.th-white
+
+        th
+            background: white
+
+    &.th-gray
+
+        th
+            background: rgba(238, 238, 238, 0.5)
+
+    &.th-blue
+
+        th
+            background: rgba(3, 77, 143, 0.1)
+
+    &.th-clblue
+
+        th
+            color: $color-blue
+
+    &.td-max-width
+
+        td
+            width: 330px
+            max-width: 330px
+
+    &.td-gray
+
+        td
+            background: rgba(238, 238, 238, 0.5)
+
+    &.td-clgray
+
+        td
+            color: $color-gray
+
+    &.thead-green
+
+        thead
+
+            th
+                background: $color-green
+                color: white
+
+    &.tbody-even-gray
+
+        tr:nth-child(even)
+
+            td
+                background: rgba(238, 238, 238, 0.5)
+
+        &20
+
+            tr:nth-child(even)
+
+                td
+                    background: rgba(238, 238, 238, 0.2)
+
+    &.boder
+        border: 1px solid $color-gray
+
+        th,
+        td
+            border: 1px solid $color-gray
+
+    &.boder-bottom
+
+        th,
+        td
+            position: relative
+
+            &::before
+                content: ""
+                width: calc(100% - 20px)
+                left: 50%
+                height: 1px
+                background: $color-text
+                position: absolute
+                bottom: 0
+                transform: translate(-50%)
+
+        th
+
+            &::before
+                background: $color-blue
+
+    &.thead-box
+
+        thead
+
+            th
+                padding-bottom: calc(16px + 32px)
+                background: 0 0
+                color: white
+
+                &::before
+                    height: calc(100% - 34px)
+                    border-radius: 3px
+                    background: $color-blue
+                    top: 0
+                    bottom: unset
+                    z-index: -1
+
+    .u-min-width
+        min-width: 120px
+
+    .u-max-width
+        max-width: 120px
+
+.c-ul
+
+    li
+        font-size: 1.3rem
+        line-height: 1.8
+        position: relative
+
+        &:not(:last-child)
+            margin-bottom: 10px
+
+    &.u-attention
+
+        li
+            padding-left: 20px
+
+            &:not(:last-child)
+                margin-bottom: 10px
+
+            &::before
+                content: "※"
+                position: absolute
+                left: 0
+
+    &.u-disc
+
+        li
+            padding-left: 15px
+
+            &:not(:last-child)
+                margin-bottom: 10px
+
+            &::before
+                content: "・"
+                position: absolute
+                left: 0
+
+    &.u-number
+        padding-left: 30px
+
+        li
+            list-style: decimal
+
+        &.number-zero
+            padding-left: 40px
+
+            li
+                list-style-type: decimal-leading-zero
+
+.c-counters
+    counter-reset: section
+
+    .counter
+
+        &:not(.counter-right)
+
+            &::before
+                counter-increment: section
+                content: counter(section)
+
+        &.counter-right
+
+            &::after
+                counter-increment: section
+                content: counter(section)
+
+    &.counter-zero
+
+        .counter
+
+            &:not(.counter-right)
+
+                &::before
+                    content: counter(section, decimal-leading-zero)
+
+            &.counter-right
+
+                &::after
+                    content: counter(section, decimal-leading-zero)
+
+.c-dl
+    @include box-100()
+    justify-content: space-between
+
+    dt, dd
+        padding: 20px 20px
+        font-size: 1.5rem
+        line-height: 1.8
+
+    dt
+        width: 200px
+        max-width: 200px
+        border-bottom: 1px solid #cccccc
+        font-weight: bold
+        text-align: center
+
+    dd
+        width: calc(100% - 200px)
+        border-bottom: 1px solid #cccccc
+        word-break: break-all
+
+    &.space
+
+        &10
+
+            dd
+                width: calc(100% - (200px + 10px))
+
+        &20
+
+            dd
+                width: calc(100% - (200px + 20px))
+
+    &.dl-black
+
+        dt
+            border-color: $color-black
+
+    &.dl-gray
+
+        dt
+            border-color: $color-gray
+
+    &.dl-blue
+
+        dt
+            border-color: $color-blue
+
+    &.dl-green
+
+        dt
+            border-color: $color-green
+
+    &.dl-full
+
+        dt,
+        dd
+            width: 100%
+            max-width: 100%
+
+        dt
+            text-align: left
+
+        dd
+            border-bottom: 0
+
+    .c-button
+        width: 94px
+        min-height: 54px
+        padding: 12px 10px
+
+        i
+            width: 12px
+            height: 16px
+
+        span
+            margin-top: 0
+            font-size: 1.6rem
+
+.c-collapsible
+    @include box-100()
+
+    &>.header
+        @include box-100()
+        cursor: pointer
+
+    &>.content
+        @include box-100()
+        padding-top: 30px
+
+    &:not(.unhide)
+
+        &>.content
+            display: none
+
+    &.show
+
+        &>.content
+            display: flex
+
+    &:not(:last-child)
+        margin-bottom: 100px
+
+.c-icon
+    width: 20px
+    height: 20px
+    display: block
+    @include bg-img-contain()
+
+    &.icon-sm
+        width: 15px
+        height: 15px
+
+    &.icon-md
+        width: 20px
+        height: 20px
+
+    &.icon-lg
+        width: 30px
+        height: 30px
+
+    &.ic
+
+        // arrow
+
+        &-arrow-circle
+            background-image: url("../img/common/ic-arrow-circle.svg")
+
+        &-arrow-circle-black
+            background-image: url("../img/common/ic-arrow-circle-black.svg")
+
+        &-arrow-circle-2
+            background-image: url("../img/common/ic-arrow-circle-2.svg")
+
+        &-arrow-circle-3
+            background-image: url("../img/common/ic-arrow-circle-3.svg")
+
+        &-arrow-circle-black-2
+            background-image: url("../img/common/ic-arrow-circle-black-2.svg")
+
+        &-arrow-circle-black-3
+            background-image: url("../img/common/ic-arrow-circle-black-3.svg")
+
+        &-arrow-circle-blue-2
+            background-image: url("../img/common/ic-arrow-circle-blue-2.svg")
+
+        &-arrow-left-black
+            background-image: url("../img/common/ic-arrow-left-black.svg")
+
+        &-arrow-right-black
+            background-image: url("../img/common/ic-arrow-right-black.svg")
+
+        &-arrow-right-black-2
+            background-image: url("../img/common/ic-arrow-right-black-2.svg")
+
+        &-arrow-right-black-3
+            background-image: url("../img/common/ic-arrow-right-black-3.svg")
+
+        &-arrow-right-blue-2
+            background-image: url("../img/common/ic-arrow-right-blue.svg")
+
+        &-arrowlong-right
+            background-image: url("../img/common/ic-arrowlong-right.svg")
+
+        &-arrowlong-right-black
+            background-image: url("../img/common/ic-arrowlong-right-black.svg")
+
+        &-arrowlong-right-gray
+            background-image: url("../img/common/ic-arrowlong-right-gray.svg")
+
+        &-arrowlong-right-blue
+            background-image: url("../img/common/ic-arrowlong-right-blue.svg")
+
+        &-arrowlong-right-blue-2
+            background-image: url("../img/common/ic-arrowlong-right-blue-2.svg")
+
+        &-arrowshort-right
+            background-image: url("../img/common/ic-arrowshort-right.svg")
+
+        &-arrow-down
+            background-image: url("../img/common/ic-arrow-down.svg")
+
+        // arrow btn
+
+        &-btn-prev
+            background-image: url("../img/common/ic-btn-prev.svg")
+
+        &-btn-next
+            background-image: url("../img/common/ic-btn-next.svg")
+
+        &-btn-prev-2
+            background-image: url("../img/common/ic-btn-prev-2.svg")
+
+        &-btn-next-2
+            background-image: url("../img/common/ic-btn-next-2.svg")
+
+        &-btn-prev-3
+            background-image: url("../img/common/ic-btn-prev-3.svg")
+
+        &-btn-next-3
+            background-image: url("../img/common/ic-btn-next-3.svg")
+
+        // phone
+
+        &-phone
+            background-image: url("../img/common/ic-phone.svg")
+
+        &-phone-green
+            background-image: url("../img/common/ic-phone-green.svg")
+
+        &-phone-pink
+            background-image: url("../img/common/ic-phone-pink.svg")
+
+        // mail
+
+        &-email
+            background-image: url("../img/common/ic-email.svg")
+
+        &-email-blue
+            background-image: url("../img/common/ic-email-blue.svg")
+
+        &-email-outline
+            background-image: url("../img/common/ic-email-outline.svg")
+
+        &-email-outline-black
+            background-image: url("../img/common/ic-email-outline-black.svg")
+
+        &-email-outline-blue
+            background-image: url("../img/common/ic-email-outline-blue.svg")
+
+        &-map
+            background-image: url("../img/common/ic-map.svg")
+
+        &-map-green
+            background-image: url("../img/common/ic-map-green.svg")
+
+        &-pin-pink
+            background-image: url("../img/common/ic-pin-pink.svg")
+
+        // icon cursor
+
+        &-cursor
+            background-image: url("../img/common/ic-cursor.svg")
+
+        &-cursor-black
+            background-image: url("../img/common/ic-cursor-black.svg")
+
+        &-cursor-blue
+            background-image: url("../img/common/ic-cursor-blue.svg")
+
+        &-cursor-green
+            background-image: url("../img/common/ic-cursor-green.svg")
+
+        // orther
+
+        &-info-circle-black
+            background-image: url("../img/common/ic-info-circle.svg")
+
+        &-cart
+            background-image: url("../img/common/ic-cart.svg")
+
+        &-cart-orange
+            background-image: url("../img/common/ic-cart-orange.svg")
+
+        &-file
+            background-image: url("../img/common/ic-file.svg")
+
+        &-print
+            background-image: url("../img/common/ic-print.svg")
+
+        &-printer
+            background-image: url("../img/common/ic-printer.svg")
+
+        &-time
+            background-image: url("../img/common/ic-time.svg")
+
+        &-car
+            background-image: url("../img/common/ic-car.svg")
+
+        &-driver
+            background-image: url("../img/common/ic-driver.svg")
+
+        &-money
+            background-image: url("../img/common/ic-money.svg")
+
+        &-user
+            background-image: url("../img/common/ic-user.svg")
+
+        &-facebook
+            background-image: url("../img/common/ic-facebook.svg")
+
+        &-instagram
+            background-image: url("../img/common/ic-instagram3.svg")
+
+        &-instagram
+            background-image: url("../img/common/ic-instagram.svg")
+
+        &-instagram-black
+            background-image: url("../img/common/ic-instagram-black.svg")
+
+        &-instagram-blue
+            background-image: url("../img/common/ic-instagram-blue.svg")
+
+        &-instagram-green
+            background-image: url("../img/common/ic-instagram-green.svg")
+
+        &-twitter
+            background-image: url("../img/common/ic-twitter.svg")
+
+        &-youtube
+            background-image: url("../img/common/ic-youtube.svg")
+
+        &-gear
+            background-image: url("../img/common/ic-gear-black.svg")
+
+        &-eye
+            background-image: url("../img/common/ic-eye-black.svg")
+
+    &.ic-logo
+        background-image: url("../img/common/logo.svg")
+
+@media screen and (min-width: 992px)
+
+@media screen and (max-width: 991px)
+    [class*="l-container"]
+        padding-left: 20px
+        padding-right: 20px
+
+    .c-title
+
+        &.text
+
+            &10tb
+
+                strong
+                    font-size: 1rem
+
+                small
+                    font-size: 0.8rem
+
+            &12tb
+
+                strong
+                    font-size: 1.2rem
+
+                small
+                    font-size: 1rem
+
+            &13tb
+
+                strong
+                    font-size: 1.3rem
+
+                small
+                    font-size: 1rem
+
+            &14tb
+
+                strong
+                    font-size: 1.4rem
+
+                small
+                    font-size: 1rem
+
+            &15tb
+
+                strong
+                    font-size: 1.5rem
+
+                small
+                    font-size: 1rem
+
+            &16tb
+
+                strong
+                    font-size: 1.6rem
+
+                small
+                    font-size: 1rem
+
+            &18tb
+
+                strong
+                    font-size: 1.8rem
+
+                small
+                    font-size: 1rem
+
+            &20tb
+
+                strong
+                    font-size: 2rem
+
+                small
+                    font-size: 1rem
+
+            &22tb
+
+                strong
+                    font-size: 2.2rem
+
+                small
+                    font-size: 1.2rem
+
+            &24tb
+
+                strong
+                    font-size: 2.4rem
+
+                small
+                    font-size: 1.4rem
+
+            &26tb
+
+                strong
+                    font-size: 2.6rem
+
+                small
+                    font-size: 1.6rem
+
+            &28tb
+
+                strong
+                    font-size: 2.8rem
+
+                small
+                    font-size: 1.8rem
+
+            &30tb
+
+                strong
+                    font-size: 3rem
+
+                small
+                    font-size: 2rem
+
+            &32tb
+
+                strong
+                    font-size: 3.2rem
+
+                small
+                    font-size: 2.2rem
+
+            &34tb
+
+                strong
+                    font-size: 3.4rem
+
+                small
+                    font-size: 2.4rem
+
+            &36tb
+
+                strong
+                    font-size: 3.6rem
+
+                small
+                    font-size: 2.6rem
+
+            &38tb
+
+                strong
+                    font-size: 3.8rem
+
+                small
+                    font-size: 2.8rem
+
+            &40tb
+
+                strong
+                    font-size: 4rem
+
+                small
+                    font-size: 3rem
+
+            &42tb
+
+                strong
+                    font-size: 4.2rem
+
+                small
+                    font-size: 3.2rem
+
+            &44tb
+
+                strong
+                    font-size: 4.4rem
+
+                small
+                    font-size: 3.4rem
+
+            &46tb
+
+                strong
+                    font-size: 4.6rem
+
+                small
+                    font-size: 3.6rem
+
+            &48tb
+
+                strong
+                    font-size: 4.8rem
+
+                small
+                    font-size: 3.8rem
+
+            &50tb
+
+                strong
+                    font-size: 5rem
+
+                small
+                    font-size: 4rem
+
+            &52tb
+
+                strong
+                    font-size: 5.2rem
+
+                small
+                    font-size: 4.2rem
+
+            &54tb
+
+                strong
+                    font-size: 5.4rem
+
+                small
+                    font-size: 4.4rem
+
+            &58tb
+
+                strong
+                    font-size: 5.8rem
+
+                small
+                    font-size: 4.8rem
+
+            &60tb
+
+                strong
+                    font-size: 6rem
+
+                small
+                    font-size: 5rem
+
+            &64tb
+
+                strong
+                    font-size: 6.4rem
+
+                small
+                    font-size: 5.4rem
+
+    .u-highlight
+
+        &.spill
+
+            &::after
+                left: -10px
+                width: calc(100% + 20px)
+
+    .c-button
+        min-height: 64px
+
+    .c-dl
+
+        dt
+            width: 30%
+            max-width: unset
+
+        dd
+            width: calc(100% - (30% + 10px))
+
+    .c-description
+        font-size: 2.3rem
+
+@media screen and (max-width: 768px)
+    .l-wrapper
+
+        table
+            width: 680px
+
+    .c-title
+
+        strong
+            font-size: 2.4rem
+
+        small
+            font-size: 1.4rem
+
+        i
+            width: 15px
+            height: 15px
+
+        &.title-border
+
+            &-short
+
+                &::after
+                    width: 40px
+
+            &-left
+
+                &.h25
+
+                    &::after
+                        top: 5px
+
+                &.h35
+
+                    &::after
+                        height: 32px
+                        top: 0
+
+                &.h45
+
+                    &::after
+                        height: 32px
+
+            &-bottom
+                padding-bottom: 15px
+
+            &-left-right
+                padding-right: 40px
+                padding-left: 40px
+
+                &::after,
+                &::before
+                    width: 30px
+
+                &.rotate
+                    padding-right: 20px
+                    padding-left: 20px
+
+                    &.border-lg
+
+                        &::after,
+                        &::before
+                            height: 20px
+
+        &.u-square
+
+            &.square-md
+                padding-left: 20px !important
+
+                &::before
+                    width: 10px
+                    height: 10px
+                    top: 10px
+
+            &.square-lg
+                padding-left: 20px !important
+
+                &::before
+                    width: 10px
+                    height: 10px
+                    top: 12px
+
+        &.u-line
+
+            &.line-lg
+                padding-left: 40px
+
+                &::before
+                    width: 30px
+
+            &.line-top
+                padding-left: 0
+
+        &.text
+
+            &10sp
+
+                strong
+                    font-size: 1rem
+
+                small
+                    font-size: 0.8rem
+
+            &12sp
+
+                strong
+                    font-size: 1.2rem
+
+                small
+                    font-size: 1rem
+
+            &13sp
+
+                strong
+                    font-size: 1.3rem
+
+                small
+                    font-size: 1rem
+
+            &14sp
+
+                strong
+                    font-size: 1.4rem
+
+                small
+                    font-size: 1rem
+
+            &15sp
+
+                strong
+                    font-size: 1.5rem
+
+                small
+                    font-size: 1rem
+
+            &16sp
+
+                strong
+                    font-size: 1.6rem
+
+                small
+                    font-size: 1rem
+
+            &18sp
+
+                strong
+                    font-size: 1.8rem
+
+                small
+                    font-size: 1rem
+
+            &20sp
+
+                strong
+                    font-size: 2rem
+
+                small
+                    font-size: 1rem
+
+            &22sp
+
+                strong
+                    font-size: 2.2rem
+
+                small
+                    font-size: 1.2rem
+
+            &24sp
+
+                strong
+                    font-size: 2.4rem
+
+                small
+                    font-size: 1.4rem
+
+            &26sp
+
+                strong
+                    font-size: 2.6rem
+
+                small
+                    font-size: 1.6rem
+
+            &28sp
+
+                strong
+                    font-size: 2.8rem
+
+                small
+                    font-size: 1.8rem
+
+            &30sp
+
+                strong
+                    font-size: 3rem
+
+                small
+                    font-size: 2rem
+
+            &32sp
+
+                strong
+                    font-size: 3.2rem
+
+                small
+                    font-size: 2.2rem
+
+            &34sp
+
+                strong
+                    font-size: 3.4rem
+
+                small
+                    font-size: 2.4rem
+
+            &36sp
+
+                strong
+                    font-size: 3.6rem
+
+                small
+                    font-size: 2.6rem
+
+            &38sp
+
+                strong
+                    font-size: 3.8rem
+
+                small
+                    font-size: 2.8rem
+
+            &40sp
+
+                strong
+                    font-size: 4rem
+
+                small
+                    font-size: 3rem
+
+            &42sp
+
+                strong
+                    font-size: 4.2rem
+
+                small
+                    font-size: 3.2rem
+
+            &44sp
+
+                strong
+                    font-size: 4.4rem
+
+                small
+                    font-size: 3.4rem
+
+            &46sp
+
+                strong
+                    font-size: 4.6rem
+
+                small
+                    font-size: 3.6rem
+
+            &48sp
+
+                strong
+                    font-size: 4.8rem
+
+                small
+                    font-size: 3.8rem
+
+            &50sp
+
+                strong
+                    font-size: 5rem
+
+                small
+                    font-size: 4rem
+
+            &52sp
+
+                strong
+                    font-size: 5.2rem
+
+                small
+                    font-size: 4.2rem
+
+            &54sp
+
+                strong
+                    font-size: 5.4rem
+
+                small
+                    font-size: 4.4rem
+
+            &58sp
+
+                strong
+                    font-size: 5.8rem
+
+                small
+                    font-size: 4.8rem
+
+            &60sp
+
+                strong
+                    font-size: 6rem
+
+                small
+                    font-size: 5rem
+
+            &64sp
+
+                strong
+                    font-size: 6.4rem
+
+                small
+                    font-size: 5.4rem
+
+    .u-highlight
+
+        &.spill
+
+            &::after
+                left: -5px
+                width: calc(100% + 10px)
+
+    .c-blockquote
+
+        &.blockquote-bg
+            padding: 10px
+
+    .c-button
+        min-height: 54px
+        font-size: 1.4rem
+
+        i
+            width: 20px
+            height: 20px
+
+        &[class*="max-width"]
+            width: 100%
+            max-width: 100%!important
+
+        &.custom-button
+            padding: 10px 20px 10px 15px
+            font-size: 1.6rem
+
+    .c-gr-button
+        width: 100%
+
+        &:not([class*="justify-content-"])
+            flex-direction: column
+
+        .c-button
+            min-width: 100%
+
+            &:not(:last-child)
+                margin-bottom: 20px
+
+    .c-showmore
+        font-size: 1.4rem
+
+        &.icon-left
+            padding-left: 30px
+
+            &::before
+                width: 20px
+                height: 20px
+
+        &.icon-right
+
+            i
+                margin-left: 10px
+
+    .c-dl
+
+        dt,
+        dd
+            padding-left: 10px
+            padding-right: 10px
+
+    .c-collapsible
+
+        &:not(:last-child)
+            margin-bottom: 50px
+
+@media screen and (max-width: 580px)
+    .c-title
+
+        &.text
+
+            &10xs
+
+                strong
+                    font-size: 1rem
+
+                small
+                    font-size: 0.8rem
+
+            &12xs
+
+                strong
+                    font-size: 1.2rem
+
+                small
+                    font-size: 1rem
+
+            &13xs
+
+                strong
+                    font-size: 1.3rem
+
+                small
+                    font-size: 1rem
+
+            &14xs
+
+                strong
+                    font-size: 1.4rem
+
+                small
+                    font-size: 1rem
+
+            &15xs
+
+                strong
+                    font-size: 1.5rem
+
+                small
+                    font-size: 1rem
+
+            &16xs
+
+                strong
+                    font-size: 1.6rem
+
+                small
+                    font-size: 1rem
+
+            &18xs
+
+                strong
+                    font-size: 1.8rem
+
+                small
+                    font-size: 1rem
+
+            &20xs
+
+                strong
+                    font-size: 2rem
+
+                small
+                    font-size: 1rem
+
+            &22xs
+
+                strong
+                    font-size: 2.2rem
+
+                small
+                    font-size: 1.2rem
+
+            &24xs
+
+                strong
+                    font-size: 2.4rem
+
+                small
+                    font-size: 1.4rem
+
+            &26xs
+
+                strong
+                    font-size: 2.6rem
+
+                small
+                    font-size: 1.6rem
+
+            &28xs
+
+                strong
+                    font-size: 2.8rem
+
+                small
+                    font-size: 1.8rem
+
+            &30xs
+
+                strong
+                    font-size: 3rem
+
+                small
+                    font-size: 2rem
+
+            &32xs
+
+                strong
+                    font-size: 3.2rem
+
+                small
+                    font-size: 2.2rem
+
+            &34xs
+
+                strong
+                    font-size: 3.4rem
+
+                small
+                    font-size: 2.4rem
+
+            &36xs
+
+                strong
+                    font-size: 3.6rem
+
+                small
+                    font-size: 2.6rem
+
+            &38xs
+
+                strong
+                    font-size: 3.8rem
+
+                small
+                    font-size: 2.8rem
+
+            &40xs
+
+                strong
+                    font-size: 4rem
+
+                small
+                    font-size: 3rem
+
+            &42xs
+
+                strong
+                    font-size: 4.2rem
+
+                small
+                    font-size: 3.2rem
+
+            &44xs
+
+                strong
+                    font-size: 4.4rem
+
+                small
+                    font-size: 3.4rem
+
+            &46xs
+
+                strong
+                    font-size: 4.6rem
+
+                small
+                    font-size: 3.6rem
+
+            &48xs
+
+                strong
+                    font-size: 4.8rem
+
+                small
+                    font-size: 3.8rem
+
+            &50xs
+
+                strong
+                    font-size: 5rem
+
+                small
+                    font-size: 4rem
+
+            &52xs
+
+                strong
+                    font-size: 5.2rem
+
+                small
+                    font-size: 4.2rem
+
+            &54xs
+
+                strong
+                    font-size: 5.4rem
+
+                small
+                    font-size: 4.4rem
+
+            &58xs
+
+                strong
+                    font-size: 5.8rem
+
+                small
+                    font-size: 4.8rem
+
+            &60xs
+
+                strong
+                    font-size: 6rem
+
+                small
+                    font-size: 5rem
+
+            &64xs
+
+                strong
+                    font-size: 6.4rem
+
+                small
+                    font-size: 5.4rem
+
+    .c-description
+        font-size: 1.4rem
+
+    .c-dl
+
+        &:not(.c-dl--gray)
+
+            dt
+                width: 100%
+                max-width: unset
+                padding-bottom: 0
+                border-bottom: 0
+                text-align: left
+
+            dd
+                width: 100%
+                padding-top: 10px
+
+    .c-dl-2
+
+        dt, dd
+            padding: 20px 5px
+            font-size: 1.2rem
+
+        dt
+            width: 150px
+            max-width: 200px
+
+        dd
+            width: calc(100% - 150px)
+            padding-left: 0

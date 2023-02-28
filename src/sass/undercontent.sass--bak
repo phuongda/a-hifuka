@@ -1,0 +1,10 @@
+.google_translate
+    position: absolute
+    left: 320px
+
+.ex-block
+    background: url(../images/ex/bg-ex.png) center center no-repeat
+    background-size: cover
+
+.wrapper
+    max-width: 1401px

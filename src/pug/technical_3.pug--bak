@@ -1,0 +1,14 @@
+- const base = "."
+- const home = true
+- const canonical = "/"
+- const page = "technical"
+
+doctype html
+html(lang="ja")
+    include ./partials/_head
+    body
+        include ./layouts/_header
+        include ./components/_bl-banner
+        +blockBanner("METAL WORKING", "板金加工", "assets/img/technical_3/banner.jpg", [ { "link": "#", "title": "株式会社弥生金属" }, { "link": "", "title": "板金加工" } ])
+        img.lazy(data-src="assets/img/technical_3/img.jpg")
+    include ./layouts/_footer
