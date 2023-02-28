@@ -19,3 +19,70 @@
 
                         img
                             max-width: 570px
+
+                    .c-images
+
+                        .c-cates
+                            position: absolute
+                            left: 50%
+                            bottom: 0
+                            transform: translateX(-50%)
+                            z-index: 1
+
+                            .cate
+                                min-width: 180px
+                                min-height: 42px
+                                border-radius: 10px
+                                font-weight: 500
+                                color: white
+
+                                &-before
+                                    background: $color-red4
+
+                                &-after
+                                    background: $color-pink
+
+                    .position-relative
+
+                        .img-bg
+                            width: 30%
+                            position: absolute
+                            top: 0
+                            z-index: -1
+
+                            &.left
+                                max-width: 360px
+                                left: 0
+
+                            &.right
+                                max-width: 406px
+                                right: 0
+
+                &-2
+
+                    .c-list
+                        @include box-100()
+                        padding-left: 86px
+
+                        li
+                            @include box-100()
+                            min-height: 74px
+                            align-items: center
+                            padding-top: 10px
+                            padding-left: calc(74px + 28px)
+                            position: relative
+
+                            &:not(:last-child)
+                                margin-bottom: 26px
+
+                            &::before
+                                content: ""
+                                width: 74px
+                                height: 74px
+                                background-image: url("../img/top/check-circle.svg")
+                                background-size: contain
+                                background-position: center
+                                background-repeat: no-repeat
+                                position: absolute
+                                top: 0
+                                left: 0
