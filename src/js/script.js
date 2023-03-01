@@ -320,34 +320,30 @@ function slideGallery() {
 }
 
 function slideProductsSpecial() {
-    var swiper = new Swiper(".sliders.special .swiper .swiper-container", {
-        slidesPerView: 1.22,
-        slidesPerGroup: 1,
-        spaceBetween: 20,
-        centeredSlides: true,
-        loop: true,
-        loopFillGroupWithBlank: true,
-        lazy: {
-            loadPrevNext: true,
-        },
-        allowTouchMove: true,
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: false
-        },
-        speed: 1500,
-        breakpoints: {
-            992: {
-                slidesPerView: 2.22,
-                spaceBetween: 31,
+    let arr_slides = $('.sliders.special .swiper .swiper-container');
+
+    arr_slides.each(function (index, value) {
+        let slides = `.sliders.special[data-index="${index}"] .swiper`,
+            slide_length = $(slides + ' .swiper-container .swiper-wrapper .swiper-slide').length;
+
+        let slide = new Swiper(slides + ' .swiper-container', {
+            slidesPerView: 4,
+            slidesPerGroup: 1,
+            spaceBetween: 40,
+            centeredSlides: false,
+            loop: slide_length < 2 ? false : true,
+            loopFillGroupWithBlank: true,
+            // slideToClickedSlide: true,
+            lazy: {
+                loadPrevNext: true,
             },
-        },
-        breakpoints: {
-            768: {
-                slidesPerView: 1.78,
-                spaceBetween: 20,
+            allowTouchMove: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false
             },
-        },
+            speed: 1500
+        });
     });
 }
 

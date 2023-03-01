@@ -234,27 +234,73 @@
                     &:not(:last-child)
                         margin-bottom: 105px
 
-        // &.l-top-4
+        &.l-top-4
 
-        //     .c-collapsible
+            .l-block
 
-        //     .c-counters
+                &-1
 
-        //         .counter
+                    .c-collapsible
 
-                    // &::before
-                    //     counter-increment: section
-                    //     content: "Q"counter(section)"."
-                    //     font-size: 2.4rem
-                    //     font-weight: bold
-                    //     line-height: 1.4
-                    //     color: $color-blue
-                    //     position: absolute
-                    //     top: 0
-                    //     left: 0
+                        .c-cates
 
-                    // &:not(:last-child)
-                    //     margin-bottom: 55px
+                            .cate
+                                min-width: 180px
+                                min-height: 60px
+                                font-size: 2.6rem
+                                font-weight: bold
+                                border-width: 2px
+
+                &-2
+
+                    .c-collapsible
+                        padding-left: 111px
+                        position: relative
+
+                        .counter
+                            width: 74px
+                            height: 74px
+                            @include box()
+                            flex-direction: column
+                            justify-content: center
+                            align-items: center
+                            border-radius: 50px
+                            background: $color-pink
+                            font-size: 1.4rem
+                            font-weight: 500
+                            line-height: 1
+                            color: white
+                            position: absolute
+                            top: 20px
+                            left: 0
+
+                            &::before
+                                font-size: 2.6rem
+                                font-weight: bold
+                                line-height: 1.2
+
+                        &:not(:last-child)
+                            margin-bottom: 55px
+
+                &-3
+
+                    // .l-block__main
+                    //     overflow: hidden
+
+                    // .l-container-full
+                    //     width: calc(100% + 50%)
+                    //     max-width: unset
+                    //     margin-right: -25%
+                    //     margin-left: -25%
+
+                    .c-products
+                        overflow: hidden
+
+                        &.product-special2
+                            width: calc(100% + 50%)
+                            max-width: unset
+                            margin-right: -25%
+                            margin-left: -25%
 
 .c-banner
 
@@ -369,3 +415,60 @@
 
         &:not(:last-child)
             margin-bottom: 0
+
+.c-products
+
+    &.product-special2
+
+        .item
+            flex-direction: column
+            padding: 30px
+            background: white
+            border-radius: 10px
+            box-shadow: 0 2px 6px rgb(0 0 0 / 10%)
+
+            .l-imgs
+                @include box-100()
+                justify-content: space-between
+
+                .c-figure
+                    width: calc((100% - 20px) / 2)
+                    @include box()
+
+            .c-figure
+                border-radius: 10px
+
+                .c-cates
+
+                    .cate
+                        min-width: 160px
+                        min-height: 40px
+                        font-size: 20px
+                        font-weight: bold
+                        color: white
+
+                        &.cate-before
+                            background: $color-red4
+
+                        &.cate-after
+                            background: $color-pink
+
+            .c-cates
+
+                .cate
+                    min-width: 120px
+                    min-height: 48px
+                    border-width: 2px
+                    border-radius: 3px
+                    font-weight: bold
+                    color: $color-red4
+
+            .c-description
+                width: calc(100% - 20px)
+                padding: 17px 15px 18px 15px
+                border-radius: 5px
+                background: rgba(112, 112, 112, 5%)
+
+        .swiper
+            padding-left: 0
+            padding-right: 0
