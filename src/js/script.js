@@ -333,11 +333,11 @@ function slideProductsSpecial() {
             centeredSlides: false,
             loop: slide_length < 2 ? false : true,
             loopFillGroupWithBlank: true,
-            // slideToClickedSlide: true,
+            slideToClickedSlide: true,
             lazy: {
                 loadPrevNext: true,
             },
-            allowTouchMove: true,
+            // allowTouchMove: true,
             autoplay: {
                 delay: 3000,
                 disableOnInteraction: false
