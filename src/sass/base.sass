@@ -186,6 +186,10 @@ img
         max-width: 1340px
         @include box-auto()
 
+    &-1320
+        max-width: 1320px
+        @include box-auto()
+
     &-1300
         max-width: 1300px
         @include box-auto()
@@ -200,6 +204,10 @@ img
 
     &-1180
         max-width: 1180px
+        @include box-auto()
+
+    &-1168
+        max-width: 1168px
         @include box-auto()
 
     &-1120
@@ -620,6 +628,12 @@ img
             &::before
                 width: 50px
 
+        &.line-15
+            padding-left: 25px
+
+            &::before
+                width: 15px
+
         &.line-top
             padding-left: 0
 
@@ -884,6 +898,14 @@ img
 
             small
                 font-size: 5rem
+
+        &62
+
+            strong
+                font-size: 6.2rem
+
+            small
+                font-size: 5.2rem
 
         &64
 
@@ -1228,6 +1250,9 @@ img
         &-330
             max-width: 330px!important
 
+        &-450
+            max-width: 450px!important
+
     &.min-width
         min-width: 260px!important
 
@@ -1239,6 +1264,9 @@ img
 
         &-330
             min-width: 330px!important
+
+        &-450
+            min-width: 450px!important
 
     &.icon-right
 
@@ -1457,6 +1485,40 @@ img
         &:hover
             box-shadow: 0px 0px 0px 0px
             transform: translateY(10px)
+
+    &.custom-button2
+        min-height: 120px
+        justify-content: space-between
+        padding: 20px 30px 20px 30px
+        border-radius: 10px
+        font-size: 2.4rem
+        transition: all 0.5s
+        z-index: 1
+
+        i
+            width: 28px
+            height: 28px
+            margin-right: 8px
+
+.l-button
+    width: auto
+    @include box()
+    position: relative
+
+    &::after
+        content: ""
+        width: 100%
+        height: 100%
+        background-image: url("../img/top/bg-button.svg")
+        border-radius: 10px
+        background-size: cover
+        background-position: top center
+        background-repeat: no-repeat
+        background-color: rgba(245, 106, 106, 99%)
+        position: absolute
+        right: -10px
+        bottom: -10px
+        z-index: 0
 
 .c-gr-button
     @include box()

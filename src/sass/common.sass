@@ -1533,7 +1533,7 @@
                 content: ""
                 width: 100%
                 height: 100%
-                background: rgb(12, 37, 67, 8%)
+                background: rgb(75, 42, 42, 16%)
                 position: absolute
                 top: 0
                 right: 0
@@ -1847,6 +1847,24 @@
 
             &.c-box
                 padding: 35px 30px 30px 30px
+
+        &.have-txt
+
+            .contents
+                max-width: calc((50% + 10%) - 40px)
+
+                .txt
+                    width: auto
+                    height: 100%
+                    color: #cccccc
+                    line-height: 1.4
+                    top: 30px
+                    right: -10px
+                    -webkit-transform: translateX(100%)
+                    transform: translateX(100%)
+
+        &.switch
+            flex-flow: row-reverse
 
     .slider-img
 

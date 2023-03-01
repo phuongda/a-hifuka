@@ -86,3 +86,286 @@
                                 position: absolute
                                 top: 0
                                 left: 0
+
+                &-3
+
+                    .c-cols
+
+                        &.c-col-55
+
+                            .thumb
+                                width: 55%
+                                max-width: 680px
+
+                            .contents
+                                width: 45%
+
+                                table
+                                    width: 100%
+                                    border-collapse: separate
+                                    border-spacing: 14px
+                                    -webkit-border-horizontal-spacing: 14px
+                                    -webkit-border-vertical-spacing: 16px
+
+                                    td
+                                        min-height: 80px
+                                        border-radius: 3px
+                                        background: $color-yellow
+                                        vertical-align: middle
+                                        text-align: center
+
+                                        p
+                                            font-size: 3.8rem
+                                            font-weight: bold
+
+                                            &:last-child
+                                                margin-bottom: 0
+
+        &.l-top-2
+
+            .bg
+                min-height: 462px
+                background: rgba(245, 106, 106, 6%)
+                top: 16%
+
+        &.l-top-3
+
+            .c-cols
+
+                &.c-col-73
+                    padding-left: 16px
+                    padding-right: 16px
+
+                    .thumb
+                        width: 28%
+                        max-width: 320px
+                        margin-right: 75px
+
+                        figure
+                            border-radius: 200px
+
+                    .contents
+                        width: 60%
+                        max-width: 690px
+
+                        h3.c-title
+                            font-family: YuGothic
+
+                        .c-cates
+
+                            .cate
+                                width: 100%
+                                max-width: 150px
+                                height: max-content
+                                min-height: 50px
+                                padding: 5px 20px 5px 37px
+                                border-radius: 3px
+                                background: $color-pink
+                                font-weight: 500
+                                color: white
+                                position: relative
+
+                                span
+                                    @include box()
+                                    align-items: baseline
+
+                                    strong
+                                        margin-left: 6px
+                                        font-weight: 500
+
+                                &::after
+                                    content: ""
+                                    width: 15px
+                                    height: 1px
+                                    background: white
+                                    position: absolute
+                                    left: 13px
+                                    bottom: 15px
+
+                    &.have-txt
+
+                        .txt
+                            width: auto
+                            top: -50px
+                            left: unset
+                            right: 16px
+                            transform: translateX(0)
+                            opacity: 0.3
+
+                            .c-title
+                                line-height: 1
+                                color: $color-gray3
+                                font-family: YuGothic
+
+                                &.u-line
+                                    padding-left: 0
+
+                                    &::before
+                                        background: $color-gray3
+
+                                    &.line-md
+                                        padding-top: 30px
+
+                                &.line-bottom
+
+                                    &::before
+                                        width: 2px
+                                        height: 20px
+                                        top: 0
+                                        left: 20%
+
+                    &.switch
+                        flex-flow: row-reverse
+                        padding-left: 16px
+                        padding-right: 16px
+
+                        .thumb
+                            margin-right: 0
+
+                        .contents
+                            margin-right: 80px
+
+                        &.have-txt
+
+                            .txt
+                                left: 0
+                                right: unset
+
+                    &:not(:last-child)
+                        margin-bottom: 105px
+
+        // &.l-top-4
+
+        //     .c-collapsible
+
+        //     .c-counters
+
+        //         .counter
+
+                    // &::before
+                    //     counter-increment: section
+                    //     content: "Q"counter(section)"."
+                    //     font-size: 2.4rem
+                    //     font-weight: bold
+                    //     line-height: 1.4
+                    //     color: $color-blue
+                    //     position: absolute
+                    //     top: 0
+                    //     left: 0
+
+                    // &:not(:last-child)
+                    //     margin-bottom: 55px
+
+.c-banner
+
+    &.custom-banner
+        height: calc(580px + 80px)
+
+        .contents
+
+            &.contents-center-bottom
+
+                &+.banner
+                    height: 480px
+
+        .c-cates
+            width: 100%
+            justify-content: center
+
+            .cate
+                width: 100%
+                max-width: 520px
+                min-height: 66px
+                border-radius: 10px
+                font-weight: 500
+                color: white
+                font-family: 'A-OTF-R'
+                background: $color-pink
+
+.c-notes
+    @include box-100()
+
+    .item
+        width: 100%
+        @include box()
+        flex-direction: column
+        margin-bottom: 60px
+        padding: 35px 35px 40px 82px
+        background: white
+        border-radius: 10px
+        box-shadow: 0 2px 6px rgb(0 0 0 / 10%)
+        position: relative
+        overflow: hidden
+
+        &::before
+            content: ""
+            width: 3px
+            height: 150px
+            background: $color-pink
+            position: absolute
+            top: 26px
+            left: 40px
+
+    .gr-notes
+        @include box-100()
+        justify-content: space-between
+        margin-bottom: 50px
+
+        .item
+            width: calc((100% - 60px) / 2)
+            margin-bottom: 0
+            padding-right: 10px
+
+.c-cnt
+    @include box-100()
+    align-items: unset
+    justify-content: space-between
+
+    .item
+        width: calc((100% - 40px) / 2)
+        @include box()
+        padding: 20px
+        border-radius: 10px
+        color: white
+
+        .contents
+            @include box-100()
+            height: 100%
+            flex-direction: column
+            justify-content: flex-start
+            align-items: center
+            align-content: center
+            border: 2px solid rgba(255, 255, 255, 49%)
+
+            .c-title
+
+                &.title-border-left-right
+                    padding-right: 30px
+                    padding-left: 30px
+
+                    &::after,
+                    &::before
+                        top: 0
+                        background: white
+
+            span.c-title
+
+                strong
+                    font-family: YuGothic
+
+        &.left
+            background: linear-gradient(to bottom, #F56A6A, #F8C6C6)
+
+            .img
+                width: 52px
+                height: 52px
+
+        &.right
+            background: linear-gradient(to bottom, #4AADD9, #50BEBE)
+
+            .img
+                width: 50px
+                height: 50px
+
+        &:not(:last-child)
+            margin-bottom: 0
