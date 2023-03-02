@@ -484,14 +484,22 @@
 
             .c-title
 
-                &.title-border-left-right
-                    padding-right: 30px
-                    padding-left: 30px
+                &.title-border
 
-                    &::after,
-                    &::before
-                        top: 0
-                        background: white
+                    &-left-right
+                        padding-right: 30px
+                        padding-left: 30px
+
+                        &::after,
+                        &::before
+                            top: 0
+                            background: white
+
+                    &.rotate
+
+                        &::after,
+                        &::before
+                            height: 23px
 
             span.c-title
 
@@ -610,7 +618,7 @@
                         .l-txt
 
                             img
-                                max-width: 350px
+                                max-width: 400px
 
                     &-2
 
@@ -650,8 +658,8 @@
                             &.have-txt
 
                                 .txt
-                                    left: unset
-                                    right: -50px
+                                    left: -50px
+                                    right: unset
 
             &.l-top-4
 
@@ -680,17 +688,6 @@
                                 max-width: 100%
                                 margin-right: 0
                                 margin-left: 0
-
-                // &.l-top-5
-
-                //     .c-cols
-
-                //         &.c-col-64
-
-    // .c-cols
-
-    //     &.c-col-55
-    //         .c-cols.c-col-55
 
     .c-banner
 
@@ -734,6 +731,12 @@
                 min-height: 260px
                 justify-content: center
 
+                .c-title
+
+                    &.title-border-left-right
+                        padding-right: 15px
+                        padding-left: 15px
+
             .l-button
                 margin-bottom: 30px
 
@@ -753,14 +756,9 @@
             .item
                 padding: 20px
 
-    .c-tables
-
-        tbody
-
-            th,
-            td
-                p
-                    font-size: 2.4rem
+                .c-description
+                    width: calc(100% - 15px)
+                    padding: 15px
 
 @media only screen and (max-width: 768px)
     .p-top
@@ -776,7 +774,7 @@
                         .l-txt
 
                             img
-                                max-width: 300px
+                                max-width: 320px
 
                     &-3
 
@@ -803,6 +801,7 @@
                             margin-bottom: 50px
 
                         .thumb
+                            padding-left: 30px
                             padding-right: 30px
 
                         .contents
@@ -842,6 +841,15 @@
                             &:not(:last-child)
                                 margin-bottom: 30px
 
+            &.l-top-5
+
+                .c-cols
+
+                    &.c-col-64
+
+                        .contents
+                            padding-top: 30px
+
     .c-banner
 
         &.custom-banner
@@ -872,8 +880,15 @@
     .c-cnt
 
         .item
+            padding: 15px
 
             &.left
+
+                .img
+                    width: 40px
+                    height: 40px
+
+            &.right
 
                 .img
                     width: 40px
@@ -883,9 +898,11 @@
 
                 .c-title
 
-                    &.title-border-left-right
-                        padding-right: 15px
-                        padding-left: 15px
+                    &.title-border
+
+                        &-left-right
+                            padding-right: 0
+                            padding-left: 0
 
     .c-products
 
@@ -897,65 +914,21 @@
                 .c-figure
                     margin-bottom: 20px
 
+                    .c-cates
+
+                        .cate
+                            min-width: 100px
+                            min-height: 40px
+                            font-size: 1.5rem
+
                 .l-imgs
 
                     .c-figure
                         width: calc((100% - 10px) / 2)
 
-                .c-cates
-
-                    .cate
-                        min-width: 100px
-                        min-height: 40px
-
                 .c-description
                     width: calc(100% - 10px)
-
-    .c-tables
-
-        thead
-
-            th
-
-                p
-                    font-size: 1.5rem
-
-        tbody
-
-            th, td
-
-                p
-                    font-size: 1.8rem
-
-                div
-                    min-height: 50px
-
-@media only screen and (max-width: 991px)
-    .c-footer__menu li
-        height: auto
-        margin-bottom: 10px
-
-    .c-footer__logo img
-        height: 40px
-
-    .c-tables th, .c-tables td
-        padding: 0 10px
-
-    .c-mainvisual
-        height: calc(100vh - 100px)
-
-@media only screen and (max-width: 768px)
-    .c-footer__menu a
-        font-size: 1.4rem
-
-    .c-tables th, .c-tables td
-        padding: 0 5px
-
-    .p-top .l-blocks.l-top-5 .c-cols.c-col-64 .contents
-        padding-top: 30px
-
-    .c-mainvisual
-        height: calc(100vh - 80px)
+                    padding: 10px
 
 @media only screen and (max-width: 580px)
     .p-top
@@ -977,9 +950,55 @@
                                     min-width: 100px
                                     min-height: 30px
 
+            &.l-top-3
+
+                .c-cols
+
+                    &.c-col-73
+
+                        &.have-txt
+
+                            .txt
+
+                                .c-title
+
+                                    &.line-bottom
+
+                                        &::before
+                                            height: 10px
+
+            &.l-top-4
+
+                .l-block
+
+                    &-1
+
+                        .c-collapsible
+
+                            .c-cates
+
+                                .cate
+                                    min-width: 100px
+                                    min-height: 40px
+                                    font-size: 1.4rem
+
+            &.l-top-5
+
+                .c-cols
+
+                    &.c-col-64
+
+                        .contents
+
+                            .c-cates
+
+                                .cate
+                                    min-height: 40px
+
     .c-cnt
 
         .item
+            padding: 10px
 
             &.left
 
@@ -987,53 +1006,38 @@
                     width: 40px
                     height: 40px
 
-            .contents
+        .c-button
 
-                .c-title
+            i
+                width: 15px
+                height: 15px
+                margin-right: 0
 
-                    &.title-border-left-right
-                        margin-bottom: 10px
-                        padding-right: 0
-                        padding-left: 0
+            &.min-width
 
-    .p-top .l-blocks.l-top-4 .l-block-1 .c-collapsible .c-cates .cate
-        min-width: 100px
-        min-height: 40px
-        font-size: 1.4rem
+                &-450
+                    min-width: 240px!important
+                    min-height: 50px
+                    padding: 10px
+                    font-size: 1.4rem
 
-    .c-title.title-border-bottom
-        flex-direction: column
-        align-items: flex-start
+        .l-button
 
-    .c-title.title-border-bottom .c-cates
-        margin-bottom: 15px
+            &::after
+                right: -5px
+                bottom: -5px
 
-    .c-cnt .c-button
+    .c-products
 
-        &.min-width-450
-            min-width: unset!important
-            min-height: 50px
-            padding: 10px
-            font-size: 1.4rem
+        &.product-special2
 
-    .p-top .l-blocks.l-top-5 .c-cols.c-col-64 .contents .c-cates .cate
-        min-height: 40px
+            .item
 
-    .c-header__logo
-        height: calc(100% - 10px)
+                .c-figure
 
-    .c-header__logo a
-        height: 100%
+                    .c-cates
 
-    .c-header__logo img
-        object-fit: cover
-
-    .c-mainvisual__bg
-        height: 100vh
-
-    .c-mainvisual
-        height: calc(100vh - 70px)
-
-@media only screen and (max-width: 480px)
-    .c-mainvisual
-        height: calc(100vh - 50px)
+                        .cate
+                            min-width: 80px
+                            min-height: 30px
+                            font-size: 1.3rem

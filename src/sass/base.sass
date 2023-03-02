@@ -491,8 +491,8 @@ img
                 border-width: 3px
 
         &-left-right
-            padding-left: 50px
-            padding-right: 50px
+            padding-left: 40px
+            padding-right: 40px
 
             &::after,
             &::before
@@ -2558,6 +2558,19 @@ img
     .c-description
         font-size: 2.3rem
 
+    .c-tables
+
+        th,
+        td
+            padding: 0 10px
+
+        tbody
+
+            th,
+            td
+                p
+                    font-size: 2.4rem
+
 @media screen and (max-width: 768px)
     .l-wrapper
 
@@ -2951,6 +2964,29 @@ img
         &:not(:last-child)
             margin-bottom: 50px
 
+    .c-tables
+
+        th,
+        td
+            padding: 0 5px
+
+        thead
+
+            th
+
+                p
+                    font-size: 1.5rem
+
+        tbody
+
+            th, td
+
+                p
+                    font-size: 1.8rem
+
+                div
+                    min-height: 50px
+
 @media screen and (max-width: 580px)
     .c-title
 
@@ -3179,6 +3215,15 @@ img
 
                 small
                     font-size: 5.4rem
+
+        &.title-border
+
+            &-bottom
+                flex-direction: column
+                align-items: flex-start
+
+                .c-cates
+                    margin-bottom: 15px
 
     .c-description
         font-size: 1.4rem

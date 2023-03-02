@@ -327,7 +327,7 @@ function slideProductsSpecial() {
             slide_length = $(slides + ' .swiper-container .swiper-wrapper .swiper-slide').length;
 
         let slide = new Swiper(slides + ' .swiper-container', {
-            slidesPerView: 1.5,
+            slidesPerView: 1.2,
             slidesPerGroup: 1,
             spaceBetween: 10,
             centeredSlides: true,
