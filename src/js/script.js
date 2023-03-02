@@ -327,10 +327,10 @@ function slideProductsSpecial() {
             slide_length = $(slides + ' .swiper-container .swiper-wrapper .swiper-slide').length;
 
         let slide = new Swiper(slides + ' .swiper-container', {
-            slidesPerView: 4,
+            slidesPerView: 1.5,
             slidesPerGroup: 1,
-            spaceBetween: 40,
-            centeredSlides: false,
+            spaceBetween: 10,
+            centeredSlides: true,
             loop: slide_length < 2 ? false : true,
             loopFillGroupWithBlank: true,
             slideToClickedSlide: true,
@@ -342,7 +342,25 @@ function slideProductsSpecial() {
                 delay: 3000,
                 disableOnInteraction: false
             },
-            speed: 1500
+            speed: 1500,
+            breakpoints: {
+                992: {
+                    slidesPerView: 4,
+                    slidesPerGroup: 1,
+                    spaceBetween: 40,
+                    centeredSlides: false,
+                },
+                769: {
+                    slidesPerView: 1.5,
+                    slidesPerGroup: 1,
+                    spaceBetween: 20,
+                },
+                581: {
+                    slidesPerView: 1.5,
+                    slidesPerGroup: 1,
+                    spaceBetween: 20,
+                },
+            },
         });
     });
 }

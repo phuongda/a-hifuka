@@ -143,11 +143,11 @@
                 &:hover
 
                     a
-                        color: $color-blue
+                        color: $color-pink
                         opacity: 1
 
                         span
-                            color: $color-blue
+                            color: $color-pink
 
                     // &::before
                     //     background: $color-blue
@@ -315,7 +315,7 @@
                     background-color: white
 
             &.change
-                background: $color-blue
+                background: $color-pink
 
                 p
                     color: white
@@ -424,7 +424,7 @@
         transition: 0.4s
 
     &.change
-        background: $color-blue
+        background: $color-pink
 
         span
             background-color: white
@@ -447,7 +447,7 @@
             transform: translateX(-15%)
 
     &:hover
-        background: $color-blue
+        background: $color-pink
         // opacity: 0.5
 
         p
@@ -465,7 +465,7 @@
     justify-content: flex-center
     align-items: flex-start
     visibility: hidden
-    background: $color-blue
+    background: $color-pink
     color: white
     font-family: 'A-OTF-R'
     position: fixed
@@ -1097,35 +1097,82 @@
 
     &__menu
         @include box()
-        flex-direction: column
+        justify-content: center
 
         li
-            // min-width: 200px
-            padding-left: 40px
+            min-width: 100px
+            height: 100%
+            display: flex
+            justify-content: center
+            align-items: center
+            padding: 10px 20px
+            line-height: 1.4
             position: relative
 
-            &::before
+            &:not(:first-child)::before
                 content: ""
-                width: 20px
-                height: 1px
-                background-color: white
+                width: 1px
+                height: 40px
+                background: $color-text
                 position: absolute
-                top: 15px
+                top: 50%
                 left: 0
+                transform: translateY(-50%)
+                transition: .5s
 
-            &:not(:last-child)
-                margin-bottom: 20px
+        a
+            display: flex
+            flex-direction: column
+            font-size: 1.8rem
+            position: relative
+            color: $color-text
+            transition: .5s
 
-            a
-                @include box()
-                flex-direction: column
-                font-size: 1.8rem
-                font-weight: bold
-                line-height: 1.8
+            span
+                font-size: 1rem
+                color: $color-gray3
+
+            &:hover
+                color: $color-pink
+                opacity: 1
 
                 span
-                    margin-top: 3px
-                    font-size: 1.1rem
+                    color: $color-pink
+
+            // &:hover
+            //     opacity: 0.5
+
+    // &__menu
+    //     @include box()
+    //     flex-direction: column
+
+    //     li
+    //         // min-width: 200px
+    //         padding-left: 40px
+    //         position: relative
+
+    //         &::before
+    //             content: ""
+    //             width: 20px
+    //             height: 1px
+    //             background-color: white
+    //             position: absolute
+    //             top: 15px
+    //             left: 0
+
+    //         &:not(:last-child)
+    //             margin-bottom: 20px
+
+    //         a
+    //             @include box()
+    //             flex-direction: column
+    //             font-size: 1.8rem
+    //             font-weight: bold
+    //             line-height: 1.8
+
+    //             span
+    //                 margin-top: 3px
+    //                 font-size: 1.1rem
 
     &.copyright-bg
         padding-bottom: 0
@@ -1793,6 +1840,19 @@
 
                 .thumb
                     margin-right: 50px
+
+        &.space60
+
+            .thumb
+                width: calc(50% - 30px)
+
+            .contents
+                width: calc(50% - 30px)
+
+            &:not(.justify-content-between)
+
+                .thumb
+                    margin-right: 60px
 
         &.switch
             flex-flow: row-reverse
@@ -2889,6 +2949,14 @@
                         right: 60px
                         bottom: unset
 
+    &.col-3
+
+        .item
+            width: calc((100% - (40px * 2)) / 3)
+
+            &:not(:last-child)
+                margin-right: 40px
+
     &.col-4
 
         .item
@@ -2920,20 +2988,11 @@
             &:not(:nth-of-type(2n))
                 margin-right: 20px
 
-@media screen and (max-height: 860px)
-    .c-mainvisual__menu
-        top: 38%
-
-@media screen and (max-height: 800px)
-    .c-mainvisual__menu
-        top: 38%
+@media screen and (max-width: 1620px)
+    .c-header__menu
 
         li
-
-            a
-
-                span
-                    display: none
+            padding: 10px 10px
 
 @media screen and (min-width: 1537px)
     .c-header
@@ -2989,12 +3048,6 @@
 
             .text58
                 font-size: 9.2rem!important
-
-@media screen and (max-width: 1620px)
-    .c-header__menu
-
-        li
-            padding: 10px 10px
 
 @media screen and (max-width: 1536px)
     .c-header
@@ -3242,39 +3295,6 @@
         &__slogan
             display: none
 
-@media screen and (max-width: 1440px) and (min-width: 992px)
-    .c-banner
-
-        .contents
-
-            .c-title
-
-                &.text
-
-                    &64
-
-                        strong
-                            font-size: 5.4rem
-
-                        small
-                            font-size: 3.4rem
-
-                    &72
-
-                        strong
-                            font-size: 6.2rem
-
-                        small
-                            font-size: 4.2rem
-
-                    &82
-
-                        strong
-                            font-size: 6.2rem
-
-                        small
-                            font-size: 4.2rem
-
 @media screen and (max-width: 1248px)
     // .c-header
 
@@ -3307,6 +3327,39 @@
                 .c-gr-button
                     margin-top: 30px
                     margin-bottom: 50px
+
+@media screen and (max-width: 1440px) and (min-width: 992px)
+    .c-banner
+
+        .contents
+
+            .c-title
+
+                &.text
+
+                    &64
+
+                        strong
+                            font-size: 5.4rem
+
+                        small
+                            font-size: 3.4rem
+
+                    &72
+
+                        strong
+                            font-size: 6.2rem
+
+                        small
+                            font-size: 4.2rem
+
+                    &82
+
+                        strong
+                            font-size: 6.2rem
+
+                        small
+                            font-size: 4.2rem
 
 @media screen and (min-width: 992px)
     .c-tabs-list
@@ -3676,24 +3729,43 @@
 
         &.c-col-2,
         &.c-col-55
+            width: 100%
+            max-width: 680px
+            flex-flow: column!important
+            position: relative
+            margin-left: auto
+            margin-right: auto
+
+            .thumb
+                width: 100%!important
+                max-width: 680px!important
+                height: auto
+                margin-bottom: 30px
+                margin-right: 0!important
+
+            .contents
+                width: 100%!important
+                max-width: 680px!important
+                margin-left: 0
+                position: unset
 
             &.justify-content-between
 
                 .thumb
-                    width: calc(50% - 10px)
+                    width: 100%!important
 
                 .contents
-                    width: calc(50% - 10px)
+                    width: 100%!important
 
             &:not(.justify-content-between)
 
                 &.space-40
 
                     .thumb
-                        width: 50%
+                        width: 100%!important
 
                     .contents
-                        width: 50%
+                        width: 100%!important
 
         &.c-col-64
             width: 100%
@@ -3701,17 +3773,18 @@
             position: relative
             margin-left: auto
             margin-right: auto
+            flex-flow: column!important
 
             .thumb
-                width: 100%
+                width: 100%!important
                 max-width: 680px!important
                 height: auto
                 margin-bottom: 0!important
 
             .contents
-                width: 100%
+                width: 100%!important
                 max-width: 680px!important
-                margin-left: 0
+                margin-left: 0!important
                 position: unset
 
                 &.c-box
@@ -3728,13 +3801,14 @@
             margin-right: auto
 
             .thumb
-                width: 100%
+                width: 100%!important
                 max-width: 680px!important
                 height: auto
-                margin-bottom: 0!important
+                margin-bottom: 30px
+                margin-right: 0!important
 
             .contents
-                width: 100%
+                width: 100%!important
                 max-width: 680px!important
                 margin-left: 0
                 position: unset
@@ -3797,6 +3871,29 @@
 
                         &::after
                             right: 10px
+
+        &.col-3
+
+            .item
+                width: calc((100% - (20px * 2)) / 3)
+
+                &:not(:last-child)
+                    margin-right: 20px
+
+@media screen and (max-height: 860px)
+    .c-mainvisual__menu
+        top: 38%
+
+@media screen and (max-height: 800px)
+    .c-mainvisual__menu
+        top: 38%
+
+        li
+
+            a
+
+                span
+                    display: none
 
 @media screen and (max-width: 768px)
     [class*=l-container] [class*=l-container]
@@ -4621,6 +4718,16 @@
                         width: calc(100% - (20px * 2))
                         height: auto
                         padding-bottom: 20px
+
+    .c-button
+
+        &.custom-button
+            min-height: 60px
+
+            i
+                width: 20px
+                height: 20px
+                margin-right: 0
 
 @media screen and (max-width: 480px)
     .c-header

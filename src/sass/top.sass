@@ -302,6 +302,105 @@
                             margin-right: -25%
                             margin-left: -25%
 
+        &.l-top-5
+
+            .l-block
+
+                &-4
+
+                    .c-table
+
+                        &.boder-bottom
+
+                            td
+                                padding-top: 30px
+                                padding-bottom: 30px
+
+            .c-cols
+
+                &.c-col-64
+                    justify-content: space-between
+
+                    .thumb
+                        width: 44%
+                        max-width: 600px
+
+                        figure
+                            border-radius: 10px
+
+                    .contents
+                        width: 53%
+                        max-width: 740px
+                        align-content: flex-start
+                        margin-left: 3%
+                        padding-top: 40px
+
+                        h3.c-title
+                            font-family: YuGothic
+
+                        .c-cates
+
+                            .cate
+                                width: 100%
+                                max-width: 150px
+                                height: max-content
+                                min-height: 50px
+                                padding: 5px 20px 5px 37px
+                                border-radius: 3px
+                                background: $color-pink
+                                font-weight: 500
+                                color: white
+                                position: relative
+
+                                span
+                                    @include box()
+                                    align-items: baseline
+
+                                    strong
+                                        margin-left: 6px
+                                        font-weight: 500
+
+                                &::after
+                                    content: ""
+                                    width: 15px
+                                    height: 1px
+                                    background: white
+                                    position: absolute
+                                    left: 13px
+                                    bottom: 15px
+
+                    .txt
+                        width: auto
+                        height: auto
+                        position: unset
+                        opacity: 0.3
+                        writing-mode: horizontal-tb
+
+                        .c-title
+                            line-height: 1
+                            color: $color-gray3
+                            font-family: YuGothic
+
+                            &.u-line
+
+                                &::before
+                                    background: $color-gray3
+
+                            &.line-bottom
+
+                                &::before
+                                    bottom: 10%
+
+                    &.switch
+                        flex-flow: row-reverse
+
+                        .contents
+                            margin-left: 0
+                            margin-right: 3%
+
+                    &:not(:last-child)
+                        margin-bottom: 60px
+
 .c-banner
 
     &.custom-banner
@@ -472,3 +571,469 @@
         .swiper
             padding-left: 0
             padding-right: 0
+
+.c-collapsible
+
+    &>.header
+
+        .c-title
+
+            &.bgpink
+                background: rgba(245, 106, 105, 60%)
+
+@media only screen and (max-width: 991px)
+    .lr-20
+        width: calc(100% + 40px)!important
+        max-width: unset!important
+        left: -20px!important
+        right: -20px!important
+
+    .p-top
+
+        .l-blocks
+
+            &.l-top-1
+
+                .l-block
+
+                    &-1
+
+                        .c-gr-button
+                            flex-direction: column
+
+                            .c-button
+                                margin-right: 0
+
+                                &:not(:last-child)
+                                    margin-bottom: 30px
+
+                        .l-txt
+
+                            img
+                                max-width: 350px
+
+                    &-2
+
+                        .c-list
+
+                            li
+                                min-height: 40px
+                                padding-top: 5px
+                                padding-left: 70px
+
+                                &::before
+                                    width: 50px
+                                    height: 50px
+
+            &.l-top-3
+
+                .c-cols
+
+                    &.c-col-73
+
+                        &:not(:last-child)
+                            margin-bottom: 70px
+
+                        &.have-txt
+
+                            .txt
+                                top: 0px
+                                left: unset
+                                right: -50px
+
+                        &.switch
+                            flex-flow: column
+
+                            .contents
+                                margin-right: 0
+
+                            &.have-txt
+
+                                .txt
+                                    left: unset
+                                    right: -50px
+
+            &.l-top-4
+
+                .l-block
+
+                    &-2
+
+                        .c-collapsible
+                            padding-left: 70px
+
+                            .counter
+                                width: 50px
+                                height: 50px
+                                font-size: 1rem
+
+                                &::before
+                                    font-size: 1.4rem
+
+                    &-3
+
+                        .c-products
+                            overflow: unset
+
+                            &.product-special2
+                                width: 100%
+                                max-width: 100%
+                                margin-right: 0
+                                margin-left: 0
+
+                // &.l-top-5
+
+                //     .c-cols
+
+                //         &.c-col-64
+
+    // .c-cols
+
+    //     &.c-col-55
+    //         .c-cols.c-col-55
+
+    .c-banner
+
+        &.custom-banner
+            height: 530px
+
+            .c-cates
+
+                .cate
+                    min-height: 50px
+
+            .contents
+
+                &.contents-center-bottom
+
+                    &+.banner
+                        height: 380px
+
+    .c-notes
+
+        .item
+            margin-bottom: 40px
+
+        .gr-notes
+            margin-bottom: 40px
+
+            .item
+                width: 100%
+                padding-right: 0
+
+                &:not(:last-child)
+                    margin-bottom: 40px
+
+    .c-cnt
+        flex-direction: column
+
+        .item
+            width: 100%
+
+            .contents
+                min-height: 260px
+                justify-content: center
+
+            .l-button
+                margin-bottom: 30px
+
+                .c-subtitle
+                    margin-bottom: 20px!important
+
+            .c-subtitle
+                margin-bottom: 10px!important
+
+            &:not(:last-child)
+                margin-bottom: 20px
+
+    .c-products
+
+        &.product-special2
+
+            .item
+                padding: 20px
+
+    .c-tables
+
+        tbody
+
+            th,
+            td
+                p
+                    font-size: 2.4rem
+
+@media only screen and (max-width: 768px)
+    .p-top
+
+        .l-blocks
+
+            &.l-top-1
+
+                .l-block
+
+                    &-1
+
+                        .l-txt
+
+                            img
+                                max-width: 300px
+
+                    &-3
+
+                        .c-cols
+
+                            &.c-col-55
+
+                                .contents
+
+                                    table
+
+                                        td
+
+                                            p
+                                                font-size: 2.4rem
+
+            &.l-top-3
+
+                .c-cols
+
+                    &.c-col-73
+
+                        &:not(:last-child)
+                            margin-bottom: 50px
+
+                        .thumb
+                            padding-right: 30px
+
+                        .contents
+
+                            .c-cates
+
+                                .cate
+                                    min-height: 40px
+
+                        &.have-txt
+
+                            .txt
+                                right: 0
+
+            &.l-top-4
+
+                .l-block
+
+                    &-1
+
+                        .c-collapsible
+
+                            .c-cates
+
+                                .cate
+                                    min-width: 120px
+                                    min-height: 50px
+                                    font-size: 1.6rem
+
+                    &-2
+
+                        .c-collapsible
+
+                            .content
+                                padding-top: 20px
+
+                            &:not(:last-child)
+                                margin-bottom: 30px
+
+    .c-banner
+
+        &.custom-banner
+            height: 380px
+
+            .contents
+                padding-bottom: 40px!important
+
+                &.contents-center-bottom
+
+                    &+.banner
+                        height: 280px
+
+            .c-cates
+
+                .cate
+                    max-width: 240px
+
+    .c-notes
+
+        .item
+            padding: 20px 20px 20px 40px
+
+            &::before
+                top: 20px
+                left: 20px
+
+    .c-cnt
+
+        .item
+
+            &.left
+
+                .img
+                    width: 40px
+                    height: 40px
+
+            .contents
+
+                .c-title
+
+                    &.title-border-left-right
+                        padding-right: 15px
+                        padding-left: 15px
+
+    .c-products
+
+        &.product-special2
+
+            .item
+                padding: 10px
+
+                .c-figure
+                    margin-bottom: 20px
+
+                .l-imgs
+
+                    .c-figure
+                        width: calc((100% - 10px) / 2)
+
+                .c-cates
+
+                    .cate
+                        min-width: 100px
+                        min-height: 40px
+
+                .c-description
+                    width: calc(100% - 10px)
+
+    .c-tables
+
+        thead
+
+            th
+
+                p
+                    font-size: 1.5rem
+
+        tbody
+
+            th, td
+
+                p
+                    font-size: 1.8rem
+
+                div
+                    min-height: 50px
+
+@media only screen and (max-width: 991px)
+    .c-footer__menu li
+        height: auto
+        margin-bottom: 10px
+
+    .c-footer__logo img
+        height: 40px
+
+    .c-tables th, .c-tables td
+        padding: 0 10px
+
+    .c-mainvisual
+        height: calc(100vh - 100px)
+
+@media only screen and (max-width: 768px)
+    .c-footer__menu a
+        font-size: 1.4rem
+
+    .c-tables th, .c-tables td
+        padding: 0 5px
+
+    .p-top .l-blocks.l-top-5 .c-cols.c-col-64 .contents
+        padding-top: 30px
+
+    .c-mainvisual
+        height: calc(100vh - 80px)
+
+@media only screen and (max-width: 580px)
+    .p-top
+
+        .l-blocks
+
+            &.l-top-1
+
+                .l-block
+
+                    &-1
+
+                        .c-images
+
+                            .c-cates
+                                bottom: 5px
+
+                                .cate
+                                    min-width: 100px
+                                    min-height: 30px
+
+    .c-cnt
+
+        .item
+
+            &.left
+
+                .img
+                    width: 40px
+                    height: 40px
+
+            .contents
+
+                .c-title
+
+                    &.title-border-left-right
+                        margin-bottom: 10px
+                        padding-right: 0
+                        padding-left: 0
+
+    .p-top .l-blocks.l-top-4 .l-block-1 .c-collapsible .c-cates .cate
+        min-width: 100px
+        min-height: 40px
+        font-size: 1.4rem
+
+    .c-title.title-border-bottom
+        flex-direction: column
+        align-items: flex-start
+
+    .c-title.title-border-bottom .c-cates
+        margin-bottom: 15px
+
+    .c-cnt .c-button
+
+        &.min-width-450
+            min-width: unset!important
+            min-height: 50px
+            padding: 10px
+            font-size: 1.4rem
+
+    .p-top .l-blocks.l-top-5 .c-cols.c-col-64 .contents .c-cates .cate
+        min-height: 40px
+
+    .c-header__logo
+        height: calc(100% - 10px)
+
+    .c-header__logo a
+        height: 100%
+
+    .c-header__logo img
+        object-fit: cover
+
+    .c-mainvisual__bg
+        height: 100vh
+
+    .c-mainvisual
+        height: calc(100vh - 70px)
+
+@media only screen and (max-width: 480px)
+    .c-mainvisual
+        height: calc(100vh - 50px)

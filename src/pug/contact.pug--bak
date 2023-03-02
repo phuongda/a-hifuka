@@ -1,0 +1,150 @@
+- const base = "."
+- const home = true
+- const canonical = "/"
+- const page = "contact"
+
+doctype html
+html(lang="ja")
+    include ./partials/_head
+    body
+        include ./layouts/_header
+        include ./components/_bl-banner
+        +blockBanner("お問合せ", "Contact", "./assets/img/contact/banner.jpg", [ { "link": "#", "title": "株式会社松山" }, { "link": "", "title": "お問合せ" } ])
+        //- img.lazy(data-src="./assets/img/contact/img.jpg")
+        main#main.p-contact
+            section.l-blocks.l-contact.pt90.pt50sp.pb110.pb70sp
+                .l-container-1000.p-fadein.p-delay_1s
+                    .l-blocks__title.mb50.mb30sp
+                        h3.c-title.title-center.title-border.title-border-short.bottom.text38.text28sp.text24xs.mxauto.pb35.pb20sp
+                            strong
+                                | お
+                                b.clblue 問
+                                | 合せフォーム
+                            span.c-subtitle.text11.mt15.mt10sp Contact form
+                        blockquote.c-blockquote.tcm.gothic.mt50.mt30sp
+                            p.text16.text14sp
+                                | ※ご質問がございましたらお気軽にお問合せ下さい。
+                                br
+                                | お電話（06-6744-7555）にてご連絡頂くか、下記のフォームにご記入の上、送信下さい。
+                                br
+                                | 「必須」の項目は入力必須項目となります。
+                    .l-blocks__main
+                        form.c-form(method='post' action='/mail.php')
+                            table
+                                tbody
+                                    tr
+                                        th(scope="row")
+                                            span.required お名前
+                                        td
+                                            input.md(name='お名前' placeholder='入力必須項目です' required='')
+                                    tr
+                                        th
+                                            span.required フリガナ
+                                        td
+                                            input.md(name='フリガナ' placeholder='入力必須項目です' required='')
+                                    tr
+                                        th
+                                            span.required 電話番号
+                                        td
+                                            input.sm(name='電話番号' placeholder='入力必須項目です' required='')
+                                            span ※例）0123-45-6789
+                                    tr
+                                        th
+                                            | 郵便番号
+                                        td
+                                            input.sm(id='郵便番号' name='郵便番号')
+                                            span ※例）123-4567
+                                    tr
+                                        th
+                                            | 住所
+                                        td
+                                            input.lg(id='住所' name='住所')
+                                    tr
+                                        th
+                                            span.required メールアドレス
+                                        td
+                                            input.md(name='メールアドレス' placeholder='入力必須項目です' required='')
+                                    tr
+                                        th
+                                            | ご希望の連絡方法
+                                        td
+                                            label.radio(for='電話')
+                                                input(type='radio' id='電話' value='電話' name='ご希望の連絡方法')
+                                                | 電話
+                                            label.radio(for='メール')
+                                                input(type='radio' id='メール' value='メール' name='ご希望の連絡方法')
+                                                | メール
+                                    tr
+                                        th.top
+                                            span.required ご相談内容
+                                        td
+                                            textarea.lg(cols='50' rows='12' name='ご相談内容' placeholder='入力必須項目です' required='')
+                            .c-gr-button.mxauto.mt35.mt15sp
+                                button.c-button.button-outline.min-width-300.max-width-330.icon-right.custom-button.clblack.radius0i(type='submit')
+                                    strong 送信する
+                                    i.c-icon.ic-arrow-right-black-3
+                                button.c-button.button-outline.min-width-300.max-width-330.icon-right.custom-button.clblack.radius0i(type='reset')
+                                    strong リセット
+                                    i.c-icon.ic-arrow-right-black-3
+                        blockquote.c-blockquote.tcm.gothic.mt60.mt40sp.mxauto
+                            p.text16.text14sp
+                                | ※送信頂いてから3日間経過しても返事が無い場合は送信トラブルがあった可能性があります。
+                                br
+                                | お手数ですが再度送信頂くか直接お電話（06-6744-7555）にてご連絡下さい。
+                        .l-contents.mt55.mt45sp
+                            .l-container-912
+                                h3.c-title.u-line.line-lg.line-top.bfgray.subtitle.text22.text18sp.pt25.mb30
+                                    strong 個人情報保護方針
+                                    span.c-subtitle.text12.ml30 Privacy Policy
+                                .c-description
+                                    p.text13.lineheight20
+                                        | 1.個人情報の利用目的
+                                    ul.pl15.pl10sp.mb30.mb20sp
+                                        li ご提供いただいた個人情報は、株式会社松山（以下、当社といいます）が、以下の目的で利用するものとします。
+                                        li ・ご請求もしくはご購入いただいた資料・サンプル・商品等の送付。
+                                        li ・お問い合わせ時のご連絡。
+                                    p.text13.lineheight20
+                                        | 2.個人情報の第三者への開示
+                                    ul.pl15.pl10sp.mb30.mb20sp
+                                        li 当社は、原則として、ご提供いただいた個人情報を第三者に開示することはいたしません。
+                                        li 但し、以下のような場合、個人の情報を開示することができるものとします。
+                                        li ・生命、身体、財産の保護のために必要がある場合であって、利用者本人の同意を得ることが困難である場合。
+                                        li ・国の機関若しくは地方公共団体又はその委託を受けた者が法令の定める事務を遂行することに対して協力する必要がある場合であって、利用者本人の同意を得ることにより当該事務の遂行に支障を及ぼすおそれがある場合。
+                                        li ・その他の法令により当社による開示又は提供義務が定められている場合。
+                                    p.text13.lineheight20
+                                        | 3.統計データの利用
+                                    ul.pl15.pl10sp.mb30.mb20sp
+                                        li 当社は、提供を受けた個人情報をもとに、個人を特定できない形式による統計データを作成し、当該データにつき何らの制限なく利用することができるものとします。
+                                    p.text13.lineheight20
+                                        | 4.個人情報の管理責任者 とお問い合わせ等について
+                                    ul.pl15.pl10sp.mb30.mb20sp
+                                        li ご提供いただいた個人情報は、以下の者が責任を持って管理するものとします。
+                                        li また、お問い合わせ等につきましては、下記にて承ります。 
+                                        li 株式会社松山　 東大阪市七軒家18番36号　 TEL 06-6744-7555 FAX 06-6744-7311
+                                    ul.pl15.pl10sp.mb30.mb20sp
+                                        li 個人情報取り扱い責任者： 松山　康孝
+                                    p.text13.lineheight20
+                                        | 5.変更および通知について
+                                    ul.pl15.pl10sp.mb30.mb20sp
+                                        li 当社は、この「個人情報の取扱いについて」の内容を、事前の予告なく変更することがあります。利用者の方へその都度ご連絡は
+                                        li いたしかねますので、ご利用の際には本ページの最新の内容をご参照ください。
+                        .l-contents.mt50.mt40sp
+                            .l-container-912
+                                h3.c-title.u-line.line-lg.line-top.bfgray.subtitle.text22.text18sp.pt25.mb30
+                                    strong 動作推奨環境
+                                    span.c-subtitle.text12.ml30 Environment
+                                .c-description
+                                    p.text13.lineheight20.mb30.mb20sp 本ホームページでは、より安全で快適にご利用いただくために下記のブラウザを推奨いたします。
+                                    ul.mb30.mb20sp
+                                        li
+                                            strong Windows (8・7・XP・Vista) をご利用の場合
+                                        li Microsoft Internet Explorer 10.0以上 
+                                        li ※Microsoft Internet Explorer 10でアクセスされる場合は、「ツール」→「互換表示」を押してアクセスください。
+                                        li Mozilla Firefox 12以上
+                                        li Google Chrome 18.0以上
+                                    ul
+                                        li
+                                            strong Macintosh (Mac OS X) をご利用の場合
+                                        li Safari 5.0以上Mozilla Firefox 12以上
+                                        li ※パソコン、スマートフォンのOSやブラウザにより、一部ページにおいて、正しく機能しない、もしくは正しく表示されない場合がございます。
+    include ./layouts/_footer

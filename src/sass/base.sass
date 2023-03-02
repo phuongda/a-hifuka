@@ -1511,6 +1511,7 @@ img
 .l-button
     width: auto
     @include box()
+    margin-bottom: 10px
     position: relative
 
     &::after
@@ -1675,10 +1676,10 @@ img
         th
             background: rgba(3, 77, 143, 0.1)
 
-    &.th-clblue
+    &.th-clblack
 
         th
-            color: $color-blue
+            background: $color-text
 
     &.td-max-width
 
@@ -1703,6 +1704,11 @@ img
             th
                 background: $color-green
                 color: white
+
+    &.td-clblack
+
+        th
+            color: $color-black
 
     &.tbody-even-gray
 
@@ -1746,28 +1752,132 @@ img
             &::before
                 background: $color-blue
 
+        &.boder-md
+
+            &::before
+                height: 2px
+
     &.thead-box
 
         thead
 
             th
-                padding-bottom: calc(16px + 32px)
                 background: 0 0
                 color: white
 
                 &::before
-                    height: calc(100% - 34px)
+                    height: 100%
                     border-radius: 3px
-                    background: $color-blue
+                    background: $color-black
                     top: 0
                     bottom: unset
                     z-index: -1
+
+        &.thead-box-p
+
+            thead
+
+                th
+                    padding-bottom: calc(16px + 32px)
+
+                    &::before
+                        height: calc(100% - 34px)
 
     .u-min-width
         min-width: 120px
 
     .u-max-width
         max-width: 120px
+
+.c-tables
+    width: calc(100% + 30px)
+    margin-left: -15px
+    margin-right: -15px
+
+    th,
+    td
+        vertical-align: middle
+        text-align: center
+        padding: 0 15px
+
+        p
+
+            &:last-child
+                margin-bottom: 0
+
+    thead
+
+        th
+            div
+                min-height: 50px
+                padding: 12px 10px
+                border-radius: 10px
+
+            p
+                font-size: 2rem
+                font-weight: bold
+
+    tbody
+
+        th, td
+
+            div
+                min-height: 76px
+                padding: 12px 10px
+                border-bottom: 1px solid
+
+            p
+                font-size: 2.8rem
+                font-weight: bold
+
+    &.table-pink
+
+        thead
+
+            th
+
+                div
+                    background: $color-pink
+                    color: white
+
+        tbody
+
+            th
+
+                div
+                    color: $color-pink
+
+            th, td
+
+                div
+                    border-color: $color-pink
+
+            tr
+                background: rgba(245, 106, 106, 2%)
+
+    &.table-yellow
+
+        thead
+
+            th
+                div
+                    background: $color-yellow2
+                    color: white
+
+        tbody
+
+            th
+
+                div
+                    color: $color-yellow2
+
+            th, td
+
+                div
+                    border-color: $color-yellow2
+
+            tr
+                background: rgba(249, 242, 139, 10%)
 
 .c-ul
 
@@ -1854,7 +1964,7 @@ img
 
     dt, dd
         padding: 20px 20px
-        font-size: 1.5rem
+        font-size: 1.6rem
         line-height: 1.8
 
     dt
@@ -1900,6 +2010,11 @@ img
 
         dt
             border-color: $color-green
+
+    &.dl-pink
+
+        dt
+            border-color: $color-pink
 
     &.dl-full
 
@@ -2425,6 +2540,12 @@ img
     .c-button
         min-height: 64px
 
+        &.custom-button
+            min-height: 80px
+
+        &.custom-button2
+            min-height: 80px
+
     .c-dl
 
         dt
@@ -2467,7 +2588,8 @@ img
                 &.h25
 
                     &::after
-                        top: 5px
+                        // top: 5px
+                        top: 0
 
                 &.h35
 
@@ -2784,6 +2906,11 @@ img
         &.custom-button
             padding: 10px 20px 10px 15px
             font-size: 1.6rem
+            box-shadow: 0px 5px 0px 0px rgb(245 106 106 / 83%)
+
+            &:hover
+                -webkit-transform: translateY(5px)
+                transform: translateY(5px)
 
     .c-gr-button
         width: 100%
